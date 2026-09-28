@@ -43,7 +43,7 @@ Handles diverse long-horizon agent workflows including tool calling, web browsin
 
 We evaluate Agents-A1.5 across engineering tasks, long-horizon search, scientific research, instruction following, and general agentic tasks. Despite operating in the ~35B model class, Agents-A1.5 delivers highly competitive performance against frontier-scale systems.
 
-![Agents-A1.5 Benchmark Results](./assets/a15_benchmarks.png)
+![Agents-A1.5 Benchmark Results](./assets/a15_hf_benchmarks.png)
 
 ## Usage
 
