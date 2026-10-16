@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 488" fill="none">
+<title>Aerodynamic design and quantum compilation evidence</title>
+<defs><radialGradient id="glow"><stop stop-color="#2563eb" stop-opacity=".14"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient></defs>
+<circle cx="575" cy="244" r="205" fill="url(#glow)"/><circle cx="575" cy="244" r="166" stroke="#93b4de" stroke-opacity=".4" stroke-dasharray="3 8"/>
+<rect x="413" y="112" width="316" height="112" rx="12" fill="#f8fafc" stroke="#b5c9e6"/>
+<g stroke="#9ab9e6" stroke-width="1.5"><path d="M433 143h63m-63 27h48m-48 28h63M667 143h43m-62 27h62m-43 28h43"/></g>
+<path d="M682 169C605 135 516 124 492 159c-16 31 102 44 190 10Z" fill="#dce8fa" stroke="#2563eb" stroke-width="2.5"/>
+<path d="M572 226v37m-7-7 7 7 7-7" stroke="#829cbf" stroke-width="1.5"/>
+<rect x="444" y="277" width="252" height="110" rx="12" fill="#f8fafc" stroke="#b5c9e6"/>
+<g fill="#d8eae7" stroke="#74b5a4"><rect x="464" y="296" width="31" height="25" rx="4"/><rect x="509" y="296" width="31" height="25" rx="4"/><rect x="554" y="296" width="31" height="25" rx="4"/><rect x="599" y="296" width="31" height="25" rx="4"/><rect x="644" y="296" width="31" height="25" rx="4"/><rect x="464" y="339" width="31" height="25" rx="4"/><rect x="554" y="339" width="31" height="25" rx="4"/><rect x="599" y="339" width="31" height="25" rx="4"/></g>
+<g fill="#fbe2de" stroke="#d98d7f"><rect x="509" y="339" width="31" height="25" rx="4"/><rect x="644" y="339" width="31" height="25" rx="4"/></g>
+<path d="m520 347 9 9m0-9-9 9m136-9 9 9m0-9-9 9" stroke="#c16555" stroke-width="1.5"/>
+</svg>
