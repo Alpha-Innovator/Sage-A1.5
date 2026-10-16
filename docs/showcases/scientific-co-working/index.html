@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Explore scientific co-working with Agents-A1.5: aerodynamic design selection and quantum compilation claim reproduction, grounded in recorded scientific artifacts."><title>Scientific Co-working · Agents-A1.5</title><link rel="icon" type="image/png" href="../../assets/InternScience_logo.png"><link rel="stylesheet" href="../../assets/website-shell.css?v=integration-2"><link rel="stylesheet" href="../../assets/integrated-showcases.css?v=integration-2"><link rel="stylesheet" href="assets/style.css?v=20261016"></head><body><header class="a15-site-header">
+    <nav class="a15-nav" aria-label="Primary navigation">
+      <div class="a15-nav-links">
+        <a class="a15-nav-cta" href="https://huggingface.co/collections/Alpha-Innovator/agents-a15" target="_blank" rel="noopener noreferrer">Model</a>
+        <a href="../../index.html#capabilities">Capabilities</a>
+        <a href="../../index.html#benchmarks">Benchmarks</a>
+        <a href="../../index.html#demos" aria-current="page" data-site-return>Demos</a>
+        <a href="../../index.html#training">Training</a>
+        <a href="../../index.html#usage">Usage</a>
+        <a href="../../index.html#related-projects">Related Projects</a>
+      </div>
+    </nav>
+  </header><div class="a15-demo-context"><nav class="a15-breadcrumb" aria-label="Breadcrumb"><a href="../../index.html#demo-scientific-co-working" data-site-return>← All demos</a><span aria-hidden="true">/</span><span aria-current="page">Scientific Co-working</span></nav><nav class="a15-demo-sections" aria-label="On this page"><a href="#replay">Workflow</a><a href="#evidence">Evidence</a><a href="#workspace">Artifacts</a></nav></div><main class="cw-shell">
+  <section class="cw-hero">
+    <div><p class="eyebrow">AGENTS-A1.5 / RESEARCH WORKFLOWS</p><h1>Scientific Co-working</h1><p>A scientist sets the question and the constraints. The agent works through the tools, the evidence and the decision.</p><p>Explore two recorded studies: selecting an aerodynamic design and independently checking quantum compilation claims.</p><div class="hero-actions"><a class="button primary" href="#investigation">Explore the studies ↓</a><a class="button" href="#replay">Watch the workflow ↗</a></div></div>
+    <div class="hero-visual"><svg id="hero-art" class="hero-art" viewBox="0 0 520 270" role="img" aria-label="Recorded duct geometry and a 25-cell quantum compilation claim check"></svg><p>TWO SCIENTIFIC BRIEFS · NATIVE TOOLS · INSPECTABLE EVIDENCE</p></div>
+  </section>
+  <div id="investigation" class="case-tabs" role="tablist" aria-label="Scientific co-working studies">
+    <button id="tab-aerodynamics" role="tab" aria-selected="true" aria-controls="study" data-study="aerodynamics"><span class="tab-index">01 / AERODYNAMICS</span><strong>Select a duct for prototyping</strong><span>SU2 · 3 candidates × 3 conditions</span></button>
+    <button id="tab-quantum-compilation" role="tab" aria-selected="false" aria-controls="study" tabindex="-1" data-study="quantum-compilation"><span class="tab-index">02 / QUANTUM COMPUTING</span><strong>Reproduce a compilation claim</strong><span>Qiskit + Cirq · 25 compilation cells</span></button>
+  </div>
+  <noscript>These studies need JavaScript for their interactive charts. Read or download the recorded <a href="assets/data/aerodynamics/run-data.json">aerodynamic results</a> and <a href="assets/data/quantum-compilation/run-data.json">quantum compilation results</a>.</noscript>
+  <div id="study" role="tabpanel" aria-labelledby="tab-aerodynamics">
+    <section class="case-intro"><div><p class="eyebrow" id="study-eyebrow"></p><h2 id="study-title"></h2><p class="muted" id="study-summary"></p></div><div class="brief"><p class="eyebrow">THE SCIENTIST’S BRIEF</p><p id="study-brief"></p><p class="small" id="study-tools"></p></div></section>
+    <div class="stats" id="stats"></div>
+    <section id="replay" class="cw-section"><div class="section-heading"><div><p class="eyebrow">01 / FROM BRIEF TO DECISION</p><h2>Replay the investigation.</h2></div><p>Step through the study, from staged inputs to a decision supported by native artifacts.</p></div>
+      <div class="replay"><div class="replay-top"><span id="replay-label">RECORDED STUDY / WORKFLOW REPLAY</span><span id="replay-meta"></span></div><div id="film-stage" class="film-stage"><div class="film-copy"><p class="eyebrow" id="film-kicker"></p><h3 id="film-title"></h3><p id="film-body"></p><div id="film-caption" class="film-caption"></div></div><div id="film-visual" class="film-visual"></div></div><div class="film-controls"><button id="film-play" aria-label="Play workflow replay">Play</button><button id="film-restart" aria-label="Restart workflow replay">↺</button><input id="film-seek" type="range" min="0" max="30" step="0.1" value="0" aria-label="Workflow replay position in seconds"><output id="film-time" for="film-seek">00:00 / 00:30</output></div><div id="chapters" class="chapters" aria-label="Replay chapters"></div></div>
+      <p class="replay-note">An edited, animated explanation of the recorded artifacts. Playback time is compressed; it is not a screen recording or a new simulation.</p>
+      <details class="video-details"><summary>Watch the two-study overview video · 60 seconds</summary><video id="overview-video" controls preload="none" poster="assets/images/overview-poster.jpg" aria-label="Scientific Co-working overview"><source src="assets/media/scientific-co-working.mp4" type="video/mp4"><track kind="captions" src="assets/media/overview-en.vtt" srclang="en" label="English"></video><p>English on-screen narration · Aerodynamics followed by quantum compilation · <a href="assets/media/scientific-co-working.mp4" download>Download the video</a></p></details>
+    </section>
+    <section id="evidence" class="cw-section"><div class="section-heading"><div><p class="eyebrow">02 / EXPLORE THE EVIDENCE</p><h2 id="evidence-title"></h2></div><p id="evidence-lead"></p></div>
+      <div id="aerodynamics-evidence">
+        <div class="evidence-grid"><div class="panel"><h3>Three candidates. Four engineering limits.</h3><p>Select a profile to inspect its recorded extrema across all three operating conditions.</p><svg id="geometry-chart" viewBox="0 0 580 230" role="img" aria-label="Duct profiles traced from recorded mesh coordinates"></svg><div class="candidate-buttons" aria-label="Duct candidates"><button data-candidate="K17" aria-pressed="true" class="active">K17 · selected</button><button data-candidate="K42" aria-pressed="false">K42</button><button data-candidate="K88" aria-pressed="false">K88</button></div><p id="geometry-note" class="chart-note"></p></div><div class="panel"><h3 id="constraint-title">K17 / Constraint check</h3><div id="constraints"></div><div id="candidate-decision" class="decision"></div></div></div>
+        <div id="candidate-table" class="table-scroll" tabindex="0" aria-label="Candidate and condition results"></div>
+        <div class="evidence-grid" style="margin-top:20px"><div class="panel"><h3>The certification run converges.</h3><svg id="residual-chart" viewBox="0 0 580 260" role="img" aria-label="Recorded log pressure residual over 414 iterations"></svg><label class="small" for="iteration">Inspect an iteration</label><input id="iteration" type="range" min="0" max="413" value="413"><output id="residual-readout" class="chart-readout" for="iteration"></output><p class="chart-note">K17 at CROSS_12. All 414 recorded rows are retained; the dashed line is the −8 residual target.</p></div><div class="panel"><p class="eyebrow">THE RECORDED DECISION</p><h3>Freeze K17 for prototyping.</h3><p>K42 exceeds the crossload and pressure recovery limits. K17 and K88 are feasible; K17 uses less peak electrical power.</p><div id="freeze-summary" class="decision"></div><p class="chart-note">The delivered design freeze is supported by a native configuration, mesh, restart solution, convergence history and candidate comparison.</p></div></div>
+      </div>
+      <div id="quantum-evidence" hidden>
+        <div class="evidence-grid"><div class="panel"><h3>Which claims reproduce?</h3><p>Each cell compares six recorded fields against the supplied claim. Select a cell to inspect the reproduced metrics.</p><div id="claim-matrix" class="matrix" role="group" aria-label="Compilation claim check matrix"></div><div class="legend"><span>Claims match within tolerance</span><span>At least one mismatch</span></div><div id="cell-details" class="cell-details" aria-live="polite"></div></div><div class="panel"><div class="select-row"><h3>Approximation and error</h3><label>Workload<select id="workload" aria-label="Quantum workload"></select></label></div><svg id="infidelity-chart" viewBox="0 0 480 280" role="img" aria-label="Reproduced process infidelity across five approximation degrees"></svg><p class="chart-note">Process infidelity, computed from compiled circuits. Lower approximation degrees can reduce gate count while increasing error.</p><div class="decision fail">CLAIM_NOT_REPRODUCED<br>3 mismatched cells; 1 qualification disagreement.</div><p class="chart-note">A computational reproduction using the supplied IBM Torino calibration data. Estimated success is a model-derived metric, not a measured hardware success rate.</p></div></div>
+        <div id="mismatch-table" class="table-scroll" tabindex="0" aria-label="All three claim mismatches"></div>
+      </div>
+      <details class="source-details"><summary>View figures from the supplied handoff</summary><div id="figure-gallery" class="gallery"></div></details>
+    </section>
+    <section id="workspace" class="cw-section"><div class="section-heading"><div><p class="eyebrow">03 / THE SCIENTIFIC HANDOFF</p><h2>Start with the brief. Finish with evidence.</h2></div><p>Inspect the staged input files, then download the research artifacts behind the decision.</p></div><div class="workspace"><div class="file-sidebar"><label for="file-search">Find an input file</label><input type="search" id="file-search" placeholder="Search policies, claims, inputs…"><div id="file-list" class="file-list"></div></div><div class="file-preview" id="file-preview" aria-live="polite"><p>Select an input file to inspect.</p></div></div>
+      <div class="delivery"><div><p class="eyebrow">THE RESULT, DELIVERED</p><h3 id="delivery-title"></h3><p id="delivery-copy"></p></div><div class="delivery-links"><a id="download-artifacts" class="button primary" download>Download artifacts ↓</a><a id="download-data" class="button" download>Recorded data ↓</a></div></div>
+      <details class="source-details"><summary>Run details, scoring and source hashes</summary><p id="run-details" style="margin-top:16px"></p><div id="hashes" class="hash-list"></div><a href="assets/data/provenance.json" download>Download provenance &amp; artifact checksums ↓</a></details>
+    </section>
+  </div>
+  <div class="next-study"><p>Continue along the research workflow.</p><a class="button" href="../researchclawbench/index.html">Explore End-to-End Auto-Research ↗</a></div>
+</main>
+<script src="assets/data/aerodynamics/run-data.js"></script><script>window.COWORKING_DATA={aerodynamics:window.RUN_DATA};</script>
+<script src="assets/data/quantum-compilation/run-data.js"></script><script>window.COWORKING_DATA['quantum-compilation']=window.RUN_DATA;delete window.RUN_DATA;</script>
+<script src="assets/main.js" defer></script><script src="../../assets/showcase-navigation.js?v=integration-1" defer></script>
+<footer class="a15-footer">
+    <div class="a15-footer-inner">
+      <p>Agents-A1.5 is released by Alpha-Innovator. Star the repository, try the model, and report issues through GitHub.</p>
+      <section class="a15-visitor-panel" aria-label="Visitor information">
+        <div class="a15-visitor-copy">
+          <span class="a15-visitor-title">Visitor Map</span>
+          <span class="a15-visitor-note">Live country and city statistics powered by MapMyVisitors.</span>
+        </div>
+        <div class="a15-visitor-embed" aria-label="MapMyVisitors visitor map">
+          <a href="https://mapmyvisitors.com/web/1bwlf" title="Visit tracker" target="_blank" rel="noopener noreferrer">
+            <img loading="lazy" decoding="async" src="https://mapmyvisitors.com/map.png?d=placeholder&cl=ffffff" alt="Visit tracker" />
+          </a>
+        </div>
+      </section>
+    </div>
+  </footer></body></html>
