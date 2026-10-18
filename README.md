@@ -19,11 +19,11 @@
 
 ## Key Features
 
-### Swarm Mode
+### Agentic Orchestration
 
 Orchestrates parallel investigations across subagents with independent contexts, enabling them to challenge assumptions, refine conclusions through evidence, and synthesize their findings into comprehensive results.
 
-### Verification Mode
+### Agentic Verification
 
 An opt-in self-review capability that lives inside the model's own chain of thought — the model pauses mid-trajectory to review what it has established and what has failed, then acts on a revised direction in the same turn, with no external critic.
 
