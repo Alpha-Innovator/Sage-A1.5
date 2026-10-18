@@ -5,12 +5,12 @@
     {
       "id": "swarm",
       "href": "showcases/swarm/index.html",
-      "sha256": "769a9c0d32debfc41535614b4bf12969e12135393df0f9dc9c430f211eac5df2"
+      "sha256": "6ef89a59317f90d5858b635e32f59fe2c6116b2e3c508a065642289be296c5af"
     },
     {
       "id": "verification",
       "href": "showcases/verification/index.html",
-      "sha256": "5f0e6ed4c78d386e0b74d49c8e7d9f5fd7dc6b5000ed93db1c1523cd3af414e0"
+      "sha256": "4bf380ae5f0b32a5c0fde6056ff7630aea0c9051b55d1a3e58a3085357e4cd57"
     },
     {
       "id": "local-deployment",

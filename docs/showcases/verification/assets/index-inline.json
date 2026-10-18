@@ -10,10 +10,10 @@
     },
     {
       "kind": "js",
-      "path": "assets/js/index-1-af982b5a318d.js",
-      "sha256": "af982b5a318dac5b193f0d87dfd22f2b1d459714b175f7226f7eba9a6225333f",
+      "path": "assets/js/index-1-1238ec2bc059.js",
+      "sha256": "1238ec2bc059b7a8e291faf303f134071e0d4fc2ad8d761a5c2ff6cec367260d",
       "attrs": "",
-      "replacement": "<script src=\"assets/js/index-1-af982b5a318d.js\"></script>",
+      "replacement": "<script src=\"assets/js/index-1-1238ec2bc059.js\"></script>",
       "original_sha256": "46be7b9e6580224e842467274cc43fcb052b760f259e6be9963afadbf5e90f80"
     },
     {
@@ -27,10 +27,10 @@
     },
     {
       "kind": "js",
-      "path": "assets/js/index-3-b7fdc9fe13ec.js",
-      "sha256": "b7fdc9fe13ec6f3455ce295eefed000d3fd6cec8449da8ddec8d8f56c0e0659c",
+      "path": "assets/js/index-3-65b44d9aaefb.js",
+      "sha256": "65b44d9aaefb48d81339a02bff578edbbc9c29ff0e2bcad6a05bd8614132d79a",
       "attrs": "",
-      "replacement": "<script src=\"assets/js/index-3-b7fdc9fe13ec.js\"></script>",
+      "replacement": "<script src=\"assets/js/index-3-65b44d9aaefb.js\"></script>",
       "original_sha256": "963185a622ff9314d2566968b3cc22b45cecc72ff562fe3d376468e7b1c5e7b2"
     }
   ]
