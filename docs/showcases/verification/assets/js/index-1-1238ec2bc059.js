@@ -1,6 +1,6 @@
 /* light-visual-palette */
 
-/* Agents-A1.5 / Verification 能力演示。
+/* Agents-A1.5 / Agentic Verification 能力演示。
  * 确定性矢量帧: 给定时间 t 就得到一张 SVG, 不依赖随机数, 也没有网络请求。
  * 画面里的检索词、反思内容、最终答案均取自同一道题的真实作答记录。
  */
@@ -50,13 +50,13 @@ const L={
      "Q: What is his first wife's name?"],
   hop1:'Hop 1: played a police commissioner', hop2:"Hop 2: second wife's brother", hop3:"Target: the first wife's name",
   tTitle:'The same question, answered twice', tSub:'Each block is one interaction',
-  off:'Without Verification', on:'With Verification',
+  off:'Without Agentic Verification', on:'With Agentic Verification',
   stuckHint:'Several searches in a row, no progress',
   noProgress:'← no progress', noInfo:'← nothing usable',
   stuckFoot:'Both attempts reach the same dead end',
   bubble:['Hold on.','I keep circling the same vague leads without pinning down a single verified identity.','Let me pause before I waste more time on guesswork.'],
   sideA:'The model stops itself', sideB:'inside its own reasoning',
-  offFoot:'Without Verification: it keeps following the same line to the end',
+  offFoot:'Without Agentic Verification: it keeps following the same line to the end',
   cTitle:'After changing approach, it found the answer',
   cGrow:'Every search after the change moves toward the answer',
   chain:['Look up the police-commissioner role in an authoritative source','Found the actor: Anupam Kher','Found his wife: Kirron Kher','Found the first wife: Madhumati'],
@@ -194,8 +194,8 @@ class Film{
    const R1=318,R2=436;
    const n1=audit?Math.round(lerp(19,N_TRACK,ramp(u,.1,4.6))):Math.round(ramp(u,0,2.6)*19);
    const n2=audit?PAUSE+1:Math.round(ramp(u,0,2.6)*PAUSE);
-   s+=this.text(T('off'),280,R1+20,21,P.muted,450,'end');
-   s+=this.text(T('on'),280,R2+20,21,P.ink,550,'end');
+   s+=this.text(T('off'),280,R1+20,LANG==='en'?16:21,P.muted,450,'end');
+   s+=this.text(T('on'),280,R2+20,LANG==='en'?16:21,P.ink,550,'end');
    s+=this.track(R1,n1,colBase);
    s+=this.track(R2,n2,colVerify);
    if(!audit){
@@ -240,7 +240,7 @@ class Film{
    let s=this.title(T('cTitle'),'');
    const ty=268;
    const cells=Math.min(N_ANS,PAUSE+1+Math.floor(ramp(u,.2,4.4)*(N_ANS-PAUSE-1)+1e-6));
-   s+=this.text(T('on'),280,ty+20,21,P.ink,550,'end');
+   s+=this.text(T('on'),280,ty+20,LANG==='en'?16:21,P.ink,550,'end');
    s+=this.track(ty,cells,colVerify);
    s+=this.pauseMark(ty,T('reflect'));
    if(cells>PAUSE+1)

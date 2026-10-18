@@ -15,7 +15,7 @@ const COPY={
   navPlay:'观看演示',
   heroTitle:'AI 解决长程问题时，<br>能不能自我感知到解决陷入僵局，<br><em>并寻找新的解题方法。</em>',
   heroDesc:'搜索智能体最常见的失败，不是不会查，而是沿着一条走不通的路反复重试。',
-  heroWatch:'观看演示', heroRead:'查看具体 verification 内容',
+  heroWatch:'观看演示', heroRead:'查看 Agentic Verification 内容',
 
   eye1:'01 / 能力演示',
   h1t:'一道题，<br>从反复空转到找到答案。',
@@ -52,7 +52,7 @@ const COPY={
            ['03','沿着同一条思路继续检索',''],['04','在某些问题上始终走不出来','dead']],
   noteOn:'多出来的是第 03、04 两步。它们发生在模型的推理过程中，不额外消耗一次检索。',
   noteOff:'常规检索流程。缺少重新梳理这一步，走不通的方法会被反复重试。',
-  pillOn:'Verification protocol: enabled', pillOff:'Verification protocol: 未配置',
+  pillOn:'Agentic Verification: enabled', pillOff:'Agentic Verification: 未配置',
 
   eye5:'05 / 评测结果',
   h5t:'在 BrowseComp 上<br>的表现。',
@@ -90,7 +90,7 @@ const COPY={
   navPlay:'Watch the demo',
   heroTitle:'On long-horizon problems,<br>can a model notice it is stuck<br><em>and find another way through?</em>',
   heroDesc:'The most common failure of a search agent is not that it cannot search — it is that it keeps retrying a route that leads nowhere.',
-  heroWatch:'Watch the demo', heroRead:'See the actual verification',
+  heroWatch:'Watch the demo', heroRead:'See Agentic Verification in action',
 
   eye1:'01 / DEMO',
   h1t:'One question,<br>from spinning to solved.',
@@ -127,7 +127,7 @@ const COPY={
            ['03','Keep searching along the same line',''],['04','On some questions, never gets out','dead']],
   noteOn:'Steps 03 and 04 are what it adds. Both happen inside the model’s reasoning — they cost no extra search.',
   noteOff:'An ordinary search loop. Without the taking-stock step, routes that lead nowhere get retried.',
-  pillOn:'Verification protocol: enabled', pillOff:'Verification protocol: not set',
+  pillOn:'Agentic Verification: enabled', pillOff:'Agentic Verification: not set',
 
   eye5:'05 / RESULTS',
   h5t:'Performance on<br>BrowseComp.',
@@ -283,6 +283,7 @@ function renderTrace(){
 }
 
 /* ================= 开关 ================= */
+// Keep the activation instruction literal; the capability is named Agentic Verification.
 const PROMPT=['You are a deep research assistant. Your core function is',
               'to conduct thorough, multi-source investigations ...','',
               'Verification Protocol: enabled'];
