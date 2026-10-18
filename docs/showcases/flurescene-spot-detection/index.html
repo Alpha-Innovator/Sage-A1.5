@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Follow eight fluorescence spot detection submissions, explore original F1 scores across nine datasets, and inspect a retained DNA-FISH prediction against reference spots.">
+  <title>Fluorescence Spot Detection · Agents-A1.5</title>
+  <link rel="icon" href="../../assets/InternScience_logo.png">
+  <link rel="stylesheet" href="../../assets/website-shell.css?v=integration-2">
+  <link rel="stylesheet" href="../scientific-co-working/assets/workflows.css?v=coworking-light-2">
+  <link rel="stylesheet" href="assets/flurescene-spot-detection.css?v=1">
+  <script src="assets/flurescene-spot-detection-data.js?v=2" defer></script>
+  <script src="assets/flurescene-spot-detection.js?v=1" defer></script>
+  <script src="../../assets/showcase-navigation.js?v=integration-1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#record">Skip to the experiment record</a>
+  <header class="a15-site-header"><nav class="a15-nav" aria-label="Primary navigation"><div class="a15-nav-links">
+    <a class="a15-nav-cta" href="https://huggingface.co/collections/Alpha-Innovator/agents-a15" target="_blank" rel="noopener noreferrer">Model</a>
+    <a href="../../index.html#capabilities">Capabilities</a><a href="../../index.html#benchmarks">Benchmarks</a><a href="../../index.html#demos" aria-current="page" data-site-return>Demos</a><a href="../../index.html#training">Training</a><a href="../../index.html#usage">Usage</a><a href="../../index.html#related-projects">Related Projects</a>
+  </div></nav></header>
+  <main class="workflow-page flurescene-spot-detection-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html#demos" data-site-return>← All demos</a><span>/</span><span aria-current="page">Fluorescence Spot Detection</span><a class="collection-jump" href="#comparison">Prediction comparison ↓</a></nav>
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">AGENTS-A1.5 / SCIENTIFIC PROBLEM SOLVING</p>
+        <h1 id="hero-title">Fluorescence<br>Spot Detection</h1>
+        <p class="hero-lead">Find the signal.<br><span>Refine the detector.</span></p>
+        <p class="hero-description">Turn fluorescence images into spot coordinates. Follow a recorded optimization run as it combines U-Net detection, peak tuning and targeted retraining across nine datasets.</p>
+        <div class="hero-actions"><a class="primary-link" id="hero-play" href="#record">Watch the optimization <span aria-hidden="true">↗</span></a><a href="#comparison">Inspect the detections <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <figure class="hero-visual">
+        <img src="assets/field.svg" width="1306" height="930" alt="Original DNA-FISH field with rings around 96 matched predictions from the separate comparison run.">
+        <figcaption><span>DNA-FISH</span><i aria-hidden="true">→</i><span>DETECTED SPOTS</span><i aria-hidden="true">→</i><span>REFERENCE MATCHING</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="outcome aggregate-outcome" aria-labelledby="aggregate-title">
+      <div class="outcome-copy"><p class="eyebrow">THE RECORDED RESULT</p><h2 id="aggregate-title">Eight submissions.<br>A stronger spot detector.</h2><p>Aggregate improvement rises from <strong>-0.0469</strong> to <strong>0.1158</strong>. The submission-by-submission view below preserves the original F1 scores for every dataset.</p></div>
+      <div class="metrics"><div class="metric"><strong>-0.0469</strong><span>Initial aggregate improvement</span></div><div class="metric"><strong>0.1158</strong><span>Final aggregate improvement</span></div><div class="metric"><strong>+0.1627</strong><span>Absolute increase</span></div></div>
+    </section>
+
+    <section class="collection" id="record" aria-labelledby="record-title">
+      <div class="case-heading"><div><p class="eyebrow">01 / FROM DETECTION TO REFINEMENT</p><h2 id="record-title">Let each evaluation<br>guide the next change.</h2></div><p>Choose a dataset and step through all eight submissions. Each point is an original F1 score; the recorded changes explain what was tried between evaluations.</p></div>
+      <section class="theater" id="stage" aria-label="Recorded optimization walkthrough">
+        <div class="stage-top"><span><i class="status-dot" aria-hidden="true"></i><b>RECORDED OPTIMIZATION</b></span><span>8 submissions · 9 datasets</span><button id="fullscreen" class="icon-btn" aria-label="Enter full screen" title="Full screen" hidden>⤢</button></div>
+        <div class="stage-layout">
+          <div class="visual-column">
+            <div class="chart-heading"><div><span class="small-label">ORIGINAL EVALUATION SCORES</span><h3 id="chart-dataset">DNA-FISH</h3></div><span>F1 · higher is better</span></div>
+            <div class="score-chart" id="score-chart"><svg id="trajectory" role="group" aria-label="DNA-FISH F1 across eight submissions" aria-describedby="chart-note"></svg></div>
+            <div id="dataset-controls" class="scene-controls" role="group" aria-label="Select a dataset"></div>
+            <div class="scene-readout" aria-live="polite"><div><span>Selected submission</span><strong id="selected-submission">01 / 08</strong></div><div><span>Original F1</span><strong id="selected-f1">0.7654</strong></div><div><span>Change from first submission</span><strong id="selected-delta">+0.0000</strong></div></div>
+          </div>
+          <aside class="agent-panel" aria-label="Recorded changes">
+            <div class="agent-heading"><span class="agent-mark" aria-hidden="true">A</span><div><strong>Optimization agent</strong><span>Recorded execution</span></div><span class="agent-signal" aria-hidden="true">•••</span></div>
+            <div id="agent-steps" class="agent-steps"></div>
+          </aside>
+        </div>
+        <div class="caption"><span id="chapter-index">01 / 08</span><div><h3 id="chapter-title">Combine U-Net detection with tuned LoG fallback</h3><p id="chapter-text">Train a U-Net detector and retain a tuned Laplacian-of-Gaussian fallback for per-instance method selection.</p></div></div>
+        <div class="transport"><button id="play" aria-label="Play optimization">▶ <span>Play optimization</span></button><button id="restart" class="icon-btn" aria-label="Restart optimization">↺</button><input id="seek" type="range" min="0" max="7" step="1" value="0" aria-label="Evaluation submission"><output id="clock" for="seek">01 / 08</output><select id="playback-speed" aria-label="Playback speed"><option value="1">1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select><button id="next-submission" class="next-button">Next submission <span aria-hidden="true">→</span></button></div>
+      </section>
+      <div class="under-stage" id="chart-note"><span>Recorded optimization run · Edited walkthrough · Playback time is compressed.</span><span>Original F1 scores · No best-so-far smoothing.</span></div>
+      <p id="load-error" role="alert" hidden></p>
+      <details class="details" id="scores"><summary><span>Every dataset, every submission <small>Original F1 scores and downloadable records</small></span><span class="details-plus" aria-hidden="true">＋</span></summary>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="F1 scores by dataset and submission"><table id="score-table"><caption>Original per-instance F1 · all 8 evaluation submissions</caption><thead></thead><tbody></tbody></table></div>
+        <div class="source-links table-links"><a href="assets/submissions.csv" download>Download original F1 scores ↓</a><a href="assets/flurescene-spot-detection-data.json" download>Download display data ↓</a></div>
+      </details>
+    </section>
+
+    <section class="collection comparison-section" id="comparison" aria-labelledby="comparison-title">
+      <div class="case-heading"><div><p class="eyebrow">02 / LOOK AT THE DETECTIONS</p><h2 id="comparison-title">One field.<br>Every spot accounted for.</h2></div><p>A retained DNA-FISH prediction from a separate run, compared with reference annotations on the same full image. It is not an output from any of the eight submissions above.</p></div>
+      <section class="theater" aria-label="DNA-FISH prediction comparison">
+        <div class="stage-top"><span><i class="status-dot" aria-hidden="true"></i><b>REFERENCE / PREDICTION</b></span><span>img_000.tif · 1306 × 930 pixels</span><a class="figure-link" href="assets/flurescene-spot-detection-comparison.svg" target="_blank" rel="noopener">Original figure ↗</a></div>
+        <div class="comparison-grid">
+          <figure><figcaption><span>01 / REFERENCE</span><strong>99 annotated spots</strong></figcaption><svg id="reference-field" viewBox="0 0 1306 930" role="img" aria-label="Full DNA-FISH field with all 99 reference spots"><image href="assets/dna-fish.png" width="1306" height="930"/></svg></figure>
+          <figure><figcaption><span>02 / PREDICTION AGREEMENT</span><strong>109 predicted spots</strong></figcaption><svg id="prediction-field" viewBox="0 0 1306 930" role="img" aria-label="Full DNA-FISH field: 96 matched predictions, 13 unmatched predictions, 3 missed reference spots"><image href="assets/dna-fish.png" width="1306" height="930"/></svg></figure>
+        </div>
+        <div class="scene-controls detection-controls" role="group" aria-label="Toggle spot annotation layers"><button data-layer="reference" aria-pressed="true"><i class="legend-ring reference-key" aria-hidden="true"></i>Reference · 99</button><button data-layer="matched" aria-pressed="true"><i class="legend-ring match-key" aria-hidden="true"></i>Matched · 96</button><button data-layer="extra" aria-pressed="true"><i class="extra-key" aria-hidden="true">×</i>Unmatched · 13</button><button data-layer="missed" aria-pressed="true"><i class="missed-key" aria-hidden="true">+</i>Missed · 3</button></div>
+        <div class="scene-readout comparison-readout"><div><span>F1</span><strong>0.9231</strong></div><div><span>Precision</span><strong>0.8807</strong></div><div><span>Recall</span><strong>0.9697</strong></div></div>
+      </section>
+      <div class="under-stage"><span>Hungarian one-to-one spatial matching · 3 pixel cutoff.</span><span>Full image · Identical contrast · Coordinates in pixels.</span></div>
+      <details class="details" id="details"><summary><span>About this case <small>Background, approach and evidence</small></span><span class="details-plus" aria-hidden="true">＋</span></summary>
+        <div class="detail-grid"><div>
+          <h4>Task background</h4><p>Detect fluorescence spots in two- and three-dimensional microscopy data. The nine evaluated instances are synthetic simple, synthetic complex, DNA-FISH, HybISS, MERFISH, smFISH, telomeres, TERRA and synthetic 3D.</p>
+          <h4>Approach</h4><p>The recorded run combines U-Net inference with a LoG fallback, tunes peak thresholds and test-time augmentation, retrains weak instances, aligns preprocessing and introduces spot-weighted loss. The step labels summarize recorded operations; they do not establish the isolated causal effect of each change.</p>
+          <h4>Aggregate improvement</h4><p>The initial and final values are corrected to -0.0469 and 0.1158. Corrected intermediate aggregate values were not supplied, so the trajectory uses the original per-instance F1 scores. No intermediate aggregate scores are inferred.</p>
+        </div><div>
+          <h4>Optimization record</h4><p>Task s41592-025-02662-x. All eight submissions and their original F1 scores are retained. These are observations from one run, not independent replicates.</p>
+          <h4>Prediction comparison</h4><p>The retained prediction comes from 0915-qwen36-v6-old-nb-glm-qwen38-ep8-ckpt1172-newconfig, in the 20261015 showcase-compact-nb-lite-v2 seed-1 run. The sample is the fixed first DNA-FISH test image. Its F1 of 0.9231 describes this image only.</p>
+          <h4>Image and matching</h4><p>All reference and predicted coordinates are preserved. The display uses the supplied full-frame image, with the original linear contrast mapping from the minimum to the 99.8th percentile. No physical pixel calibration was verified.</p>
+          <div class="source-links"><a href="assets/flurescene-spot-detection-comparison.pdf" download>Original comparison PDF ↓</a><a href="assets/flurescene-spot-detection-comparison.caption.txt">Figure caption ↗</a><a href="assets/source-manifest.json">Source manifest ↗</a></div>
+        </div></div>
+      </details>
+    </section>
+    <section class="closing"><div><p class="eyebrow">CONTINUE EXPLORING</p><h2>From one detection task<br>to a scientific workflow.</h2></div><a href="../scientific-co-working/index.html">Explore Scientific Co-working <span aria-hidden="true">↗</span></a></section>
+    <noscript><p>Enable JavaScript to replay submissions and toggle spot annotations. <a href="assets/submissions.csv">Download all original F1 scores</a> or <a href="assets/flurescene-spot-detection-comparison.svg">open the original comparison figure</a>.</p></noscript>
+  </main>
+  <footer class="a15-footer"><div class="a15-footer-inner"><p>Agents-A1.5 · Alpha-Innovator</p><p>Recorded optimization · Original scientific data · Inspectable results</p></div></footer>
+</body>
+</html>

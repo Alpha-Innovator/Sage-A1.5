@@ -1,0 +1,38 @@
+{
+  "source_directory": "/mnt/shared-storage-gpfs2/ma4tool-shared-mle/wuyiming/NatureBench/showcase/visualizer/output/agents-a1.5/refined-showcase",
+  "sources": [
+    {
+      "path": "figure-data.json",
+      "sha256": "9929ac6497e655dfe8a9eabce9704c039e9ad3510a02e8528b0a98161f33df0c"
+    },
+    {
+      "path": "spots-comparison-metrics.json",
+      "sha256": "fea40653fad318e68cb0ce3fef9cdb539bce7d13a30d1013f07fe15baa7c3ae9"
+    },
+    {
+      "path": "spots-comparison.svg",
+      "sha256": "55021fc7999d95d42631ff5d5b2e8eae086110037069a5f70c31d76f2a609612"
+    },
+    {
+      "path": "spots-comparison.pdf",
+      "sha256": "4aad9174ecd02110aa0bb0c3868a90a2cdbac012a2086cb9322f782135d72ce4"
+    },
+    {
+      "path": "spots-comparison.caption.txt",
+      "sha256": "67d82080ebf7965f2579a69259ebee4616835643f658f34e087d632cff9e50c9"
+    },
+    {
+      "path": "evidence/spots-trace-index.json",
+      "sha256": "110709ce7be51f10286d006fc67e120824ab08f1e21ba527fe1326149e8f482e"
+    }
+  ],
+  "aggregate_correction": {
+    "initial": -0.0469,
+    "final": 0.1158,
+    "delta": 0.1627,
+    "source": "User-confirmed correction; intermediate values were not supplied."
+  },
+  "presentation": "Raw per-instance F1 is used for all eight submissions. Original aggregate plots are not republished because their values are superseded. The comparison belongs to a separate run.",
+  "attribution_adjustment": "The user corrected the optimization model attribution. Its model label is omitted from the page and display data; the comparison caption refers to optimization submissions without a model attribution.",
+  "display_image_sha256": "ac17692e501129ec6d35df8c88bb734701fcefa6dd945091dc9fc925eed75821"
+}

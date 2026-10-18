@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="488" viewBox="0 0 800 488" fill="none" role="img" aria-labelledby="flurescene-spot-detection-title flurescene-spot-detection-description">
+  <title id="flurescene-spot-detection-title">Fluorescence spot detection</title>
+  <desc id="flurescene-spot-detection-description">A stylized microscopy field with translucent cells, fluorescent puncta and detection rings. A magnified spot shows the localized center. Scientific cover illustration, not experimental image data.</desc>
+  <!-- Shared cover composition: transparent canvas, left title space, right scientific illustration. -->
+  <defs>
+    <radialGradient id="flurescene-spot-detection-atmosphere">
+      <stop stop-color="#7fa3e1" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#7fa3e1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="flurescene-spot-detection-field" cx="37%" cy="31%" r="78%">
+      <stop stop-color="#fbfdff"/>
+      <stop offset=".62" stop-color="#edf3fb"/>
+      <stop offset="1" stop-color="#dce7f6"/>
+    </radialGradient>
+    <linearGradient id="flurescene-spot-detection-cell" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#b9cde7" stop-opacity=".12"/>
+      <stop offset=".6" stop-color="#93b4de" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#7fa3d5" stop-opacity=".12"/>
+    </linearGradient>
+    <radialGradient id="flurescene-spot-detection-punctum">
+      <stop stop-color="#fff"/>
+      <stop offset=".16" stop-color="#e4f3ff"/>
+      <stop offset=".34" stop-color="#3971b7" stop-opacity=".95"/>
+      <stop offset=".6" stop-color="#3971b7" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#3971b7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="flurescene-spot-detection-localized">
+      <stop stop-color="#fff"/>
+      <stop offset=".15" stop-color="#e2fff4"/>
+      <stop offset=".34" stop-color="#27aa87" stop-opacity=".94"/>
+      <stop offset=".64" stop-color="#27aa87" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#27aa87" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="flurescene-spot-detection-field-clip"><circle cx="557" cy="230" r="128"/></clipPath>
+    <g id="flurescene-spot-detection-dot"><circle r="11" fill="url(#flurescene-spot-detection-punctum)"/><circle r="1.6" fill="#fff"/></g>
+    <g id="flurescene-spot-detection-detection"><circle r="10" stroke="#3971b7" stroke-width="1.3" stroke-opacity=".8"/></g>
+  </defs>
+
+  <ellipse cx="575" cy="242" rx="200" ry="196" fill="url(#flurescene-spot-detection-atmosphere)"/>
+  <circle cx="575" cy="242" r="184" stroke="#93b4de" stroke-opacity=".22"/>
+  <path d="M407 242a168 168 0 0 1 268-135M743 242a168 168 0 0 1-213 162" stroke="#93b4de" stroke-opacity=".32" stroke-dasharray="3 8"/>
+
+  <!-- Optical field and faint cell boundaries. -->
+  <circle cx="557" cy="230" r="137" fill="#f8fbff" stroke="#afc7e8" stroke-width="1.4"/>
+  <circle cx="557" cy="230" r="131" stroke="#d2dff0"/>
+  <circle cx="557" cy="230" r="128" fill="url(#flurescene-spot-detection-field)"/>
+  <g clip-path="url(#flurescene-spot-detection-field-clip)">
+    <g fill="url(#flurescene-spot-detection-cell)" stroke="#9bb7dc" stroke-width="1.1" stroke-opacity=".65">
+      <path d="M419 172C430 137 460 116 483 126C513 140 526 178 515 210C504 239 483 263 459 253C436 243 410 208 419 172Z"/>
+      <path d="M522 110C541 91 580 99 602 121C623 141 630 174 615 195C600 216 573 226 550 212C528 197 503 137 522 110Z"/>
+      <path d="M646 137C670 132 699 151 706 180C714 209 703 248 677 256C653 262 622 245 620 220C617 192 625 146 646 137Z"/>
+      <path d="M492 244C507 222 537 214 560 228C589 245 605 280 595 305C586 332 554 342 528 328C499 312 477 270 492 244Z"/>
+      <path d="M429 286C447 265 473 263 488 283C502 304 506 334 494 351C479 372 451 376 430 359C408 341 413 307 429 286Z"/>
+      <path d="M629 278C651 266 682 279 688 301C697 329 681 361 656 369C632 376 611 361 607 339C602 315 608 291 629 278Z"/>
+    </g>
+    <g fill="#b9cde7" fill-opacity=".2" stroke="#9bb7dc" stroke-opacity=".36">
+      <ellipse cx="468" cy="191" rx="21" ry="35" transform="rotate(-21 468 191)"/>
+      <ellipse cx="568" cy="157" rx="27" ry="33" transform="rotate(-31 568 157)"/>
+      <ellipse cx="661" cy="199" rx="23" ry="32" transform="rotate(17 661 199)"/>
+      <ellipse cx="545" cy="275" rx="24" ry="35" transform="rotate(-33 545 275)"/>
+      <ellipse cx="456" cy="325" rx="20" ry="29" transform="rotate(15 456 325)"/>
+      <ellipse cx="647" cy="324" rx="23" ry="29" transform="rotate(20 647 324)"/>
+    </g>
+    <g opacity=".3" fill="#7fa3d5">
+      <circle cx="444" cy="155" r="1.8"/><circle cx="477" cy="226" r="2"/><circle cx="507" cy="159" r="1.6"/>
+      <circle cx="583" cy="189" r="1.7"/><circle cx="590" cy="130" r="1.6"/><circle cx="642" cy="172" r="1.8"/>
+      <circle cx="522" cy="293" r="1.6"/><circle cx="571" cy="305" r="1.8"/><circle cx="474" cy="311" r="1.5"/>
+      <circle cx="621" cy="343" r="1.6"/><circle cx="670" cy="286" r="1.7"/>
+    </g>
+    <g>
+      <use href="#flurescene-spot-detection-dot" x="455" y="174"/><use href="#flurescene-spot-detection-dot" x="486" y="155"/>
+      <use href="#flurescene-spot-detection-dot" x="478" y="214"/><use href="#flurescene-spot-detection-dot" x="449" y="233"/>
+      <use href="#flurescene-spot-detection-dot" x="547" y="134"/><use href="#flurescene-spot-detection-dot" x="585" y="164"/>
+      <use href="#flurescene-spot-detection-dot" x="557" y="196"/><use href="#flurescene-spot-detection-dot" x="648" y="165"/>
+      <use href="#flurescene-spot-detection-dot" x="672" y="208"/><use href="#flurescene-spot-detection-dot" x="637" y="233"/>
+      <use href="#flurescene-spot-detection-dot" x="518" y="254"/><use href="#flurescene-spot-detection-dot" x="549" y="287"/>
+      <use href="#flurescene-spot-detection-dot" x="578" y="269"/><use href="#flurescene-spot-detection-dot" x="528" y="316"/>
+      <use href="#flurescene-spot-detection-dot" x="457" y="301"/><use href="#flurescene-spot-detection-dot" x="474" y="340"/>
+      <use href="#flurescene-spot-detection-dot" x="639" y="300"/><use href="#flurescene-spot-detection-dot" x="656" y="344"/>
+    </g>
+    <g>
+      <use href="#flurescene-spot-detection-detection" x="455" y="174"/><use href="#flurescene-spot-detection-detection" x="478" y="214"/>
+      <use href="#flurescene-spot-detection-detection" x="547" y="134"/><use href="#flurescene-spot-detection-detection" x="585" y="164"/>
+      <use href="#flurescene-spot-detection-detection" x="557" y="196"/><use href="#flurescene-spot-detection-detection" x="648" y="165"/>
+      <use href="#flurescene-spot-detection-detection" x="672" y="208"/><use href="#flurescene-spot-detection-detection" x="518" y="254"/>
+      <use href="#flurescene-spot-detection-detection" x="549" y="287"/><use href="#flurescene-spot-detection-detection" x="528" y="316"/>
+      <use href="#flurescene-spot-detection-detection" x="457" y="301"/><use href="#flurescene-spot-detection-detection" x="639" y="300"/>
+    </g>
+  </g>
+
+  <!-- A selected punctum, linked to its enlarged localization view. -->
+  <g stroke="#27aa87" stroke-width="1.6" stroke-linecap="round">
+    <path d="M562 261v-8h8m16 0h8v8m0 16v8h-8m-16 0h-8v-8"/>
+    <circle cx="578" cy="269" r="10"/>
+  </g>
+  <path d="M593 279 638 305" stroke="#3971b7" stroke-width="1.3" stroke-dasharray="3 5"/>
+  <path d="M593 285 631 327" stroke="#93b4de" stroke-width="1" stroke-opacity=".7"/>
+  <circle cx="684" cy="336" r="64" fill="#f8fbff" stroke="#afc7e8" stroke-width="1.5"/>
+  <circle cx="684" cy="336" r="58" fill="#edf4fe" stroke="#d2dff0"/>
+  <g stroke="#b9cde7" stroke-width=".8" stroke-opacity=".55">
+    <path d="M644 316h80m-88 20h96m-88 20h80M664 296v80m20-88v96m20-88v80"/>
+  </g>
+  <circle cx="684" cy="336" r="34" fill="url(#flurescene-spot-detection-localized)"/>
+  <circle cx="684" cy="336" r="23" stroke="#27aa87" stroke-width="1.6"/>
+  <g stroke="#3971b7" stroke-width="1.3" stroke-linecap="round">
+    <path d="M646 336h13m50 0h13M684 298v13m0 50v13"/>
+  </g>
+  <circle cx="684" cy="336" r="3" fill="#fff" stroke="#27aa87" stroke-width="1.2"/>
+
+  <!-- Restrained optical alignment marks, following the neighboring covers. -->
+  <g stroke="#7086ac" stroke-width="1.2" stroke-linecap="round" stroke-opacity=".65">
+    <path d="M557 83v-9m-146 156h-9m155 146v9"/>
+    <path d="M716 112h18m-9-9v18"/>
+  </g>
+  <g fill="#3971b7">
+    <circle cx="486" cy="388" r="2.5"/><circle cx="501" cy="388" r="2.5" fill-opacity=".55"/><circle cx="516" cy="388" r="2.5" fill-opacity=".25"/>
+  </g>
+  <path d="M532 388h66" stroke="#93b4de" stroke-width="1.3" stroke-linecap="round"/>
+</svg>

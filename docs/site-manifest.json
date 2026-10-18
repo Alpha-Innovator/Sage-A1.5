@@ -1,5 +1,5 @@
 {
-  "version": "0.16.1-report-aligned",
+  "version": "0.16.2-flurescene-spot-detection",
   "theme": "light",
   "cases": [
     {
@@ -56,6 +56,11 @@
       "id": "electrochemistry",
       "href": "showcases/electrochemistry/index.html",
       "sha256": "d9a68ad743494ff7dfa07288d1c8639a39874a50405c246b1f5c93b46b7d870a"
+    },
+    {
+      "id": "flurescene-spot-detection",
+      "href": "showcases/flurescene-spot-detection/index.html",
+      "sha256": "69f7faeac52256534d2f978443492927fd27b59b2f9f14e96b32b55499c03316"
     }
   ],
   "collections": [
@@ -91,7 +96,8 @@
         "neuroscience",
         "computational-chemistry",
         "condensed-matter",
-        "electrochemistry"
+        "electrochemistry",
+        "flurescene-spot-detection"
       ]
     }
   ]
