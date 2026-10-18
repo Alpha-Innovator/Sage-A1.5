@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 488" fill="none">
+<title>Ten professional workflows: tools, evidence and results</title>
+<defs><radialGradient id="glow"><stop stop-color="#2563eb" stop-opacity=".14"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient></defs>
+<circle cx="575" cy="244" r="205" fill="url(#glow)"/><circle cx="575" cy="244" r="166" stroke="#93b4de" stroke-opacity=".4" stroke-dasharray="3 8"/>
+<path d="M422 221v46h286v-46M565 267v50" stroke="#9bb7dc" stroke-width="1.5"/>
+<g fill="#f8fbff" stroke="#b9cde7">
+<rect x="392" y="130" width="60" height="76" rx="10"/><rect x="464" y="130" width="60" height="76" rx="10"/><rect x="536" y="130" width="60" height="76" rx="10"/><rect x="608" y="130" width="60" height="76" rx="10"/><rect x="680" y="130" width="60" height="76" rx="10"/>
+<rect x="392" y="218" width="60" height="76" rx="10"/><rect x="464" y="218" width="60" height="76" rx="10"/><rect x="536" y="218" width="60" height="76" rx="10"/><rect x="608" y="218" width="60" height="76" rx="10"/><rect x="680" y="218" width="60" height="76" rx="10"/>
+</g>
+<g stroke="#3971b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<rect x="409" y="151" width="26" height="27" rx="3" fill="#e3edfc"/><path d="M415 145v6m8-6v6m8-6v6m-16 27v6m8-6v6m8-6v6m-28-26h6m-6 10h6m26-10h6m-6 10h6"/>
+<path d="M480 148h28v11h-28zM494 159v9m-13 0h26m-26 0v12m13-12v12m13-12v12M478 184h6m7 0h6m7 0h6"/>
+<path d="M548 166c10-17 22-11 35 4-18 4-29 4-35-4Z" fill="#dce8fa"/><path d="M546 150c12-6 25-3 38 6m-38 27c12 4 26 3 38-2"/>
+<path d="M632 150a6 6 0 0 1 12 0v23a10 10 0 1 1-12 0Zm6 8v21m12-20h6m-6 9h6"/>
+<path d="m692 151 12 6 13-6 12 6v27l-12-6-13 6-12-6Zm12 6v27m13-33v27"/><circle cx="711" cy="166" r="3" fill="#86a9db"/>
+<path d="M405 239h34m-34 14h34m-34 14h34"/><rect x="413" y="234" width="10" height="10" rx="2" fill="#dce8fa"/><rect x="425" y="248" width="10" height="10" rx="2" fill="#e4ddfa"/><circle cx="417" cy="267" r="4" fill="#dce8fa"/>
+<path d="m494 234 16 10v20l-16 10-16-10v-20Zm-16 10 16 10 16-10m-16 10v20m0-40v20"/>
+<ellipse cx="566" cy="239" rx="16" ry="6" fill="#e1f1eb"/><path d="M550 239v28c0 8 32 8 32 0v-28m-32 13c0 8 32 8 32 0"/>
+<path d="M623 240h12m-12 13h12m-12 13h12m6-26h12m-12 13h12m-12 13h12m-20-20 8 7-8 7"/>
+<path d="M698 235h20l7 7v34h-27Zm20 0v8h7m-21 8h14m-14 8h14m-14 8h9"/><path d="M704 251h14m-14 8h14" stroke="#56789c" stroke-width="4"/>
+</g>
+<rect x="470" y="322" width="192" height="46" rx="9" fill="#edf4fe" stroke="#afc7e8"/>
+<circle cx="492" cy="345" r="9" fill="#d9e9fc"/><path d="m488 345 3 3 5-6" stroke="#3971b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M513 339h125m-125 12h92" stroke="#88a7d1" stroke-width="2" stroke-linecap="round"/>
+</svg>

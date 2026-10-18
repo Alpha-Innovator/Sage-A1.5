@@ -1,3 +1,6 @@
+// Technical report §4.3 / Figure 9: energy, gravitational waves, materials.
+const REPORT_CASE_ORDER = ['energy', 'astronomy', 'material'];
+CASES.sort((a, b) => REPORT_CASE_ORDER.indexOf(a.id) - REPORT_CASE_ORDER.indexOf(b.id));
 /* light-visual-palette */
 /* Authored interface translations. Original research artifacts are never translated. */
 const COPY_EN = Object.fromEntries(`
@@ -319,7 +322,7 @@ Object.assign(COPY_EN,{
   "查看数值来源": "View source values"
 });
 let language='en';
-Object.assign(COPY_EN,{"研究流程": "Research workflow", "研究总览": "Research overview", "研究案例": "Research cases", "探索三个研究案例": "Explore three research cases", "观看自主发现短片": "Watch autonomous discovery", "从科学问题出发，走向自主发现。": "From scientific questions to autonomous discovery.", "42 秒 · 从问题到成果": "42 seconds · From questions to results", "播放总览视频": "Play the overview film", "播放端到端自主发现短片": "Play the autonomous discovery film", "端到端自主发现总览，基于三个研究任务与保存数据。": "An autonomous discovery overview based on three research tasks and their saved data.", "下载总览视频 ↓": "Download overview video ↓", "观看完整视频 ↗": "Watch full video ↗", "端到端自主发现 · 研究总览": "End-to-End Autonomous Discovery · Research Overview", "短片串联三个研究任务中的问题理解、分析执行、线索提炼与成果交付。动画为流程示意，图表读取保存数据，非执行录屏；42 秒为展示时长。": "The film connects question understanding, analysis, insights and delivery across three research tasks. Animation illustrates the workflow; charts use saved data. It is not an execution recording, and 42 seconds is the presentation length.", "引力波误差分析": "Gravitational-wave error analysis", "石墨烯超流响应": "Graphene superfluid response", "材料吸附建模探索": "Materials adsorption exploration", "结果探索": "Explore the results", "研究发现与线索": "Findings and insights", "研究过程": "Research process", "阅读研究报告 ↗": "Read the research report ↗", "下载研究资料 ↓": "Download research materials ↓", "运行耗时": "Execution time", "数据与验证范围": "Data and validation scope", "端到端自主发现": "End-to-end autonomous discovery", "从科学问题，到研究成果。": "From scientific questions to research results.", "一个智能体，跨越三个研究领域。": "One agent, across three research disciplines.", "理解问题，自主组织分析。": "Understand the question. Organize the analysis.", "不同的研究问题，进入同一条自主研究流程。": "Different scientific questions enter one autonomous research workflow.", "执行分析，让数据显露规律。": "Analyze the data. Reveal the patterns.", "统计误差、拟合响应、比较吸附关系。": "Measure uncertainty, fit responses and compare adsorption relationships.", "从分析中，提炼研究线索。": "Turn analysis into research insights.", "每条线索，都连接到具体数据。": "Connect every insight to the data behind it.", "核对证据，明确验证范围。": "Check the evidence. Define what is supported.", "区分模拟、估计与实际验证，让后续研究有据可循。": "Distinguish simulations and estimates from validation, guiding the next research steps.", "让研究成果，支持下一步探索。": "Deliver research that others can build on.", "数据、代码、图表与报告，一并交付。": "Deliver the data, code, figures and reports together.", "理解问题": "Understand", "组织分析": "Plan", "执行分析": "Analyze", "提炼发现": "Find insights", "核对证据": "Check evidence", "交付成果": "Deliver", "波形误差有多大？": "How large are waveform errors?", "超流刚度如何变化？": "How does superfluid stiffness change?", "金属吸附有何关联？": "How are adsorption energies related?", "1,500 条合成样本": "1,500 synthetic samples", "密度、温度与电流模拟数据": "Simulated density, temperature and current data", "六种金属的参考值与估计值": "Reference values and estimates for six metals", "比较分布与高阶模式": "Compare distributions and harmonic modes", "拟合温度与电流响应": "Fit temperature and current responses", "组织参数与解析估计": "Organize parameters and analytic estimates", "差异低于 10⁻³ 的样本": "Samples with mismatch below 10⁻³", "拟合得到的临界电流": "Fitted critical current", "吸附关系中的金属种类": "Metals in the adsorption comparison", "误差存在长尾，高阶模式的中位误差更大。": "Errors have a long tail; higher modes show larger median errors.", "模拟数据中的刚度随电流增大而降低。": "In the simulated data, stiffness decreases as current increases.", "比较 O 与 OH 的吸附能估计，形成待验证的关系。": "Compare estimated O and OH adsorption energies, identifying relationships for validation.", "合成数据": "Synthetic data", "模拟观测": "Simulated observations", "解析估计": "Analytic estimates", "统计比较适用于本数据集。": "Statistical comparisons apply to this dataset.", "拟合结果不等于实验验证。": "A fitted result is not experimental validation.", "实际 MACE / MD 计算仍待完成。": "MACE / MD calculations remain to be performed.", "研究输入": "Research inputs", "分析脚本": "Analysis scripts", "结果图表": "Results and figures", "研究报告": "Research reports", "自主推进研究，交付可复用的成果。": "Advance research autonomously. Deliver reusable results.", "三次研究任务的流程概览 · 非执行录屏": "Overview of three research tasks · Not an execution recording", "切换研究领域": "Switch research discipline", "切换研究领域，探索从问题、分析到发现与交付的完整过程。": "Switch disciplines to explore the full journey from question and analysis to discovery and delivery.", "天文": "Astronomy", "凝聚态物理": "Condensed matter", "材料科学": "Materials science", "绿氢成本情景分析": "Green Hydrogen Cost Scenarios", "改变融资条件，<br>追踪绿氢成本变化。": "Change financing assumptions,<br>trace hydrogen delivery costs.", "能源系统情景分析": "Energy system scenario analysis", "从 30 个非洲南部模拟站点出发，分析制氢、氨转化、海运与再转化成本，比较融资条件和技术假设下的交付成本。": "Starting with 30 simulated sites in southern Africa, analyze hydrogen production, ammonia conversion, shipping and reconversion costs under different financing and technology assumptions.", "把资源条件、生产与运输连接到成本模型，探索融资条件如何改变绿氢交付成本。": "Connect resource conditions, production and transport in a cost model to explore how financing affects delivered hydrogen costs.", "非洲南部模拟站点": "Simulated sites in southern Africa", "资本成本从 8% 降到 5% 时的平均降幅": "Mean reduction when WACC falls from 8% to 5%", "9 分 02 秒": "9 min 02 sec", "数据性质：30 个非洲南部模拟站点。成本来自保存的模型输出，采用资源映射、设备成本与运输假设，不是全非洲实测数据或现实市场报价。": "Data scope: 30 simulated sites in southern Africa. Costs are saved model outputs based on resource mappings, equipment costs and transport assumptions, not continent-wide measurements or market quotations.", "从融资条件，<br>追踪交付成本。": "Trace delivery costs<br>back to financing assumptions.", "2025 年假设下，资本成本从 8% 降至 5%，平均交付成本从 5.64 降至 5.09 欧元/kg，减少约 0.56 欧元/kg（9.9%）。拖动曲线可查看已保存的融资情景。": "Under the 2025 assumptions, reducing WACC from 8% to 5% lowers mean delivery cost from €5.64 to €5.09/kg, a reduction of about €0.56/kg (9.9%). Explore the saved financing scenarios along the curve.", "原评测为 28.9 / 100，未完成目标论文的全非洲空间复现。原运行的碳价仅调整灰氨对照基准，未改变绿氢交付成本；欧洲成本为外部设定基准。此处展示成本情景分析，不据此宣称现实竞争力或碳价效果已获验证。": "Original evaluation: 28.9/100. The run did not reproduce the target paper’s continent-wide spatial analysis. Carbon pricing adjusts only the grey-ammonia benchmark, not delivered green-hydrogen costs; European costs are assumed benchmarks. These scenarios do not establish real-world competitiveness or validate carbon-pricing effects.", "核对站点与资源": "Inspect sites and resources", "读取 30 个站点的资源、位置与运输输入，区分模拟输入和模型假设。": "Read resource, location and transport inputs for 30 sites, distinguishing simulated inputs from model assumptions.", "连接生产与运输成本": "Connect production and transport costs", "组织制氢、氨转化、海运与再转化计算，保留模型脚本供检查。": "Assemble hydrogen production, ammonia conversion, shipping and reconversion calculations, with model code available for inspection.", "比较融资情景": "Compare financing scenarios", "读取 36 个资本成本情景点，检查平均与最低站点交付成本的变化。": "Read 36 saved WACC scenarios and inspect changes in mean and minimum site delivery costs.", "交付结果与验证范围": "Deliver findings and their scope", "整理输入数据、2 个脚本、9 张图与报告；保留原始评分和模型未覆盖的部分。": "Deliver input data, 2 scripts, 9 figures and a report, retaining the original evaluation and model limitations.", "30 个站点的模拟资源与运输数据": "Simulated resource and transport data for 30 sites", "连接生产运输成本，比较融资情景": "Model production and transport costs; compare financing scenarios", "量化资本成本对交付成本的影响": "Quantify how WACC affects modeled delivery costs", "输入数据 · 2 个脚本 · 9 张图 · 研究报告": "Input data · 2 scripts · 9 figures · report", "能源科学": "Energy Science", "融资成本如何影响绿氢交付成本？": "How Does Financing Affect Hydrogen Delivery Costs?", "加权平均资本成本 WACC（%）": "Weighted average cost of capital, WACC (%)", "交付成本（欧元/kg H₂）": "Delivery cost (€/kg H₂)", "站点平均成本": "Mean site cost", "最低站点成本": "Minimum site cost", "读取 outputs/interest_rate_sensitivity.csv 的 36 个已保存情景点。2025 年假设，30 个非洲南部模拟站点；曲线为模型结果，不是实时价格或重新执行计算。": "Reads 36 saved scenarios from outputs/interest_rate_sensitivity.csv. Uses 2025 assumptions for 30 simulated sites in southern Africa; these are model outputs, not live prices or new calculations.", "融资情景与技术假设": "Financing Scenarios and Technology Assumptions", "平均交付成本（欧元/kg H₂）": "Mean delivery cost (€/kg H₂)", "2025 年假设": "2025 assumptions", "2030 年技术假设": "2030 technology assumptions", "读取 outputs/scenario_comparison.csv 的融资情景。2030 年曲线包含技术成本假设；原运行的碳价仅调整灰氨基准，未改变绿氢交付成本，不能据此验证现实碳价效果。": "Reads financing scenarios from outputs/scenario_comparison.csv. The 2030 curve includes technology cost assumptions. Carbon pricing changes only the grey-ammonia benchmark, not delivered green-hydrogen costs; this does not validate real-world carbon-pricing effects.", "融资如何影响绿氢成本？": "How does financing affect hydrogen cost?", "30 个模拟站点的资源与运输数据": "Resource and transport data for 30 simulated sites", "比较融资与交付成本": "Compare financing and delivery costs", "统计误差、比较成本、探索吸附关系。": "Analyze errors, compare costs and explore adsorption relationships.", "成本模型": "Cost model", "融资降本情景中的平均降幅": "Mean reduction in the lower-WACC scenario", "资本成本从 8% 降到 5%，模型平均交付成本降低约 9.9%。": "Lowering WACC from 8% to 5% reduces modeled mean delivery cost by about 9.9%.", "模拟成本不等于实际市场价格。": "Modeled costs are not market prices.", "保存的站点平均交付成本": "Saved mean site delivery cost", "2025 年融资情景中的平均降幅": "Mean reduction, 2025 financing scenario", "让每一次自主发现，": "Every autonomous discovery,", "都有据可循。": "grounded in evidence.", "输入、代码、结果与报告一并交付，支持检查、复用与进一步探索。": "Inputs, code, results and reports, delivered together for review, reuse and further exploration.", "探索研究资料": "Explore the research materials", "研究交付内容": "Research deliverables", "原始输入": "Source inputs", "分析代码": "Analysis code", "输出数值": "Result values", "研究图表": "Research figures", "完整报告": "Full reports", "评分与边界": "Evaluation & scope", "追溯问题与数据来源": "Trace the questions and source data", "查看方法、脚本与参数": "Inspect methods, scripts and parameters", "核对分析结果与读数": "Check the results and measurements", "理解趋势、比较与发现": "Explore patterns and comparisons", "串联研究过程与结论": "Follow the process and conclusions", "明确评价依据与验证范围": "Review criteria and validation scope", "端到端自主发现，": "End-to-end autonomous discovery,", "从科学问题到研究成果。": "from scientific questions to research results.", "从理解问题、执行分析到检验结果、提炼发现，Agents-A1.5 自主推进研究流程，交付数据、代码、图表与报告。": "From understanding questions and conducting analyses to checking results and drawing insights, Agents-A1.5 autonomously advances the research workflow, delivering data, code, figures and reports.", "一个智能体，": "One agent,", "三个领域的自主探索。": "autonomous exploration across three disciplines."});
+Object.assign(COPY_EN,{"研究流程": "Research workflow", "研究总览": "Research overview", "研究案例": "Research cases", "探索三个研究案例": "Explore three research cases", "观看自主发现短片": "Watch the research workflow", "从科学问题出发，走向自主发现。": "From scientific questions to research results.", "42 秒 · 从问题到成果": "42 seconds · From questions to results", "播放总览视频": "Play the overview film", "播放端到端自主科研短片": "Play the autonomous discovery film", "端到端自主科研总览，基于三个研究任务与保存数据。": "An autonomous discovery overview based on three research tasks and their saved data.", "下载总览视频 ↓": "Download overview video ↓", "观看完整视频 ↗": "Watch full video ↗", "端到端自主科研 · 研究总览": "End-to-End Auto-Research · Research Overview", "短片串联三个研究任务中的问题理解、分析执行、线索提炼与成果交付。动画为流程示意，图表读取保存数据，非执行录屏；42 秒为展示时长。": "The film connects question understanding, analysis, insights and delivery across three research tasks. Animation illustrates the workflow; charts use saved data. It is not an execution recording, and 42 seconds is the presentation length.", "引力波误差分析": "Gravitational-wave error analysis", "石墨烯超流响应": "Graphene superfluid response", "材料吸附建模探索": "Materials adsorption exploration", "结果探索": "Explore the results", "研究发现与线索": "Findings and insights", "研究过程": "Research process", "阅读研究报告 ↗": "Read the research report ↗", "下载研究资料 ↓": "Download research materials ↓", "运行耗时": "Execution time", "数据与验证范围": "Data and validation scope", "端到端自主科研": "End-to-End Auto-Research", "从科学问题，到研究成果。": "From scientific questions to research results.", "一个智能体，跨越三个研究领域。": "One agent, across three research disciplines.", "理解问题，自主组织分析。": "Understand the question. Organize the analysis.", "不同的研究问题，进入同一条自主研究流程。": "Different scientific questions enter one autonomous research workflow.", "执行分析，让数据显露规律。": "Analyze the data. Reveal the patterns.", "统计误差、拟合响应、比较吸附关系。": "Measure uncertainty, fit responses and compare adsorption relationships.", "从分析中，提炼研究线索。": "Turn analysis into research insights.", "每条线索，都连接到具体数据。": "Connect every insight to the data behind it.", "核对证据，明确验证范围。": "Check the evidence. Define what is supported.", "区分模拟、估计与实际验证，让后续研究有据可循。": "Distinguish simulations and estimates from validation, guiding the next research steps.", "让研究成果，支持下一步探索。": "Deliver research that others can build on.", "数据、代码、图表与报告，一并交付。": "Deliver the data, code, figures and reports together.", "理解问题": "Understand", "组织分析": "Plan", "执行分析": "Analyze", "提炼发现": "Find insights", "核对证据": "Check evidence", "交付成果": "Deliver", "波形误差有多大？": "How large are waveform errors?", "超流刚度如何变化？": "How does superfluid stiffness change?", "金属吸附有何关联？": "How are adsorption energies related?", "1,500 条合成样本": "1,500 synthetic samples", "密度、温度与电流模拟数据": "Simulated density, temperature and current data", "六种金属的参考值与估计值": "Reference values and estimates for six metals", "比较分布与高阶模式": "Compare distributions and harmonic modes", "拟合温度与电流响应": "Fit temperature and current responses", "组织参数与解析估计": "Organize parameters and analytic estimates", "差异低于 10⁻³ 的样本": "Samples with mismatch below 10⁻³", "拟合得到的临界电流": "Fitted critical current", "吸附关系中的金属种类": "Metals in the adsorption comparison", "误差存在长尾，高阶模式的中位误差更大。": "Errors have a long tail; higher modes show larger median errors.", "模拟数据中的刚度随电流增大而降低。": "In the simulated data, stiffness decreases as current increases.", "比较 O 与 OH 的吸附能估计，形成待验证的关系。": "Compare estimated O and OH adsorption energies, identifying relationships for validation.", "合成数据": "Synthetic data", "模拟观测": "Simulated observations", "解析估计": "Analytic estimates", "统计比较适用于本数据集。": "Statistical comparisons apply to this dataset.", "拟合结果不等于实验验证。": "A fitted result is not experimental validation.", "实际 MACE / MD 计算仍待完成。": "MACE / MD calculations remain to be performed.", "研究输入": "Research inputs", "分析脚本": "Analysis scripts", "结果图表": "Results and figures", "研究报告": "Research reports", "自主推进研究，交付可复用的成果。": "Advance research autonomously. Deliver reusable results.", "三次研究任务的流程概览 · 非执行录屏": "Overview of three research tasks · Not an execution recording", "切换研究领域": "Switch research discipline", "切换研究领域，探索从问题、分析到发现与交付的完整过程。": "Switch disciplines to explore the full journey from question and analysis to discovery and delivery.", "天文": "Astronomy", "凝聚态物理": "Condensed matter", "材料科学": "Materials science", "绿氢成本情景分析": "Green Hydrogen Cost Scenarios", "改变融资条件，<br>追踪绿氢成本变化。": "Change financing assumptions,<br>trace hydrogen delivery costs.", "能源系统情景分析": "Energy system scenario analysis", "从 30 个非洲南部模拟站点出发，分析制氢、氨转化、海运与再转化成本，比较融资条件和技术假设下的交付成本。": "Starting with 30 simulated sites in southern Africa, analyze hydrogen production, ammonia conversion, shipping and reconversion costs under different financing and technology assumptions.", "把资源条件、生产与运输连接到成本模型，探索融资条件如何改变绿氢交付成本。": "Connect resource conditions, production and transport in a cost model to explore how financing affects delivered hydrogen costs.", "非洲南部模拟站点": "Simulated sites in southern Africa", "资本成本从 8% 降到 5% 时的平均降幅": "Mean reduction when WACC falls from 8% to 5%", "9 分 02 秒": "9 min 02 sec", "数据性质：30 个非洲南部模拟站点。成本来自保存的模型输出，采用资源映射、设备成本与运输假设，不是全非洲实测数据或现实市场报价。": "Data scope: 30 simulated sites in southern Africa. Costs are saved model outputs based on resource mappings, equipment costs and transport assumptions, not continent-wide measurements or market quotations.", "从融资条件，<br>追踪交付成本。": "Trace delivery costs<br>back to financing assumptions.", "2025 年假设下，资本成本从 8% 降至 5%，平均交付成本从 5.64 降至 5.09 欧元/kg，减少约 0.56 欧元/kg（9.9%）。拖动曲线可查看已保存的融资情景。": "Under the 2025 assumptions, reducing WACC from 8% to 5% lowers mean delivery cost from €5.64 to €5.09/kg, a reduction of about €0.56/kg (9.9%). Explore the saved financing scenarios along the curve.", "原评测为 28.9 / 100，未完成目标论文的全非洲空间复现。原运行的碳价仅调整灰氨对照基准，未改变绿氢交付成本；欧洲成本为外部设定基准。此处展示成本情景分析，不据此宣称现实竞争力或碳价效果已获验证。": "Original evaluation: 28.9/100. The run did not reproduce the target paper’s continent-wide spatial analysis. Carbon pricing adjusts only the grey-ammonia benchmark, not delivered green-hydrogen costs; European costs are assumed benchmarks. These scenarios do not establish real-world competitiveness or validate carbon-pricing effects.", "核对站点与资源": "Inspect sites and resources", "读取 30 个站点的资源、位置与运输输入，区分模拟输入和模型假设。": "Read resource, location and transport inputs for 30 sites, distinguishing simulated inputs from model assumptions.", "连接生产与运输成本": "Connect production and transport costs", "组织制氢、氨转化、海运与再转化计算，保留模型脚本供检查。": "Assemble hydrogen production, ammonia conversion, shipping and reconversion calculations, with model code available for inspection.", "比较融资情景": "Compare financing scenarios", "读取 36 个资本成本情景点，检查平均与最低站点交付成本的变化。": "Read 36 saved WACC scenarios and inspect changes in mean and minimum site delivery costs.", "交付结果与验证范围": "Deliver findings and their scope", "整理输入数据、2 个脚本、9 张图与报告；保留原始评分和模型未覆盖的部分。": "Deliver input data, 2 scripts, 9 figures and a report, retaining the original evaluation and model limitations.", "30 个站点的模拟资源与运输数据": "Simulated resource and transport data for 30 sites", "连接生产运输成本，比较融资情景": "Model production and transport costs; compare financing scenarios", "量化资本成本对交付成本的影响": "Quantify how WACC affects modeled delivery costs", "输入数据 · 2 个脚本 · 9 张图 · 研究报告": "Input data · 2 scripts · 9 figures · report", "能源科学": "Energy Science", "融资成本如何影响绿氢交付成本？": "How Does Financing Affect Hydrogen Delivery Costs?", "加权平均资本成本 WACC（%）": "Weighted average cost of capital, WACC (%)", "交付成本（欧元/kg H₂）": "Delivery cost (€/kg H₂)", "站点平均成本": "Mean site cost", "最低站点成本": "Minimum site cost", "读取 outputs/interest_rate_sensitivity.csv 的 36 个已保存情景点。2025 年假设，30 个非洲南部模拟站点；曲线为模型结果，不是实时价格或重新执行计算。": "Reads 36 saved scenarios from outputs/interest_rate_sensitivity.csv. Uses 2025 assumptions for 30 simulated sites in southern Africa; these are model outputs, not live prices or new calculations.", "融资情景与技术假设": "Financing Scenarios and Technology Assumptions", "平均交付成本（欧元/kg H₂）": "Mean delivery cost (€/kg H₂)", "2025 年假设": "2025 assumptions", "2030 年技术假设": "2030 technology assumptions", "读取 outputs/scenario_comparison.csv 的融资情景。2030 年曲线包含技术成本假设；原运行的碳价仅调整灰氨基准，未改变绿氢交付成本，不能据此验证现实碳价效果。": "Reads financing scenarios from outputs/scenario_comparison.csv. The 2030 curve includes technology cost assumptions. Carbon pricing changes only the grey-ammonia benchmark, not delivered green-hydrogen costs; this does not validate real-world carbon-pricing effects.", "融资如何影响绿氢成本？": "How does financing affect hydrogen cost?", "30 个模拟站点的资源与运输数据": "Resource and transport data for 30 simulated sites", "比较融资与交付成本": "Compare financing and delivery costs", "统计误差、比较成本、探索吸附关系。": "Analyze errors, compare costs and explore adsorption relationships.", "成本模型": "Cost model", "融资降本情景中的平均降幅": "Mean reduction in the lower-WACC scenario", "资本成本从 8% 降到 5%，模型平均交付成本降低约 9.9%。": "Lowering WACC from 8% to 5% reduces modeled mean delivery cost by about 9.9%.", "模拟成本不等于实际市场价格。": "Modeled costs are not market prices.", "保存的站点平均交付成本": "Saved mean site delivery cost", "2025 年融资情景中的平均降幅": "Mean reduction, 2025 financing scenario", "让每一次自主发现，": "Every autonomous discovery,", "都有据可循。": "grounded in evidence.", "输入、代码、结果与报告一并交付，支持检查、复用与进一步探索。": "Inputs, code, results and reports, delivered together for review, reuse and further exploration.", "探索研究资料": "Explore the research materials", "研究交付内容": "Research deliverables", "原始输入": "Source inputs", "分析代码": "Analysis code", "输出数值": "Result values", "研究图表": "Research figures", "完整报告": "Full reports", "评分与边界": "Evaluation & scope", "追溯问题与数据来源": "Trace the questions and source data", "查看方法、脚本与参数": "Inspect methods, scripts and parameters", "核对分析结果与读数": "Check the results and measurements", "理解趋势、比较与发现": "Explore patterns and comparisons", "串联研究过程与结论": "Follow the process and conclusions", "明确评价依据与验证范围": "Review criteria and validation scope", "端到端自主科研，": "End-to-End Auto-Research,", "从科学问题到研究成果。": "from scientific questions to research results.", "从理解问题、执行分析到检验结果、提炼发现，Agents-A1.5 自主推进研究流程，交付数据、代码、图表与报告。": "From understanding questions and conducting analyses to checking results and drawing insights, Agents-A1.5 autonomously advances the research workflow, delivering data, code, figures and reports.", "一个智能体，": "One agent,", "三个领域的自主探索。": "autonomous exploration across three disciplines."});
 const phraseKeys=Object.keys(COPY_EN).sort((a,b)=>b.length-a.length);
 function tr(value){
  const source=String(value);
@@ -359,7 +362,7 @@ function installLanguage(){
  function apply(){
   document.documentElement.lang=language==='en'?'en':'zh-CN';
   document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===language)));
-  sweep(document.body);document.title=language==='en'?'Agents-A1.5 · End-to-End Autonomous Discovery':'Agents-A1.5 · 端到端自主发现';
+  sweep(document.body);document.title=language==='en'?'Agents-A1.5 · End-to-End Auto-Research':'Agents-A1.5 · 端到端自主科研';
   if(window.filmRuntime)window.filmRuntime.render(window.filmRuntime.time);
  }
  window.setLanguage=next=>{
@@ -437,10 +440,10 @@ function scientificCover(id){
 function initScienceField(){
  const canvas=document.querySelector('#hero-field');if(!canvas)return;
  const scenes=[
-  {id:'astronomy',scene:'01 / GRAVITATIONAL WAVES',label:'保存的差异中位数',value:'4.25 <small>× 10⁻⁴</small>',discipline:'NUMERICAL PRECISION',detail:'ℓ = 2 — 8'},
-  {id:'energy',scene:'02 / GREEN HYDROGEN',label:'保存的站点平均交付成本',value:'5.64 <small>€/kg H₂</small>',discipline:'ENERGY SCIENCE',detail:'30 SIMULATED SITES · WACC 8%'},
+  {id:'astronomy',scene:'02 / GRAVITATIONAL WAVES',label:'保存的差异中位数',value:'4.25 <small>× 10⁻⁴</small>',discipline:'NUMERICAL PRECISION',detail:'ℓ = 2 — 8'},
+  {id:'energy',scene:'01 / GREEN HYDROGEN',label:'保存的站点平均交付成本',value:'5.64 <small>€/kg H₂</small>',discipline:'ENERGY SCIENCE',detail:'30 SIMULATED SITES · WACC 8%'},
   {id:'material',scene:'03 / ATOMIC MODELING',label:'比较的金属种类',value:'6 <small>METALS</small>',discipline:'MATERIALS SCIENCE',detail:'3 STUDY DIRECTIONS'}
- ];
+ ].sort((a, b) => REPORT_CASE_ORDER.indexOf(a.id) - REPORT_CASE_ORDER.indexOf(b.id));
  const c=canvas.getContext('2d'),motion=matchMedia('(prefers-reduced-motion: reduce)');let visible=true,frame=0,last=0,index=0,cycle=0,switchTimer=0;
  const draw=t=>scienceScene(c,scenes[index].id,t,canvas.width,canvas.height);
  function showScene(next,animate=true){
@@ -471,8 +474,8 @@ function initScienceField(){
 
 const $=s=>document.querySelector(s), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const EDITORIAL={
- astronomy:{label:'ASTRONOMY / 01',name:'引力波里的微小误差',title:'测量误差的形状，<br>读懂引力波的精度。',tag:'合成数据分析',intro:'波形有多可靠？A1.5 Preview 读取三份合成数据，比较分辨率、球谐模式与外推阶数，把误差分布变成可检查的数值和图表。',desc:'1,500 条波形差异，七个球谐模式。从分布长尾到外推误差，探索数值精度的不同侧面。',color:'#8daaff',facts:[['1,500','分辨率误差样本'],['4.25 × 10⁻⁴','输入波形差异的中位数'],['12 分 52 秒','原运行记录耗时']],boundary:'数据性质：题目提供的合成统计数据，不是新生成的数值相对论波形。图表支持本数据集内的统计比较。',finding:'误差不均匀，<br>长尾值得被看见。',body:'输入数据的波形差异中位数为 4.2494 × 10⁻⁴，77.7% 的样本低于 10⁻³。高阶球谐模式的中位误差逐步增大：ℓ=8 与 ℓ=2 的比值约为 7.57。',limit:'各阶相对误差不等于总波形中的加权贡献。数据只含统计列，不能据此推出质量比、旋转参数或模式间的物理因果关系。评分使用原论文的 3,756 条目标，输入实际为 1,500 条。',summary:'outputs/analysis_summary.json',steps:[['读懂三份输入','检查分辨率、模式与外推数据的列结构。分辨率与模式各 1,500 行，外推数据 1,200 行。','data/fig6_data.csv'],['把误差变成统计量','计算中位数、分位数与阈值比例，并比较 ℓ=2 到 ℓ=8 的模式差异。','outputs/analysis_summary.json'],['把结果变成图表','保存误差分布与模式图，供读者回到具体图像检查趋势。','report/images/fig2_mode_error.png'],['交付可检查的分析','整理代码、输出文件、五张图和报告。原报告中的物理解释仍需与输入支持的范围区分。','report/report.md']]},
- energy:{"label": "ENERGY / 02", "name": "绿氢成本情景分析", "title": "改变融资条件，<br>追踪绿氢成本变化。", "tag": "能源系统情景分析", "intro": "从 30 个非洲南部模拟站点出发，分析制氢、氨转化、海运与再转化成本，比较融资条件和技术假设下的交付成本。", "desc": "把资源条件、生产与运输连接到成本模型，探索融资条件如何改变绿氢交付成本。", "color": "#72d9d0", "facts": [["30", "非洲南部模拟站点"], ["0.56 €/kg", "资本成本从 8% 降到 5% 时的平均降幅"], ["9 分 02 秒", "原运行记录耗时"]], "boundary": "数据性质：30 个非洲南部模拟站点。成本来自保存的模型输出，采用资源映射、设备成本与运输假设，不是全非洲实测数据或现实市场报价。", "finding": "从融资条件，<br>追踪交付成本。", "body": "2025 年假设下，资本成本从 8% 降至 5%，平均交付成本从 5.64 降至 5.09 欧元/kg，减少约 0.56 欧元/kg（9.9%）。拖动曲线可查看已保存的融资情景。", "limit": "原评测为 28.9 / 100，未完成目标论文的全非洲空间复现。原运行的碳价仅调整灰氨对照基准，未改变绿氢交付成本；欧洲成本为外部设定基准。此处展示成本情景分析，不据此宣称现实竞争力或碳价效果已获验证。", "summary": "outputs/scenario_comparison.csv", "steps": [["核对站点与资源", "读取 30 个站点的资源、位置与运输输入，区分模拟输入和模型假设。", "data/hex_final_NA_min.csv"], ["连接生产与运输成本", "组织制氢、氨转化、海运与再转化计算，保留模型脚本供检查。", "code/hydrogen_cost_model.py"], ["比较融资情景", "读取 36 个资本成本情景点，检查平均与最低站点交付成本的变化。", "outputs/interest_rate_sensitivity.csv"], ["交付结果与验证范围", "整理输入数据、2 个脚本、9 张图与报告；保留原始评分和模型未覆盖的部分。", "report/report.md"]]},
+ astronomy:{label:'ASTRONOMY / 02',name:'引力波里的微小误差',title:'测量误差的形状，<br>读懂引力波的精度。',tag:'合成数据分析',intro:'波形有多可靠？A1.5 Preview 读取三份合成数据，比较分辨率、球谐模式与外推阶数，把误差分布变成可检查的数值和图表。',desc:'1,500 条波形差异，七个球谐模式。从分布长尾到外推误差，探索数值精度的不同侧面。',color:'#8daaff',facts:[['1,500','分辨率误差样本'],['4.25 × 10⁻⁴','输入波形差异的中位数'],['12 分 52 秒','原运行记录耗时']],boundary:'数据性质：题目提供的合成统计数据，不是新生成的数值相对论波形。图表支持本数据集内的统计比较。',finding:'误差不均匀，<br>长尾值得被看见。',body:'输入数据的波形差异中位数为 4.2494 × 10⁻⁴，77.7% 的样本低于 10⁻³。高阶球谐模式的中位误差逐步增大：ℓ=8 与 ℓ=2 的比值约为 7.57。',limit:'各阶相对误差不等于总波形中的加权贡献。数据只含统计列，不能据此推出质量比、旋转参数或模式间的物理因果关系。评分使用原论文的 3,756 条目标，输入实际为 1,500 条。',summary:'outputs/analysis_summary.json',steps:[['读懂三份输入','检查分辨率、模式与外推数据的列结构。分辨率与模式各 1,500 行，外推数据 1,200 行。','data/fig6_data.csv'],['把误差变成统计量','计算中位数、分位数与阈值比例，并比较 ℓ=2 到 ℓ=8 的模式差异。','outputs/analysis_summary.json'],['把结果变成图表','保存误差分布与模式图，供读者回到具体图像检查趋势。','report/images/fig2_mode_error.png'],['交付可检查的分析','整理代码、输出文件、五张图和报告。原报告中的物理解释仍需与输入支持的范围区分。','report/report.md']]},
+ energy:{"label": "ENERGY / 01", "name": "绿氢成本情景分析", "title": "改变融资条件，<br>追踪绿氢成本变化。", "tag": "能源系统情景分析", "intro": "从 30 个非洲南部模拟站点出发，分析制氢、氨转化、海运与再转化成本，比较融资条件和技术假设下的交付成本。", "desc": "把资源条件、生产与运输连接到成本模型，探索融资条件如何改变绿氢交付成本。", "color": "#72d9d0", "facts": [["30", "非洲南部模拟站点"], ["0.56 €/kg", "资本成本从 8% 降到 5% 时的平均降幅"], ["9 分 02 秒", "原运行记录耗时"]], "boundary": "数据性质：30 个非洲南部模拟站点。成本来自保存的模型输出，采用资源映射、设备成本与运输假设，不是全非洲实测数据或现实市场报价。", "finding": "从融资条件，<br>追踪交付成本。", "body": "2025 年假设下，资本成本从 8% 降至 5%，平均交付成本从 5.64 降至 5.09 欧元/kg，减少约 0.56 欧元/kg（9.9%）。拖动曲线可查看已保存的融资情景。", "limit": "原评测为 28.9 / 100，未完成目标论文的全非洲空间复现。原运行的碳价仅调整灰氨对照基准，未改变绿氢交付成本；欧洲成本为外部设定基准。此处展示成本情景分析，不据此宣称现实竞争力或碳价效果已获验证。", "summary": "outputs/scenario_comparison.csv", "steps": [["核对站点与资源", "读取 30 个站点的资源、位置与运输输入，区分模拟输入和模型假设。", "data/hex_final_NA_min.csv"], ["连接生产与运输成本", "组织制氢、氨转化、海运与再转化计算，保留模型脚本供检查。", "code/hydrogen_cost_model.py"], ["比较融资情景", "读取 36 个资本成本情景点，检查平均与最低站点交付成本的变化。", "outputs/interest_rate_sensitivity.csv"], ["交付结果与验证范围", "整理输入数据、2 个脚本、9 张图与报告；保留原始评分和模型未覆盖的部分。", "report/report.md"]]},
  material:{label:'MATERIALS / 03',name:'原子尺度的建模探索',title:'从原子结构，<br>走向可检查的建模方案。',tag:'材料建模探索',intro:'围绕水结构、金属吸附和反应势垒，A1.5 Preview 组织参数与分析脚本，形成一个可检查的材料建模方案。通过解析估计，探索原子结构与吸附关系。',desc:'从六种金属的吸附能关系切入，探索结构参数与吸附能之间的联系。',color:'#b9a4fc',facts:[['3','规划的材料测试方向'],['6','吸附关系中的金属种类'],['7 分 04 秒','原运行记录耗时']],boundary:'方法边界：本次没有运行 MACE 模型或分子动力学。RDF 为解析曲线，吸附能与势垒含脚本估计值；所有原图按探索产物展示。',finding:'从原子结构，<br>追踪吸附关系。',body:'保存产物组织了水的径向分布、六金属吸附能与三种反应势垒。交互图读取已有吸附能 JSON，展示这些估计值的关系；比较不同金属上的吸附趋势。',limit:'原图中的 “MACE predictions” 或微调曲线标签不能作为实际推理或训练的证据。下一步需要模型权重、真实计算与轨迹验证，才能评估方法有效性。',summary:'outputs/adsorption_energies.json',steps:[['组织结构与参数','把输入中的结构信息和计算设置整理为三个测试方向。','data/MACE-MP-0_Reproduction_Dataset.txt'],['记录解析替代方法','代码明确说明缺少模型权重，因此用解析函数构造水 RDF 曲线。','code/02_water_rdf_analysis.py'],['保存探索数值','吸附关系含人为设置的参考和估计值。可查看原始 JSON，追踪这些图的来源。','outputs/adsorption_energies.json'],['整理方案与验证缺口','保存报告和图表。完成的是建模探索，实际 MACE/MD 验证尚未完成。','report/report.md']]}
 };
 let current=null,chartIndex=0,stepIndex=0,filter='all',hiddenSeries=new Set(),timer=null,selectedFile=null;
@@ -774,8 +777,8 @@ class DisciplineFilm extends ResearchFilm {
 
 /* Switch complete investigations together, retaining their chart state. */
 function mountDiscoveryCases() {
-  const names = ['引力波误差分析', '绿氢成本情景分析', '材料吸附建模探索'];
-  const domains = ['天文', '能源科学', '材料科学'];
+  const names = ['绿氢成本情景分析', '引力波误差分析', '材料吸附建模探索'];
+  const domains = ['能源科学', '天文', '材料科学'];
   const collection = $('#collection');
   const navigation = document.createElement('nav');
   navigation.className = 'research-case-links';
@@ -863,7 +866,7 @@ class DiscoveryFilm extends DisciplineFilm {
     super(canvas, 'astronomy');
     this.id = 'discovery';
     this.palette = ['#f5f8fc', '#172b45', '#7052bc'];
-    this.colors = ['#7052bc', '#087f83', '#2563b8'];
+    this.colors = ['#087f83', '#7052bc', '#2563b8'];
     this.ready = document.fonts.ready;
   }
   label(source, x, y, size = 28, width = 440, color = '#172b45', weight = 400) {
@@ -928,6 +931,7 @@ class DiscoveryFilm extends DisciplineFilm {
     }
   }
   scientific(index, t, x, y, s = 1) {
+    index = ['astronomy', 'energy', 'material'].indexOf(CASES[index].id);
     const c = this.ctx;
     c.save(); c.translate(x,y); c.scale(s,s);
     if (index === 0) {
@@ -984,10 +988,11 @@ class DiscoveryFilm extends DisciplineFilm {
     this.label('A1.5',x-43,y+12,34,120,'#5c1fb2',500);
   }
   chartData(index, x, y, w, h, progress, t = 0) {
-    const saved = CASES[index].charts[index === 0 ? 1 : 0];
+    const caseData = CASES[index];
+    const saved = caseData.charts[caseData.id === 'astronomy' ? 1 : 0];
     // Show one identified 2025 mean-cost series in the overview; both saved
     // cost series remain available in the interactive investigation.
-    const chart = index === 1 ? {...saved, yLabel: '平均交付成本（欧元/kg H₂）', series: [saved.series[0]]} : saved;
+    const chart = caseData.id === 'energy' ? {...saved, yLabel: '平均交付成本（欧元/kg H₂）', series: [saved.series[0]]} : saved;
     const points = chart.series.flatMap(s => s.points), xs = points.map(p => p[0]), ys = points.map(p => p[1]);
     const xmin = Math.min(...xs), xmax = Math.max(...xs), ymin = Math.min(0, ...ys), ymax = Math.max(...ys);
     const X = v => x + (v - xmin) / (xmax - xmin || 1) * w;
@@ -1016,7 +1021,7 @@ class DiscoveryFilm extends DisciplineFilm {
     this.label(chart.yLabel,x,y-22,18,w+25,'#526078');
   }
   intro(t) {
-    this.label('端到端自主发现',80,270,language==='en'?76:84,840,'#61349d',500);
+    this.label('端到端自主科研',80,270,language==='en'?76:84,840,'#61349d',500);
     this.label('从科学问题，到研究成果。',84,480,39,800,'#7052bc');
     this.label('一个智能体，跨越三个研究领域。',84,600,27,750,'#526078');
     const c=this.ctx;
@@ -1027,15 +1032,15 @@ class DiscoveryFilm extends DisciplineFilm {
     this.scientific(1,t,1190,470,.82);
     this.scientific(2,t,1330,680,.65);
     c.restore();
-    ['ASTRONOMY','ENERGY SCIENCE','MATERIALS SCIENCE'].forEach((s,i)=>{
+    ['ENERGY SCIENCE','ASTRONOMY','MATERIALS SCIENCE'].forEach((s,i)=>{
       this.dot(86+i*268,705,3,this.colors[i]);this.label(s,102+i*268,712,17,250,'#643f92');
     });
   }
   plan(t) {
     this.heading('理解问题，自主组织分析。','不同的研究问题，进入同一条自主研究流程。');
-    const questions=['波形误差有多大？','融资如何影响绿氢成本？','金属吸附有何关联？'];
-    const inputs=['1,500 条合成样本','30 个模拟站点的资源与运输数据','六种金属的参考值与估计值'];
-    const actions=['比较分布与高阶模式','比较融资与交付成本','组织参数与解析估计'];
+    const questions=['融资如何影响绿氢成本？','波形误差有多大？','金属吸附有何关联？'];
+    const inputs=['30 个模拟站点的资源与运输数据','1,500 条合成样本','六种金属的参考值与估计值'];
+    const actions=['比较融资与交付成本','比较分布与高阶模式','组织参数与解析估计'];
     questions.forEach((q,i)=>{
       const y=340+i*163, color=this.colors[i];
       this.flow(610,y+4,747,501,t+i*.8,color,3);
@@ -1051,8 +1056,8 @@ class DiscoveryFilm extends DisciplineFilm {
   }
   analyze(t) {
     this.heading('执行分析，让数据显露规律。','统计误差、比较成本、探索吸附关系。');
-    const names=['引力波误差分析','绿氢成本情景分析','材料吸附建模探索'];
-    const types=['合成数据','成本模型','解析估计'];
+    const names=['绿氢成本情景分析','引力波误差分析','材料吸附建模探索'];
+    const types=['成本模型','合成数据','解析估计'];
     names.forEach((name,i)=>{
       const x=80+i*490;
       this.box(x,290,460,465,this.colors[i]);
@@ -1065,11 +1070,11 @@ class DiscoveryFilm extends DisciplineFilm {
   }
   insightCase(index, t, opacity=1) {
     const metrics=[
-      ['77.7%','差异低于 10⁻³ 的样本','误差存在长尾，高阶模式的中位误差更大。'],
       ['0.56 €/kg','2025 年融资情景中的平均降幅','资本成本从 8% 降到 5%，模型平均交付成本降低约 9.9%。'],
+      ['77.7%','差异低于 10⁻³ 的样本','误差存在长尾，高阶模式的中位误差更大。'],
       ['6','吸附关系中的金属种类','比较 O 与 OH 的吸附能估计，形成待验证的关系。']
     ];
-    const names=['引力波误差分析','绿氢成本情景分析','材料吸附建模探索'];
+    const names=['绿氢成本情景分析','引力波误差分析','材料吸附建模探索'];
     this.withAlpha(opacity,()=>{
       this.chartData(index,130,367,660,270,1,t);
       this.scientific(index,t+20,1240,382,.55);
@@ -1085,7 +1090,7 @@ class DiscoveryFilm extends DisciplineFilm {
     const entry=ease(local/.4);
     if(index>0 && local<.4)this.insightCase(index-1,t,1-entry);
     this.insightCase(index,t,index===0?1:entry);
-    ['ASTRONOMY','ENERGY SCIENCE','MATERIALS SCIENCE'].forEach((name,i)=>{
+    ['ENERGY SCIENCE','ASTRONOMY','MATERIALS SCIENCE'].forEach((name,i)=>{
       const x=130+i*226;
       this.line(x,748,x+193,748,i===index?this.colors[i]:'#7052bc24',i===index?3:1);
       this.label(name,x,777,15,213,i===index?'#632ea3':'#526078');
@@ -1093,7 +1098,7 @@ class DiscoveryFilm extends DisciplineFilm {
   }
   verify(t) {
     this.heading('核对证据，明确验证范围。','区分模拟、估计与实际验证，让后续研究有据可循。');
-    const scopes=[['合成数据','统计比较适用于本数据集。'],['成本模型','模拟成本不等于实际市场价格。'],['解析估计','实际 MACE / MD 计算仍待完成。']];
+    const scopes=[['成本模型','模拟成本不等于实际市场价格。'],['合成数据','统计比较适用于本数据集。'],['解析估计','实际 MACE / MD 计算仍待完成。']];
     scopes.forEach(([title,detail],i)=>{
       const y=350+i*156,color=this.colors[i];
       this.scientific(i,t+28,188,y,.32);
@@ -1162,7 +1167,7 @@ class DiscoveryFilm extends DisciplineFilm {
     c.save();c.translate(35*(1-entry),0);
     this.withAlpha(entry,()=>scenes[index].call(this,local));c.restore();c.restore();
     this.label('Agents-A1.5',80,57,25,280,'#643d94',600);
-    this.label('END-TO-END AUTONOMOUS DISCOVERY',900,57,18,630,'#526078');
+    this.label('END-TO-END AUTO-RESEARCH',900,57,18,630,'#526078');
     this.line(80,83,1520,83,'#7052bc22');
     this.label('三次研究任务的流程概览 · 非执行录屏',80,810,17,1420,'#526078');
     DISCOVERY_CHAPTERS.forEach(([start,label],i)=>{
@@ -1187,8 +1192,8 @@ function mountFilm() {
   if (film) return;
   const section = document.createElement('section');
   section.id = 'cinema-section'; section.className = 'cinema-section';
-  section.innerHTML = `<div class="cinema-heading"><div><p class="eyebrow">END-TO-END AUTONOMOUS DISCOVERY</p><h2>从科学问题出发，走向自主发现。</h2></div><span>42 秒 · 从问题到成果</span></div>
-    <div id="film-frame"><div class="film-stage"><canvas id="film-canvas" aria-label="端到端自主发现总览，基于三个研究任务与保存数据。"></canvas><button id="film-overlay" aria-label="播放端到端自主发现短片"><span>▶</span><b>播放总览视频</b><small>42 SECONDS / AGENTS-A1.5</small></button></div>
+  section.innerHTML = `<div class="cinema-heading"><div><p class="eyebrow">END-TO-END AUTO-RESEARCH</p><h2>从科学问题出发，走向自主发现。</h2></div><span>42 秒 · 从问题到成果</span></div>
+    <div id="film-frame"><div class="film-stage"><canvas id="film-canvas" aria-label="端到端自主科研总览，基于三个研究任务与保存数据。"></canvas><button id="film-overlay" aria-label="播放端到端自主科研短片"><span>▶</span><b>播放总览视频</b><small>42 SECONDS / AGENTS-A1.5</small></button></div>
     <div class="film-controls"><button id="film-toggle" aria-label="播放或暂停">▶</button><span id="film-time">00:00</span><input id="film-seek" type="range" min="0" max="42" step="0.05" value="0" aria-label="短片进度（秒）"><span>00:42</span><button id="film-sound" aria-pressed="false">声音关</button><button id="film-full">⛶ 全屏</button></div></div>
     <nav class="discovery-chapters" aria-label="研究流程">${DISCOVERY_CHAPTERS.map(([start, label], i) => `<button data-chapter="${i}"><span>0${i + 1} / 00:${String(start).padStart(2, '0')}</span>${label}</button>`).join('')}</nav>
     <div class="film-bottom"><details class="film-method"><summary>短片说明</summary><p>短片串联三个研究任务中的问题理解、分析执行、线索提炼与成果交付。动画为流程示意，图表读取保存数据，非执行录屏；42 秒为展示时长。</p></details><div><button id="watch-mp4">观看完整视频 ↗</button><button id="save-mp4">下载总览视频 ↓</button></div></div>`;
@@ -1218,7 +1223,7 @@ function mountFilm() {
   };
   $('#watch-mp4').onclick = () => {
     pauseFilm();
-    if (filmSource()) modal('端到端自主发现 · 研究总览', `<video controls playsinline autoplay style="width:100%" src="${filmSource()}"></video>`);
+    if (filmSource()) modal('端到端自主科研 · 研究总览', `<video controls playsinline autoplay style="width:100%" src="${filmSource()}"></video>`);
   };
   $('#watch-mp4').hidden = $('#save-mp4').hidden = !filmSource();
   new IntersectionObserver(entries => { if (!entries[0].isIntersecting) pauseFilm(); }, {threshold: .05}).observe(section);

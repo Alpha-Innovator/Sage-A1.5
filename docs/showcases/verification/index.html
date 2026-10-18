@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light">
 <meta name="description" content="See how Agents-A1.5 recognizes stalled searches, reconsiders its approach and continues toward a verified answer.">
-<title>Agents-A1.5 · Verification</title>
+<title>Agents-A1.5 · Agentic Verification</title>
 <link rel="stylesheet" href="assets/css/index-0-9a4ff46aae1b.css">
 <link rel="stylesheet" data-site-shell href="../../assets/site-shell-9def439ea920.css"><link rel="stylesheet" data-site-theme="light" href="../../assets/themes/light-2b9a12c29bf4.css">
 <link rel="stylesheet" href="../../assets/website-shell.css?v=integration-2">
@@ -35,7 +35,7 @@
 <section class="hero" aria-labelledby="hero-title">
  <div class="hero-grid" aria-hidden="true"></div><div class="hero-glow" aria-hidden="true"></div>
  <div class="hero-copy">
-  <div class="eyebrow"><span class="live-dot amber"></span><span>AGENTS-A1.5 / VERIFICATION</span></div>
+  <div class="eyebrow"><span class="live-dot amber"></span><span>AGENTS-A1.5 / AGENTIC VERIFICATION</span></div>
   <h1 id="hero-title" data-i18n-html="heroTitle">On long-horizon problems,<br>can a model notice it is stuck<br><em>and find another way through?</em></h1>
   <p class="hero-description" data-i18n="heroDesc">The most common failure of a search agent is not that it cannot search — it is that it keeps retrying a route that leads nowhere.</p>
   <div class="hero-actions">
@@ -69,7 +69,7 @@
 <section class="section" id="reflection">
  <div class="section-heading reveal">
   <div><div class="eyebrow" data-i18n="eye2">02 / WHAT IT REFLECTS ON</div><h2 data-i18n-html="h2t">The moment it stops,<br>this is what it writes.</h2></div>
-  <p data-i18n="p2">The full reasoning from interaction 19. It takes stock of what is actually confirmed, admits its earlier guesses do not hold, lists what is still missing, and decides to search a different way.</p>
+  <p data-i18n="p2">The full reasoning from interaction 20. It takes stock of what is actually confirmed, admits its earlier guesses do not hold, lists what is still missing, and decides to search a different way.</p>
  </div>
  <div class="reflection-shell reveal">
   <div class="reflection-side">
@@ -79,7 +79,7 @@
   </div>
   <div class="reflection-main">
    <div class="chart-head">
-    <span data-i18n="reflHead">Interaction 19 · full reasoning</span>
+    <span data-i18n="reflHead">Interaction 20 · full reasoning</span>
 
    </div>
    <div class="reflection-body" id="reflectionBody"></div>
@@ -92,13 +92,13 @@
 <section class="section" id="trace">
  <div class="section-heading reveal">
   <div><div class="eyebrow" data-i18n="eye3">03 / SIDE BY SIDE</div><h2 data-i18n-html="h3t">The same question,<br>answered twice.</h2></div>
-  <p data-i18n="p3">Every search request the model actually issued. The left run changes approach partway through; the right one never does — 47 searches, still wrong.</p>
+  <p data-i18n="p3">Every search and page-read request the model actually issued. The left run changes approach partway through; the right one never does — 47 tool calls, still wrong.</p>
  </div>
  <div class="trace-grid reveal">
   <article class="trace-col on">
    <header>
     <div><span class="live-dot mint"></span><strong data-i18n="traceOnTitle">Changed approach partway</strong></div>
-    <p data-i18n="traceOnMeta">30 interactions · 29 searches</p>
+    <p data-i18n="traceOnMeta">30 interactions · 29 tool calls</p>
    </header>
    <ol class="call-list" id="callsOn"></ol>
    <footer><span data-i18n="finalAnswer">Final answer</span><b class="ok">Madhumati</b><small data-i18n="traceOnNote">Matches the reference answer Madhumalti (spelling variant)</small></footer>
@@ -106,7 +106,7 @@
   <article class="trace-col off">
    <header>
     <div><span class="live-dot"></span><strong data-i18n="traceOffTitle">Same line throughout</strong></div>
-    <p data-i18n="traceOffMeta">48 interactions · 47 searches</p>
+    <p data-i18n="traceOffMeta">48 interactions · 47 tool calls</p>
    </header>
    <ol class="call-list" id="callsOff"></ol>
    <footer><span data-i18n="finalAnswer">Final answer</span><b class="bad">Jacqueline</b><small data-i18n="traceOffNote">Does not match the reference answer</small></footer>
@@ -172,7 +172,7 @@
 
 <section class="end-section">
  <div class="end-glow" aria-hidden="true"></div>
- <div class="eyebrow"><span class="live-dot"></span><span>VERIFICATION</span></div>
+ <div class="eyebrow"><span class="live-dot"></span><span>AGENTIC VERIFICATION</span></div>
  <h2 data-i18n-html="endTitle">When the road runs out,<br><em>stop and take stock, then try another one.</em></h2>
  <p data-i18n="endDesc">The self-reflection happens inside the model’s reasoning and costs no extra search. One line in the system prompt turns it on or off.</p>
  <div class="end-actions">
@@ -183,7 +183,7 @@
 </main>
 
 <aside class="a15-case-notes" aria-label="Case notes and sources"><div class="a15-case-notes-inner">
-<span data-i18n="footer">Agents-A1.5 · Verification</span>
+<span data-i18n="footer">Agents-A1.5 · Agentic Verification</span>
 </div></aside><footer class="a15-footer">
     <div class="a15-footer-inner">
       <p>Agents-A1.5 is released by Alpha-Innovator. Star the repository, try the model, and report issues through GitHub.</p>
@@ -205,7 +205,7 @@
 <script src="assets/js/index-1-af982b5a318d.js"></script>
 
 <script id="verifyData" type="application/json"></script><script src="assets/data/verifyData-7acbdc987c15.js"></script>
-<script src="assets/js/index-3-b7fdc9fe13ec.js"></script>
+<script src="assets/js/index-3-4500b46f1b5a.js"></script>
 <script data-site-shell src="../../assets/site-shell-705010c24ae4.js" defer></script><script src="../../assets/showcase-navigation.js?v=integration-1" defer></script>
 </body>
 </html>

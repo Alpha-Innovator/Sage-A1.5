@@ -1,0 +1,41 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:06.000
+Three designs, one governed study.
+The scientist supplies candidate meshes, flight conditions and the rules for a valid design freeze.
+
+00:00:06.000 --> 00:00:12.000
+Execute the full CFD matrix.
+The agent drives SU2 for every candidate–condition pair and retains the numerical outputs.
+
+00:00:12.000 --> 00:00:18.000
+Keep the failed candidate visible.
+K42 exceeds the crossload and pressure recovery limits. K17 and K88 remain feasible across the study.
+
+00:00:18.000 --> 00:00:24.000
+Trace all 414 iterations.
+Inspect the native certification history for K17 at CROSS_12. The log pressure residual reaches −8.010.
+
+00:00:24.000 --> 00:00:30.000
+Freeze K17 for prototyping.
+The selected design stays within all four limits. The delivered package links the decision to its configuration, mesh and solver outputs.
+
+00:00:30.000 --> 00:00:36.000
+Start from the supplied claims.
+Five workloads and five approximation degrees define the study. Calibration data and a reproduction profile establish the comparison.
+
+00:00:36.000 --> 00:00:42.000
+Rebuild the compilation evidence.
+The agent produces native Qiskit and Cirq artifacts and records gate count, depth, infidelity, duration and estimated success.
+
+00:00:42.000 --> 00:00:48.000
+Less circuit cost, more error.
+Each workload is evaluated from exact synthesis to stronger approximation. The reproduced values expose the fidelity trade-off.
+
+00:00:48.000 --> 00:00:54.000
+Three mismatches remain.
+One process infidelity value, one circuit depth and one qualification flag disagree with the supplied claims.
+
+00:00:54.000 --> 00:01:00.000
+Report a claim that does not reproduce.
+The final verdict preserves the discrepancies and links them to the native circuit evidence and complete comparison tables.

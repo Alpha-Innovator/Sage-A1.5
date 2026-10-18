@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="340 70 460 360" fill="none">
+  <title>A professional workbench: run tools, build artifacts, verify the result</title>
+  <desc>An integrated tool console with chip routing and flow analysis, delivering checked native files.</desc>
+  <defs>
+    <linearGradient id="workbench-face" x1="403" y1="101" x2="731" y2="359" gradientUnits="userSpaceOnUse"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#e8f0f3"/></linearGradient>
+    <linearGradient id="workbench-surface" x1="397" y1="370" x2="747" y2="411" gradientUnits="userSpaceOnUse"><stop stop-color="#dce9ee"/><stop offset="1" stop-color="#eff4f7"/></linearGradient>
+  </defs>
+  <!-- One rectangular engineering workstation, with a continuous execution path. -->
+  <path d="M405 361h324l31 40H374z" fill="url(#workbench-surface)" stroke="#8aa6b4" stroke-width="1.6"/>
+  <path d="M374 401v9h386v-9" fill="#e2edf1" stroke="#8aa6b4" stroke-width="1.6" stroke-linejoin="round"/>
+  <rect x="410" y="104" width="327" height="263" rx="12" fill="#dfeaf0" stroke="#7797aa" stroke-opacity=".4" stroke-width="1.6"/>
+  <rect x="400" y="94" width="327" height="263" rx="12" fill="url(#workbench-face)" stroke="#658b9e" stroke-width="2"/>
+  <path d="M401 130h325" stroke="#8ca8b7" stroke-opacity=".65"/>
+  <g fill="#85a4b4"><circle cx="418" cy="112" r="3"/><circle cx="431" cy="112" r="3"/><circle cx="444" cy="112" r="3"/></g>
+  <path d="M674 112h34" stroke="#6f93a6" stroke-width="3" stroke-linecap="round"/>
+  <!-- Tool calls on the left. -->
+  <rect x="413" y="143" width="83" height="198" rx="5" fill="#e4eef2"/>
+  <g stroke="#527e93" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m429 160 11 9-11 9m19 0h14"/>
+    <path d="M430 202h43m-43 11h29M430 241h43m-43 11h32M430 280h43m-43 11h26" stroke="#8ca9b6" stroke-width="2"/>
+  </g>
+  <g stroke="#6b978f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m430 319 4 4 8-9m10 5 4 4 8-9m10 5 4 4 8-9"/></g>
+  <!-- Native engineering work: routed cells above a flow profile. -->
+  <rect x="508" y="143" width="205" height="115" rx="5" fill="#f2f7f9" stroke="#9ab3bf" stroke-opacity=".6"/>
+  <g stroke="#749bab" stroke-width="1.7" stroke-linejoin="round">
+    <path d="M529 162h25v16h29m-54 58h31v-18h23m61-40h27v-16h21m-48 56h18v17h30"/>
+    <path d="M595 161v13m15-13v13m15-13v13m-30 49v17m15-17v17m15-17v17M566 190h15m-15 15h15m63-15h17m-17 15h17"/>
+    <rect x="582" y="175" width="61" height="48" rx="3" fill="#dce9ef" stroke="#557f94" stroke-width="2"/>
+    <path d="M592 188h16v11h25m-41 14h28v-24m-14 34v-10" stroke="#5a8d92" stroke-width="2.1"/>
+  </g>
+  <g fill="#7a9fba"><circle cx="529" cy="162" r="3"/><circle cx="529" cy="236" r="3"/><circle cx="692" cy="162" r="3"/><circle cx="692" cy="235" r="3"/></g>
+  <rect x="508" y="269" width="205" height="72" rx="5" fill="#f2f7f9" stroke="#9ab3bf" stroke-opacity=".6"/>
+  <g stroke="#709aa9" stroke-width="1.6" stroke-linecap="round">
+    <path d="M521 283c43 0 49 13 85 11s55-8 93-8M521 297c27 0 42 11 79 8s68-5 99-5M521 317c39 0 49-11 84-7s58 11 94 11M521 330c41 0 49-11 84-8s61 11 94 11" stroke-opacity=".55"/>
+    <path d="M558 306c23-20 64-13 102 2-34-7-66-9-102-2Z" fill="#d5e5eb" stroke="#537e93" stroke-width="2"/>
+  </g>
+  <!-- Checked files emerge from the workbench as a single delivery tray. -->
+  <rect x="464" y="351" width="236" height="51" rx="6" fill="#f8fbfc" stroke="#7497a6" stroke-width="1.8"/>
+  <g stroke="#72949f" stroke-width="1.7" stroke-linejoin="round">
+    <path d="M479 362h15l6 6v24h-21Zm15 0v7h6M487 373h6m-9 5h9"/>
+    <path d="M552 362h15l6 6v24h-21Zm15 0v7h6M560 373h6m-9 5h9"/>
+    <path d="M625 362h15l6 6v24h-21Zm15 0v7h6M633 373h6m-9 5h9"/>
+  </g>
+  <g stroke="#648d84" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m510 377 5 5 10-12m58 7 5 5 10-12m58 7 5 5 10-12"/></g>
+</svg>

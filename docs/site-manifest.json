@@ -1,16 +1,16 @@
 {
-  "version": "0.15.0-light",
+  "version": "0.16.1-report-aligned",
   "theme": "light",
   "cases": [
     {
       "id": "swarm",
       "href": "showcases/swarm/index.html",
-      "sha256": "769a9c0d32debfc41535614b4bf12969e12135393df0f9dc9c430f211eac5df2"
+      "sha256": "f66f3d64fddd50dc9eb67b960a8e390d51ccfc5b0ac3cfa22f7ea0e1dad07387"
     },
     {
       "id": "verification",
       "href": "showcases/verification/index.html",
-      "sha256": "5f0e6ed4c78d386e0b74d49c8e7d9f5fd7dc6b5000ed93db1c1523cd3af414e0"
+      "sha256": "62199abc37b53ae9ab7aa017a7e85867b4c9ffc90159d6ef2bc3bf2221a97920"
     },
     {
       "id": "local-deployment",
@@ -28,14 +28,24 @@
       "sha256": "6a15d728e6ea32ccbc91530e47072ca828d50effc09c7e2a193679431f3c7d39"
     },
     {
+      "id": "scientific-co-working",
+      "href": "showcases/scientific-co-working/index.html",
+      "sha256": "ba0a1de01a3bdbcca4ee2bd22b52e90f8fc878bd5dae63bc48371cfd68e8586d"
+    },
+    {
       "id": "researchclawbench",
       "href": "showcases/researchclawbench/index.html",
-      "sha256": "4f771ad854d87d360a500830abdae7e69295150d97bf49cbe49b831d20908743"
+      "sha256": "54bb8586b2fc087a2fcd3feac2dad64f83e5eb198e4f8483ea81ef47fc3949f2"
     },
     {
       "id": "neuroscience",
       "href": "01-launch.html",
       "sha256": "361904a96de5f5097d63ea2f280a397874fbd2b33895edce0fb5de7eadcd7c04"
+    },
+    {
+      "id": "computational-chemistry",
+      "href": "showcases/computational-chemistry/index.html",
+      "sha256": "cb01bcd5e54be1434ab4a0aae913865346b21b89796e79d437948d9c910b63e7"
     },
     {
       "id": "condensed-matter",
@@ -45,12 +55,44 @@
     {
       "id": "electrochemistry",
       "href": "showcases/electrochemistry/index.html",
-      "sha256": "bb079b73460065c61ab655ddb2847cf7ebf304566fe0c8ac0a949237c8e185e2"
+      "sha256": "d9a68ad743494ff7dfa07288d1c8639a39874a50405c246b1f5c93b46b7d870a"
+    }
+  ],
+  "collections": [
+    {
+      "id": "foundations",
+      "name": "Foundational Capabilities",
+      "cases": [
+        "swarm",
+        "verification",
+        "local-deployment"
+      ]
     },
     {
-      "id": "computational-chemistry",
-      "href": "showcases/computational-chemistry/index.html",
-      "sha256": "fa8c8aabe0d01bb8bb864715f31991e1e8d546b6e908c232427538c696fa67e3"
+      "id": "reasoning",
+      "name": "Scientific Information Integration and Long-Horizon Reasoning",
+      "cases": [
+        "deep-research",
+        "scientific-reasoning"
+      ]
+    },
+    {
+      "id": "research",
+      "name": "From Scientific Co-working to End-to-End Auto-Research",
+      "cases": [
+        "scientific-co-working",
+        "researchclawbench"
+      ]
+    },
+    {
+      "id": "scientist-aligned",
+      "name": "Solving Scientific Problems Aligned by Scientists",
+      "cases": [
+        "neuroscience",
+        "computational-chemistry",
+        "condensed-matter",
+        "electrochemistry"
+      ]
     }
   ]
 }

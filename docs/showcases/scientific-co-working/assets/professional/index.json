@@ -1,0 +1,111 @@
+{
+  "t101": {
+    "files": [
+      "baseline_placed.def",
+      "eco_routed.def",
+      "eco_parasitics.spef",
+      "timing.rpt"
+    ],
+    "bytes": 143847,
+    "sha256": "a38da3005339e863bc763aaae40c7548d182b91d33a5927ebb29ce830a2a48f2",
+    "indexed_calls": 223
+  },
+  "t188": {
+    "files": [
+      "emergency_network.gpkg",
+      "ems_peak.gpkg",
+      "fire_rescue_peak.gpkg",
+      "all_hazards_surge.gpkg"
+    ],
+    "bytes": 2256591,
+    "sha256": "5cd3ba9d3c9bd7eb9bf9d39986d7e03f9c6ffdbdecf6bea996768f64a167d6ff",
+    "indexed_calls": 290
+  },
+  "t093": {
+    "files": [
+      "selected_mesh.su2",
+      "history.csv",
+      "pareto_front.jsonl",
+      "design_freeze.toml"
+    ],
+    "bytes": 387447,
+    "sha256": "efaf5decfb997a9fef13417ba53b7177fd4dd8ae96e821a08a1ff279791da249",
+    "indexed_calls": 72
+  },
+  "t100": {
+    "files": [
+      "public_release.pdf",
+      "object_inventory.tsv",
+      "render_ledger.tsv",
+      "redaction_map.cbor"
+    ],
+    "bytes": 1088,
+    "sha256": "614d740b02876c93f80bd74e82c7c4c1173a78a65d2e0b54a74438a7012714b0",
+    "indexed_calls": 47
+  },
+  "t134": {
+    "files": [
+      "defect_protocol.json",
+      "energy_ledger.tsv",
+      "defect_thermodynamics.json",
+      "registry_verdict.json"
+    ],
+    "bytes": 3752,
+    "sha256": "276fe7d680d0b60103d367d25e3869840f1edc807ef303e4cd4e8bbcfc65c5a9",
+    "indexed_calls": 163
+  },
+  "t115": {
+    "files": [
+      "case.ep",
+      "sensor_observations.csv",
+      "thermal_parameters.toml",
+      "derating_curve.csv"
+    ],
+    "bytes": 331409,
+    "sha256": "0273f2e854c5d5bbf3c98d66596d6633fc18a98c877550dc4288b19ea9db0f55",
+    "indexed_calls": 117
+  },
+  "t124": {
+    "files": [
+      "field_soc.asc",
+      "pnr_report.json",
+      "netlist_check.log",
+      "release_manifest.json"
+    ],
+    "bytes": 38921,
+    "sha256": "5d029707e6c23cd0d2113f32f46dc44f927766b094162c5c9dd0d532ce8eed69",
+    "indexed_calls": 85
+  },
+  "t141": {
+    "files": [
+      "reproduction_matrix.csv",
+      "claim_discrepancies.csv",
+      "reproducibility_verdict.json"
+    ],
+    "bytes": 37788,
+    "sha256": "0665e41306a64d5bf81f2681237d7bd829dd88a501928f2c699219f8e3859439",
+    "indexed_calls": 190
+  },
+  "t026": {
+    "files": [
+      "warehouse.sqlite",
+      "warehouse.duckdb",
+      "reconciliation.json",
+      "dbt_run_results.json"
+    ],
+    "bytes": 2366,
+    "sha256": "7fb7af10f3047fee86101f348182a40f5793a15da4e1f841b8989f3ae5b2e949",
+    "indexed_calls": 68
+  },
+  "t030": {
+    "files": [
+      "dns_transactions.tsv",
+      "packet_lineage.tsv",
+      "candidate_sessions.tsv",
+      "summary.json"
+    ],
+    "bytes": 5902,
+    "sha256": "9b8949c024faacd3e3120d316e642cea963ec40eb2c79a6a67d6beffb0476999",
+    "indexed_calls": 177
+  }
+}
