@@ -23,18 +23,18 @@ const COPY={
 
   eye2:'02 / 模型会反思什么',
   h2t:'停下来的那一刻，<br>模型在反思什么。',
-  p2:'这是它在第 19 次交互时写下的完整思考。它回顾了已经确认的事实，承认之前的判断站不住，列出仍然缺失的关键信息，并决定换一种查法。',
+  p2:'这是它在第 20 次交互时写下的完整思考。它回顾了已经确认的事实，承认之前的判断站不住，列出仍然缺失的关键信息，并决定换一种查法。',
   dimHead:'它检查了这五件事',
   dimNote:'',
-  reflHead:'第 19 次交互 · 模型的完整思考',
+  reflHead:'第 20 次交互 · 模型的完整思考',
   reflZh:'中文译文', reflEn:'英文原文',
   reflNote:'中文为译文，模型原文为英文。',
 
   eye3:'03 / 效果对比',
   h3t:'同一道题，<br>两次作答。',
-  p3:'逐条列出模型实际发出的检索请求。左边中途换了方法，右边没有——检索了 47 次，仍然没有答对。',
-  traceOnTitle:'中途换了方法', traceOnMeta:'30 次交互 · 29 次检索',
-  traceOffTitle:'始终沿用同一思路', traceOffMeta:'48 次交互 · 47 次检索',
+  p3:'逐条列出模型实际发出的搜索和网页读取请求。左边中途换了方法，右边没有——调用了 47 次工具，仍然没有答对。',
+  traceOnTitle:'中途换了方法', traceOnMeta:'30 次交互 · 29 次工具调用',
+  traceOffTitle:'始终沿用同一思路', traceOffMeta:'48 次交互 · 47 次工具调用',
   finalAnswer:'最终答案',
   traceOnNote:'与标准答案 Madhumalti 一致（仅拼写差异）',
   traceOffNote:'与标准答案不符',
@@ -81,7 +81,7 @@ const COPY={
         gaps:['还缺哪些关键事实','具体缺什么，而不是泛泛地说还不够'],
         deadend:['哪些方法已经失败','试过且无效的检索词与站点'],
         action:['下一步查什么','下一步补哪个缺口、用哪类来源']},
-  pivotTitle:'第 19 次交互 · 停下来重新梳理',
+  pivotTitle:'第 20 次交互 · 停下来重新梳理',
   pivotBody:'把反复无用的聚合站判为死路，改用权威来源反查角色',
   reflNone:'承接下一步'
  },
@@ -98,18 +98,18 @@ const COPY={
 
   eye2:'02 / WHAT IT REFLECTS ON',
   h2t:'The moment it stops,<br>this is what it writes.',
-  p2:'The full reasoning from interaction 19. It takes stock of what is actually confirmed, admits its earlier guesses do not hold, lists what is still missing, and decides to search a different way.',
+  p2:'The full reasoning from interaction 20. It takes stock of what is actually confirmed, admits its earlier guesses do not hold, lists what is still missing, and decides to search a different way.',
   dimHead:'Five things it checks',
   dimNote:'All five have to appear together for this to count as real self-reflection — not just the phrase “let me double-check”.',
-  reflHead:'Interaction 19 · full reasoning',
+  reflHead:'Interaction 20 · full reasoning',
   reflZh:'Chinese',  reflEn:'Original',
   reflNote:'The model wrote this in English; the Chinese is a translation.',
 
   eye3:'03 / SIDE BY SIDE',
   h3t:'The same question,<br>answered twice.',
-  p3:'Every search request the model actually issued. The left run changes approach partway through; the right one never does — 47 searches, still wrong.',
-  traceOnTitle:'Changed approach partway', traceOnMeta:'30 interactions · 29 searches',
-  traceOffTitle:'Same line throughout', traceOffMeta:'48 interactions · 47 searches',
+  p3:'Every search and page-read request the model actually issued. The left run changes approach partway through; the right one never does — 47 tool calls, still wrong.',
+  traceOnTitle:'Changed approach partway', traceOnMeta:'30 interactions · 29 tool calls',
+  traceOffTitle:'Same line throughout', traceOffMeta:'48 interactions · 47 tool calls',
   finalAnswer:'Final answer',
   traceOnNote:'Matches the reference answer Madhumalti (spelling variant)',
   traceOffNote:'Does not match the reference answer',
@@ -156,7 +156,7 @@ const COPY={
         gaps:['What key facts are still missing','Specifically what, not just “not enough yet”'],
         deadend:['What has already failed','Queries and sites tried without result'],
         action:['What to search next','Which gap to close, and from what kind of source']},
-  pivotTitle:'Interaction 19 · stops and takes stock',
+  pivotTitle:'Interaction 20 · stops and takes stock',
   pivotBody:'Writes off the aggregator sites as dead ends, switches to authoritative sources for the role',
   reflNone:'Leads into the next step'
  }};
@@ -269,7 +269,7 @@ function renderCalls(el,side){
     }
     const after=pivot!==undefined&&c.t>pivot, dead=DEAD.test(c.v);
     const cls=[c.k==='read'?'read':'',dead?'dead':(after?'after':'')].filter(Boolean).join(' ');
-    html+='<li class="'+cls+'"><b>'+String(c.t).padStart(2,'0')+'</b>'+
+    html+='<li class="'+cls+'"><b>'+String(c.t + 1).padStart(2,'0')+'</b>'+
           '<i>'+(c.k==='read'?ICON_READ:ICON_SEARCH)+'</i><span>'+esc(c.v)+'</span></li>';
   });
   el.innerHTML=html;

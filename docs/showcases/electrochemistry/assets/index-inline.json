@@ -10,10 +10,10 @@
     },
     {
       "kind": "js",
-      "path": "assets/js/index-1-f1324ed2bd04.js",
-      "sha256": "f1324ed2bd04c217098451aa825fd089997b3f3f692f418eeb8df71eaff1f16a",
+      "path": "assets/js/index-1-151e25026727.js",
+      "sha256": "151e250267276937e785bbdc719f9553a636e6466ae6e5e04834a85500209e41",
       "attrs": "",
-      "replacement": "<script src=\"assets/js/index-1-f1324ed2bd04.js\"></script>",
+      "replacement": "<script src=\"assets/js/index-1-151e25026727.js\"></script>",
       "original_sha256": "ab467c6b829b9fdb1ca45f9c02a2d419087082db63b42fd608bbe49efac4bfb6"
     }
   ]

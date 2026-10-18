@@ -212,7 +212,7 @@
       if(!sources[name]) {const response=await fetch(`assets/data/${name}/workspace.json`);if(!response.ok)throw Error('Input files unavailable');sources[name]=(await response.json()).files;}
       if(request!==workspaceRequest)return;
       workspaceFiles=sources[name];fileIndex=0;selectFile(0);
-    } catch(error) {if(request!==workspaceRequest)return;$('file-list').innerHTML='';$('file-preview').innerHTML=`<p>Input preview could not be loaded. <a href="assets/data/${name}/workspace.json" download>Download the input-file listing</a>.</p>`;}
+    } catch(error) {if(request!==workspaceRequest)return;$('file-list').innerHTML='';$('file-preview').innerHTML=`<p>Input preview could not be loaded. Refresh the page to try again.</p>`;}
   }
   function setStudy(name,{url=true}={}) {
     if(!studies[name])name='aerodynamics';stop();current=name;
@@ -229,7 +229,6 @@
     $('chapters').innerHTML=s.steps.map((step,i)=>`<button data-chapter="${i}" aria-label="Chapter ${i+1}: ${step[0]}">0${i+1} / ${step[0]}</button>`).join('');
     $('figure-gallery').innerHTML=s.figures.map(([file,caption])=>`<figure><a href="assets/images/${name}/${file}" target="_blank" rel="noopener"><img src="assets/images/${name}/${file}" alt="${escape(caption)}" loading="lazy"></a><figcaption>${escape(caption)}</figcaption></figure>`).join('');
     $('delivery-title').textContent=s.deliveryTitle;$('delivery-copy').textContent=s.deliveryCopy;
-    $('download-artifacts').href=`assets/data/${name}/research-artifacts.zip`;$('download-data').href=`assets/data/${name}/run-data.json`;
     $('run-details').textContent=`${d.model} · ${d.harness} · ${d.runDate} · ${d.durationMin} minutes · ${d.exchanges} model exchanges. One recorded attempt (${isAero?'t093':'t141'}, attempt-01). Recorded task score: ${fmt(d.score)} out of 1.000, as supplied in the run-data handoff. Scores refer to these individual runs. The supplied summary values are preserved; listed output hashes have been checked against the extracted artifacts.`;
     $('hashes').innerHTML=Object.entries(d.hashes).map(([file,hash])=>`<div><strong>${escape(file)}</strong><br><code>${escape(hash)}</code></div>`).join('');
     $('file-search').value='';loadWorkspace(name);renderFilm(0);

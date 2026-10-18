@@ -1,5 +1,5 @@
 {
-  "version": "0.16.0-scientific-co-working",
+  "version": "0.16.1-report-aligned",
   "theme": "light",
   "cases": [
     {
@@ -10,7 +10,7 @@
     {
       "id": "verification",
       "href": "showcases/verification/index.html",
-      "sha256": "4bf380ae5f0b32a5c0fde6056ff7630aea0c9051b55d1a3e58a3085357e4cd57"
+      "sha256": "5f41d78a243f980c1ea0b3be2cdc8cec7f299d5a5d0b3b59f4fdafeb3ca37e07"
     },
     {
       "id": "local-deployment",
@@ -28,14 +28,24 @@
       "sha256": "6a15d728e6ea32ccbc91530e47072ca828d50effc09c7e2a193679431f3c7d39"
     },
     {
+      "id": "scientific-co-working",
+      "href": "showcases/scientific-co-working/index.html",
+      "sha256": "ba0a1de01a3bdbcca4ee2bd22b52e90f8fc878bd5dae63bc48371cfd68e8586d"
+    },
+    {
       "id": "researchclawbench",
       "href": "showcases/researchclawbench/index.html",
-      "sha256": "4f771ad854d87d360a500830abdae7e69295150d97bf49cbe49b831d20908743"
+      "sha256": "54bb8586b2fc087a2fcd3feac2dad64f83e5eb198e4f8483ea81ef47fc3949f2"
     },
     {
       "id": "neuroscience",
       "href": "01-launch.html",
       "sha256": "361904a96de5f5097d63ea2f280a397874fbd2b33895edce0fb5de7eadcd7c04"
+    },
+    {
+      "id": "computational-chemistry",
+      "href": "showcases/computational-chemistry/index.html",
+      "sha256": "cb01bcd5e54be1434ab4a0aae913865346b21b89796e79d437948d9c910b63e7"
     },
     {
       "id": "condensed-matter",
@@ -45,17 +55,7 @@
     {
       "id": "electrochemistry",
       "href": "showcases/electrochemistry/index.html",
-      "sha256": "bb079b73460065c61ab655ddb2847cf7ebf304566fe0c8ac0a949237c8e185e2"
-    },
-    {
-      "id": "computational-chemistry",
-      "href": "showcases/computational-chemistry/index.html",
-      "sha256": "fa8c8aabe0d01bb8bb864715f31991e1e8d546b6e908c232427538c696fa67e3"
-    },
-    {
-      "id": "scientific-co-working",
-      "href": "showcases/scientific-co-working/index.html",
-      "sha256": "35b86330d1eb594167346a1cbe243200b564e4eb21439a843804f7e1f5c19f06"
+      "sha256": "d9a68ad743494ff7dfa07288d1c8639a39874a50405c246b1f5c93b46b7d870a"
     }
   ],
   "collections": [
