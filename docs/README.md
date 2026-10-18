@@ -19,8 +19,12 @@ Scientific Co-working page is `/showcases/scientific-co-working/index.html`.
 Keep each page's relative navigation within this same site.
 
 The fluorescence spot detection showcase is `/showcases/flurescene-spot-detection/index.html`.
-It reuses the Scientific Co-working presentation, preserves original F1 scores,
-and applies the confirmed aggregate endpoints -0.0469 and 0.1158. Its source
+It directly reuses the Computational Chemistry styles and three-part layout,
+with a 32-second process animation reconstructed from the eight submissions.
+It preserves original F1 scores and applies the confirmed aggregate endpoints
+-0.0469 and 0.1158. The comparison gallery switches between fixed first test
+fields from DNA-FISH, Telomeres, HybISS and MERFISH, using a separate retained
+prediction run. Its source
 notes and regeneration instructions are in `showcases/flurescene-spot-detection/README.md`.
 
 The four homepage collections follow Section 4 of the A1.5 technical report.
