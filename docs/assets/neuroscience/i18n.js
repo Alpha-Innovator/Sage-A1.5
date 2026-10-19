@@ -25,7 +25,7 @@ const EN={
   "数据整理、统计验证、运动成分分离、脑区解剖图谱定位与报告交付，每一步都有可查看的产物。": "Data preparation, statistical checks, movement adjustment, atlas mapping and reporting: every step leaves an inspectable result.",
   "研究价值：帮助研究者区分运动相关的跨指标协变结构与剩余脑区线索，为后续实验提出更具体的问题。": "Research value: distinguish shared movement-related variation from the remaining regional patterns to ask more focused experimental questions.",
   "模型能力：将数据整理、统计验证、成分分离、脑区解剖图谱定位与报告串成一条可检查的研究链。": "Model capability: connect data preparation, statistical checks, component separation, brain mapping and reporting in one inspectable workflow.",
-  "Agents-A1.5 分析 201 个脑区的五类指标，分离跨指标协变结构与运动相关部分，为后续研究留下可检查的线索。两种呈现方式，同一组真实成果。": "Agents-A1.5 analyzes five measures across 201 brain regions, separates shared and movement-related variation, and delivers inspectable clues for further research. Two experiences. One real set of results.",
+  "Sage-A1.5 分析 201 个脑区的五类指标，分离跨指标协变结构与运动相关部分，为后续研究留下可检查的线索。两种呈现方式，同一组真实成果。": "Sage-A1.5 analyzes five measures across 201 brain regions, separates shared and movement-related variation, and delivers inspectable clues for further research. Two experiences. One real set of results.",
   "返回方案总览": "Back to showcase overview",
   "研究故事": "The research",
   "解剖图谱": "Anatomical atlas",
@@ -120,7 +120,7 @@ const EN={
   "来源：Panel F 的 Swanson 投影与已保存的 201 个脑区得分": "Source: Panel F Swanson geometry, saved regional scores and decoding measures",
   "研究过程，留下可以打开的成果。": "Research leaves results you can open.",
   "本次运行交付了 A–J 十张图与报告。原始产物、可交互的数值和易读的解释在这里连接起来。": "This run delivered ten panels, A–J, and a report. Original outputs, interactive numbers and plain-language explanations meet here.",
-  "来源：本次 Agents-A1.5 运行 · 原图保持原样": "Source: this Agents-A1.5 run · Original figures preserved",
+  "来源：本次 Sage-A1.5 运行 · 原图保持原样": "Source: this Sage-A1.5 run · Original figures preserved",
   "发布会版": "The launch",
   "主宣传页推荐": "For the main showcase",
   "深色舞台、动态脑区解剖图谱、强叙事。用一眼能记住的视觉，把数据分析到科研交付的能力展现出来。": "A dark stage, an animated brain atlas and a clear research story. A memorable visual journey from data analysis to scientific outputs.",
@@ -218,7 +218,7 @@ const EN={
   "放大查看原始图表": "Enlarge the original figure",
   "放大原图": "Enlarge figure",
   "下载 PNG": "Download PNG",
-  "来源：本次 Agents-A1.5 运行产物": "Source: outputs from this Agents-A1.5 run",
+  "来源：本次 Sage-A1.5 运行产物": "Source: outputs from this Sage-A1.5 run",
   "11 张研究图表": "11 research figures",
   "相关矩阵、PCA、运动回归与五张解剖分布图；原始产物可逐张放大查看。": "Correlation matrices, PCA, movement regression and five anatomical maps. Open each original output at full size.",
   "浏览全部图表 ↗": "Browse all figures ↗",
@@ -235,7 +235,7 @@ const EN={
   "关闭": "Close",
   "本次运行 · 原始图表": "Original figures from this run",
   "放大的原始研究图表": "Enlarged original research figure",
-  "本次 Agents-A1.5 运行 · 原始产物": "Original outputs · Agents-A1.5",
+  "本次 Sage-A1.5 运行 · 原始产物": "Original outputs · Sage-A1.5",
   "28 秒脑科学能力宣传片": "28-second neuroscience showcase film",
   "关闭短片": "Close film",
   "脑科学研究过程的连续动画": "Continuous animation of the neuroscience research workflow",
@@ -288,7 +288,7 @@ const EN={
   "如何组织不同任务信息？": "how is task information organized?",
   "小鼠全脑编码与解剖分布": "Mouse brain coding & anatomy",
   "重新分析已有的小鼠全脑数据：图案位置、左右选择与结果反馈的解码指标，在脑区间如何协同变化？这种关系与转轮运动有何关联？比较五类指标，计算运动相关成分，并将结果映射到脑区解剖图谱。": "Reanalyze existing mouse brain-wide data: how do decoding measures for pattern location, left/right choice and outcome feedback covary across regions? How is this related to wheel movement? Compare five measures, estimate movement-related components and map the results onto the anatomical atlas.",
-  "SeekBrain 驱动 Agents-A1.5 再分析 201 个小鼠脑区的已有数据，连接跨任务编码的协变、运动相关成分与脑区解剖分布，为可检验的新假设提供依据。": "SeekBrain powers Agents-A1.5 to reanalyze existing data from 201 mouse brain regions, connecting covariation across task-coding measures, movement-related components and anatomical distributions to motivate testable hypotheses.",
+  "SeekBrain 驱动 Sage-A1.5 再分析 201 个小鼠脑区的已有数据，连接跨任务编码的协变、运动相关成分与脑区解剖分布，为可检验的新假设提供依据。": "SeekBrain powers Sage-A1.5 to reanalyze existing data from 201 mouse brain regions, connecting covariation across task-coding measures, movement-related components and anatomical distributions to motivate testable hypotheses.",
   "小鼠的实验任务": "The mouse behavioral task",
   "刺激：看见图案": "Stimulus: see a pattern",
   "图案出现在屏幕左边或右边。": "A pattern appears on the left or right of the screen.",
@@ -321,7 +321,7 @@ const EN={
   "小轮往哪个方向、以多快的速度转动？这个指标概括该脑区活动中包含多少带方向的转轮速度信息。": "How fast and in which direction did the wheel turn? This measure summarizes information about signed wheel velocity in this region.",
   "IBL / Allen 小鼠脑区解剖图谱 · 双侧同名脑区使用同一得分": "IBL / Allen mouse brain atlas · Homologous regions share the same score",
   "小鼠脑区解剖图谱 · Swanson 平面投影 · 点击脑区探索": "Mouse anatomical atlas · Swanson flatmap · Select a region",
-  "小鼠看图案、转轮作答、获得奖励或错误提示。SeekBrain 驱动 Agents-A1.5 再分析 201 个小鼠脑区的已有数据，识别不同任务信息中跨任务编码与运动的关联，为可检验的新假设提供依据。": "A mouse sees a pattern, turns a wheel and receives reward or error feedback. SeekBrain powers Agents-A1.5 to reanalyze existing data from 201 mouse brain regions, identify a shared pattern linked to movement across task variables, and provide evidence for testable new hypotheses.",
+  "小鼠看图案、转轮作答、获得奖励或错误提示。SeekBrain 驱动 Sage-A1.5 再分析 201 个小鼠脑区的已有数据，识别不同任务信息中跨任务编码与运动的关联，为可检验的新假设提供依据。": "A mouse sees a pattern, turns a wheel and receives reward or error feedback. SeekBrain powers Sage-A1.5 to reanalyze existing data from 201 mouse brain regions, identify a shared pattern linked to movement across task variables, and provide evidence for testable new hypotheses.",
   "小鼠脑区解剖图谱 / IBL ATLAS": "MOUSE BRAIN / IBL ATLAS",
   "跨指标协变关系": "cross-metric covariation",
   "五类指标": "five measures",
@@ -365,7 +365,7 @@ const EN={
   "未被解释的部分。": "Variation left unexplained.",
   "分别映射到解剖位置。": "Mapped onto regional anatomy.",
   "来源：Panel A / B 与已有脑区指标 · 拟合及置信带为展示页补充": "Source: saved Panel A/B matrices and regional measures; fit and CI added for this display",
-  "小鼠看图案、转轮作答、获得奖励或错误提示。SeekBrain 驱动 Agents-A1.5 再分析 201 个小鼠脑区的已有数据，分析不同任务编码指标的协变及其与转轮运动的关联，为可检验的新假设提供依据。": "A mouse sees a pattern, turns a wheel, and receives a reward or error cue. Through SeekBrain, Agents-A1.5 reanalyzes saved data from 201 mouse brain regions, relating covariation in task-coding measures to wheel movement and motivating testable hypotheses.",
+  "小鼠看图案、转轮作答、获得奖励或错误提示。SeekBrain 驱动 Sage-A1.5 再分析 201 个小鼠脑区的已有数据，分析不同任务编码指标的协变及其与转轮运动的关联，为可检验的新假设提供依据。": "A mouse sees a pattern, turns a wheel, and receives a reward or error cue. Through SeekBrain, Sage-A1.5 reanalyzes saved data from 201 mouse brain regions, relating covariation in task-coding measures to wheel movement and motivating testable hypotheses.",
   "科研案例首页": "Research showcases home",
   "探索科研灵感": "Explore scientific possibilities",
   "从真实问题出发，看 AI 如何连接数据、分析与科学探索。": "Start with real research questions. Explore how AI connects data, analysis and scientific inquiry.",
@@ -413,7 +413,7 @@ const EN={
   "走到科学发现。": "to a scientific finding.",
   "看见、选择、获得反馈，": "Seeing, choosing, receiving feedback.",
   "小鼠大脑如何组织这些不同的信息？": "How does the mouse brain organize this information?",
-  "Agents-A1.5 在 SeekBrain 工作区中完成分析与解剖映射，从已有数据中识别出一条与运动相关的跨任务编码轴。": "Agents-A1.5 uses the SeekBrain workspace to connect analysis with anatomy, identifying a movement-related axis of covariation across task-coding measures.",
+  "Sage-A1.5 在 SeekBrain 工作区中完成分析与解剖映射，从已有数据中识别出一条与运动相关的跨任务编码轴。": "Sage-A1.5 uses the SeekBrain workspace to connect analysis with anatomy, identifying a movement-related axis of covariation across task-coding measures.",
   "进入研究工作区": "Enter the research workspace",
   "28 秒，看完整个过程": "The process in 28 seconds",
   "传统研究": "MANUALLY ORCHESTRATED",
@@ -487,16 +487,16 @@ const EN={
   "运行使用的 IBL / Allen 图谱资源。把脑区编号、名称和层级联系起来，为解剖映射提供上下文。": "IBL / Allen atlas resources used in the run connect region IDs, names and anatomical hierarchy to support mapping.",
   "图谱资源 · 脑区名称与层级": "Atlas resource · Regional names and hierarchy",
   "主要统计轴的真实结果": "Saved principal-axis statistics",
-  "来自本次 Agents-A1.5 运行保存的 Panel C 统计文件。网页和短片中的方差解释率均读取这一结果。": "Panel C statistics saved by this Agents-A1.5 run. The page and film read their variance-explained values from this result.",
-  "A1.5 产物 · PCA 与随机参照": "A1.5 output · PCA and shuffled reference",
+  "来自本次 Sage-A1.5 运行保存的 Panel C 统计文件。网页和短片中的方差解释率均读取这一结果。": "Panel C statistics saved by this Sage-A1.5 run. The page and film read their variance-explained values from this result.",
+  "Sage-A1.5 产物 · PCA 与随机参照": "Sage-A1.5 output · PCA and shuffled reference",
   "十张原始研究图表": "Ten original research figures",
   "相关性、主成分、运动关联与脑区解剖分布。点击浏览 A–J，每张均保留本次运行原图。": "Correlations, principal components, movement associations and regional anatomy. Browse panels A–J, each preserved from this run.",
-  "A1.5 产物 · 原始图表 A–J": "A1.5 output · Original figures A–J",
+  "Sage-A1.5 产物 · 原始图表 A–J": "Sage-A1.5 output · Original figures A–J",
   "提供的输入": "PROVIDED INPUTS",
   "解剖图谱资源": "ANATOMICAL RESOURCES",
-  "A1.5 分析产物": "A1.5 ANALYSIS OUTPUTS",
+  "Sage-A1.5 分析产物": "Sage-A1.5 ANALYSIS OUTPUTS",
   "图谱资源": "ATLAS RESOURCES",
-  "A1.5 运行产物": "A1.5 RUN OUTPUTS",
+  "Sage-A1.5 运行产物": "Sage-A1.5 RUN OUTPUTS",
   "真实文件节选": "Excerpt from the actual file",
   "完整统计文件": "Complete statistics file",
   "下载此文件": "Download this file",
@@ -505,7 +505,7 @@ const EN={
   "工作区文件": "Workspace files",
   "运行汇总报告 · 公共脚本生成": "Aggregate report · Generated by a shared script",
   "运行目录中的汇总报告，由公共脚本生成；数值可与原始统计文件核对。": "The aggregate report was generated by a shared script. Its values can be checked against the original statistics.",
-  "从研究问题出发，浏览工作区、分析数据、检验关系、映射脑区。Agents-A1.5 通过 SeekBrain 再分析小鼠全脑已有数据，识别五类指标的主要协变轴及其与运动的关联。": "Explore a workspace, analyze data, test relationships and map regional anatomy. Through SeekBrain, Agents-A1.5 reanalyzes mouse brain data to identify a principal axis across five measures and its association with movement.",
+  "从研究问题出发，浏览工作区、分析数据、检验关系、映射脑区。Sage-A1.5 通过 SeekBrain 再分析小鼠全脑已有数据，识别五类指标的主要协变轴及其与运动的关联。": "Explore a workspace, analyze data, test relationships and map regional anatomy. Through SeekBrain, Sage-A1.5 reanalyzes mouse brain data to identify a principal axis across five measures and its association with movement.",
   "自主衔接分析、统计检验与解剖映射，发现小鼠脑区中与运动相关的跨任务编码结构。": "Connect analysis, statistical checks and anatomy to identify movement-related covariation across mouse regional coding measures.",
   "小鼠大脑，": "The mouse brain:",
   "看见图案、转轮作答、获得反馈——这些信息在全脑中如何关联？": "Seeing a pattern, turning a wheel, receiving feedback. How are these signals related across the brain?",
@@ -514,7 +514,7 @@ const EN={
   "与运动相关的共同组织模式。": "a shared organization linked to movement.",
   "研究者逐步编排工作流": "Researchers assemble each step",
   "整理数据、编写分析、统计检验，再绘制解剖分布。": "Prepare data, write analyses, run statistical checks, and map results onto anatomy.",
-  "智能体研究 / AGENTS-A1.5": "AGENT-LED RESEARCH / AGENTS-A1.5",
+  "智能体研究 / Sage-A1.5": "AGENT-LED RESEARCH / Sage-A1.5",
   "给定目标，衔接全流程": "Set the goal. Connect the workflow.",
   "在 SeekBrain 工作区中连接数据、工具与分析，交付可查阅的结果。": "Connect data, tools and analysis in SeekBrain to deliver results that can be inspected.",
   "研究价值": "SCIENTIFIC VALUE",
@@ -555,7 +555,7 @@ const EN={
   "将相关性、共享编码结构与运动残差的脑区分布汇总在一张图中。": "Correlations, shared coding structure and regional movement residuals brought together in one original figure.",
   "总览图": "Overview",
   "原始图表 A 至 J 与总览图": "Original panels A–J and overview",
-  "来源：Agents-A1.5 · V3（第 3 次运行）": "Source: Agents-A1.5 · V3 (third run)",
+  "来源：Sage-A1.5 · V3（第 3 次运行）": "Source: Sage-A1.5 · V3 (third run)",
   "相关矩阵、PCA、运动回归与五张解剖分布图；含完整总览图，原始产物可逐张放大查看。": "Correlations, PCA, movement regression and five anatomical maps, plus a complete overview. Open each original at full size.",
   "第一主成分解释了 {pc1}% 的标准化指标总方差；打乱脑区对应关系的 {count} 次参照，平均约为 {nullMean}%。": "The first principal component explains {pc1}% of the standardized measures' total variance. Across {count} shuffles of regional correspondence, the average is about {nullMean}%.",
   "主成分载荷给出五类指标对 PC1 的贡献。模型还用排名 PCA 检查稳健性；两种脑区得分的相关系数约为 {correlation}。": "Loadings show how each of the five measures contributes to PC1. Rank-based PCA checks robustness; the regional scores correlate at about {correlation}.",
@@ -598,7 +598,7 @@ function initLocale(){
  });
  document.querySelectorAll('a[href]').forEach(a=>{if(/^(index|01-launch|02-lab)\.html(?:[?#]|$)/.test(a.getAttribute('href')))a.href=localeURL(a.href)});
  if(LANG==='en'){
-  document.title=document.body.classList.contains('launch')?'Agents-A1.5 · The neuroscience showcase':document.body.classList.contains('lab')?'Agents-A1.5 · Research workspace':'Agents-A1.5 · Research showcases';
+  document.title=document.body.classList.contains('launch')?'Sage-A1.5 · The neuroscience showcase':document.body.classList.contains('lab')?'Sage-A1.5 · Research workspace':'Sage-A1.5 · Research showcases';
   document.querySelectorAll('[data-preview-en]').forEach(img=>img.src=img.dataset.previewEn);
  }
  localizeRoot(document);
@@ -608,6 +608,6 @@ function initLocale(){
  if(LANG==='en')observer.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['title','aria-label','alt','placeholder','data-tip']});
  document.addEventListener('click',e=>{const button=e.target.closest('[data-language]');if(!button)return;const url=new URL(PAGE_LOCATION.href);url.searchParams.set('lang',button.dataset.language);if(document.querySelector('#film[open]'))url.searchParams.set('film','1');PAGE_LOCATION.href=url.href});
 }
-const SOURCE_EN=`What the model did\n\nResearch question: Do five regional decoding maps share a dominant action/state pattern, and what remains after accounting for movement?\n\nBehavioral context: mice view a pattern on the left or right of a screen and turn a wheel with their front paws to bring it to the center. Correct choices receive water; errors receive a noise cue and timeout. Stimulus, choice and feedback refer to these events. The movement measures are wheel speed and signed wheel velocity.\n\nData: Findling2025 / IBL region_info.csv. Each row is a Beryl mouse brain region. Each decoding measure summarizes information associated with a variable in that region's activity. Of 279 input rows, 201 regions had valid values for all five measures. These are regional summaries, not raw neural recordings.\n\nResearch value: the reanalysis identifies covariation across regional task-coding measures and its association with wheel movement. It provides a basis for testable new hypotheses. The example follow-up hypothesis on this page is a showcase interpretation, not a quotation from the original report or a completed experiment. SeekBrain’s ambition of open-ended reanalysis is distinct from this case’s explicitly specified shared-axis and movement-analysis task.\n\nModel: Agents-A1.5 (recorded as A1.5-Preview), operating through SeekBrain Harness on a staged research task. This showcase uses saved outputs from the existing run.\n\nWorkflow: prepare data → compare values and ranks → extract shared structure and compare with shuffled references → account for movement → map regional scores onto a bilateral atlas → deliver figures and a report.\n\nSaved results: PC1 explains ${(D.pc1*100).toFixed(1)}% of total variance; the mean across ${D.permutations.toLocaleString('en-US')} permutations is ${(D.nullMean*100).toFixed(1)}%. Rank-based PC1 explains ${(D.rankPc1*100).toFixed(1)}%; main and rank-based regional scores correlate at ${D.rankCorrelation.toFixed(3)}.\n\nPresentation: Interactive plots use saved numbers. The interactive atlas uses this run's Panel F Swanson geometry. Main PC1 scores come from Panel C; rank-PC1 scores come from the five-decoder analysis in Panel D. V3 Panel G uses the same five decoder metrics with rank PCA; its own saved table drives the film. The interactive main and rank-based PC1 layers share a presentation scale of −4 to +8; each decoding measure uses its own observed range. Gray denotes unavailable values. Regions absent from the projection remain available numerically without an anatomical highlight. V3 original panels A–J and the composite overview are preserved. In the film and research brief, five maps are redrawn on F geometry: main PC1 from C; five-decoder rank PC1 from G; and choice, stimulus and feedback residuals from H, I and J. PC1 colors use −4 to +8, residual colors −3 to +3, with values beyond the limits saturated. F/G show value-based and rank-based views of the five measures; their regional scores correlate at approximately ${D.rankCorrelation.toFixed(3)}. The closing brief is an editorial summary of saved results, not a separately model-authored report. The 28-second film reconstructs a workflow from saved results. Interface actions, file highlights and animation timings are illustrative, not a screen recording or model execution trace. Its opening question summarizes the task; this run actually received staged task specifications. The data explorer lists only the 59 provided input files; anatomical resources and saved outputs are documented separately. Availability of a file does not imply that it entered the PCA. Particle motion is a workflow illustration, not a neuron-location map or a neural activity trajectory. The aggregate report was generated by a shared upstream script; it is not evidence of independent model authorship. Film length is not model runtime.\n\nInterpretation: This is an observational, region-level analysis. Covariation does not establish a causal mechanism. The ${(D.pc1*100).toFixed(1)}% statistic is the proportion of total variance across the five standardized measures.\n\nAdded display interactions: matrix cells select raw-value scatter plots with Pearson r and Spearman rho. The OLS fit and pointwise 95% confidence band for the mean are computed from 201 saved regional observations (t distribution, df=199); they are presentation additions, not original model outputs. The interval does not account for spatial dependence between regions and is not a prediction interval. Method reference: https://www.itl.nist.gov/div898/handbook/pmd/section5/pmd511.htm\n\nExperimental context sources: https://www.nature.com/articles/s41586-025-09226-1 and https://www.nature.com/articles/s41586-025-09235-0\n\nRun: ${D.run} · V3 (third overall run, second local repetition)`;
+const SOURCE_EN=`What the model did\n\nResearch question: Do five regional decoding maps share a dominant action/state pattern, and what remains after accounting for movement?\n\nBehavioral context: mice view a pattern on the left or right of a screen and turn a wheel with their front paws to bring it to the center. Correct choices receive water; errors receive a noise cue and timeout. Stimulus, choice and feedback refer to these events. The movement measures are wheel speed and signed wheel velocity.\n\nData: Findling2025 / IBL region_info.csv. Each row is a Beryl mouse brain region. Each decoding measure summarizes information associated with a variable in that region's activity. Of 279 input rows, 201 regions had valid values for all five measures. These are regional summaries, not raw neural recordings.\n\nResearch value: the reanalysis identifies covariation across regional task-coding measures and its association with wheel movement. It provides a basis for testable new hypotheses. The example follow-up hypothesis on this page is a showcase interpretation, not a quotation from the original report or a completed experiment. SeekBrain’s ambition of open-ended reanalysis is distinct from this case’s explicitly specified shared-axis and movement-analysis task.\n\nModel: Sage-A1.5 (recorded as A1.5-Preview), operating through SeekBrain Harness on a staged research task. This showcase uses saved outputs from the existing run.\n\nWorkflow: prepare data → compare values and ranks → extract shared structure and compare with shuffled references → account for movement → map regional scores onto a bilateral atlas → deliver figures and a report.\n\nSaved results: PC1 explains ${(D.pc1*100).toFixed(1)}% of total variance; the mean across ${D.permutations.toLocaleString('en-US')} permutations is ${(D.nullMean*100).toFixed(1)}%. Rank-based PC1 explains ${(D.rankPc1*100).toFixed(1)}%; main and rank-based regional scores correlate at ${D.rankCorrelation.toFixed(3)}.\n\nPresentation: Interactive plots use saved numbers. The interactive atlas uses this run's Panel F Swanson geometry. Main PC1 scores come from Panel C; rank-PC1 scores come from the five-decoder analysis in Panel D. V3 Panel G uses the same five decoder metrics with rank PCA; its own saved table drives the film. The interactive main and rank-based PC1 layers share a presentation scale of −4 to +8; each decoding measure uses its own observed range. Gray denotes unavailable values. Regions absent from the projection remain available numerically without an anatomical highlight. V3 original panels A–J and the composite overview are preserved. In the film and research brief, five maps are redrawn on F geometry: main PC1 from C; five-decoder rank PC1 from G; and choice, stimulus and feedback residuals from H, I and J. PC1 colors use −4 to +8, residual colors −3 to +3, with values beyond the limits saturated. F/G show value-based and rank-based views of the five measures; their regional scores correlate at approximately ${D.rankCorrelation.toFixed(3)}. The closing brief is an editorial summary of saved results, not a separately model-authored report. The 28-second film reconstructs a workflow from saved results. Interface actions, file highlights and animation timings are illustrative, not a screen recording or model execution trace. Its opening question summarizes the task; this run actually received staged task specifications. The data explorer lists only the 59 provided input files; anatomical resources and saved outputs are documented separately. Availability of a file does not imply that it entered the PCA. Particle motion is a workflow illustration, not a neuron-location map or a neural activity trajectory. The aggregate report was generated by a shared upstream script; it is not evidence of independent model authorship. Film length is not model runtime.\n\nInterpretation: This is an observational, region-level analysis. Covariation does not establish a causal mechanism. The ${(D.pc1*100).toFixed(1)}% statistic is the proportion of total variance across the five standardized measures.\n\nAdded display interactions: matrix cells select raw-value scatter plots with Pearson r and Spearman rho. The OLS fit and pointwise 95% confidence band for the mean are computed from 201 saved regional observations (t distribution, df=199); they are presentation additions, not original model outputs. The interval does not account for spatial dependence between regions and is not a prediction interval. Method reference: https://www.itl.nist.gov/div898/handbook/pmd/section5/pmd511.htm\n\nExperimental context sources: https://www.nature.com/articles/s41586-025-09226-1 and https://www.nature.com/articles/s41586-025-09235-0\n\nRun: ${D.run} · V3 (third overall run, second local repetition)`;
 const TASK_EN=`Research objective\n\nReanalyze existing Findling2025 / IBL mouse regional decoding measures: visual pattern location, left/right wheel choice, reward/error feedback, wheel speed and signed wheel velocity. Test for a dominant shared action/state pattern and identify the components remaining after movement adjustment.\n\nRequested workflow\n\n1. Read the CSV and retain regions with valid values for all five measures.\n2. Compare numerical and rank correlations.\n3. Extract shared structure with PCA, compare against ${D.permutations.toLocaleString('en-US')} permutations, and check stability using ranks.\n4. Use movement measures in linear models to compute residual stimulus, choice and feedback components.\n5. Map the main pattern, rank-based pattern and three residual components onto bilateral brain atlases.\n6. Deliver ten panels, A–J, structured statistics and a research report.\n\nThis is a plain-language summary of the original task. The data are region-level measures; see Research context & sources for provenance and presentation details.`;
 const REPORT_EN=`Source note: this aggregate report was written by a shared upstream finalization script, not independently authored by the model. Its numerical claims have been checked against this run’s statistics. The English translation is provided by the showcase.\n\n# Mouse Brain-Wide Coding Analysis Report\n\nThis report summarizes the results of ten consecutive subtasks performed through SeekBrain Harness on Findling2025 / IBL region_info.csv. Across 201 Beryl regions with finite values, the analysis tests whether five decoding measures share a low-rank action-state axis and maps the main axis and movement residuals onto bilateral atlases.\n\n## Results\n\n- Main PCA PC1 explains approximately ${(D.pc1*100).toFixed(1)}% of variance; the permutation null mean is approximately ${(D.nullMean*100).toFixed(1)}%, with an empirical p ≈ ${D.nullP.toFixed(5)} across ${D.permutations.toLocaleString('en-US')} permutations.\n- Rank-based PCA explains approximately ${(D.rankPc1*100).toFixed(1)}% of variance and correlates with main PC1 at approximately ${D.rankCorrelation.toFixed(3)}.\n- Regional R² values for movement measures predicting stimulus, choice and feedback are approximately ${D.r2.stim.toFixed(3)}, ${D.r2.choice.toFixed(3)} and ${D.r2.fback.toFixed(3)}.\n- Panels A–E show correlations, PCA/permutation results and movement-residual statistics; Panels F–J show bilateral atlas maps.\n\nThese results support a shared low-rank action-state axis across the five regional maps rather than independence. Residuals come from observational, region-level linear models and do not support causal, trial-level, voxel-level or hemispheric-lateralization conclusions.\n\n## Deliverables\n\nAll ten subtask gates passed. The A–J composite was generated as PNG, PDF and SVG. Statistical summaries and the final QA checklist are in the original run directory.`;

@@ -1,7 +1,7 @@
 /* English for the static page text, keyed on the exact Chinese source strings
    (the house convention). Text generated in page.js carries both languages itself. */
 const EN = {
-  "Agents-A1.5 · 计算化学展示": "Agents-A1.5 · The computational chemistry showcase",
+  "Sage-A1.5 · 计算化学展示": "Sage-A1.5 · The computational chemistry showcase",
   "返回探索首页": "Back to the showcase home",
   "页面导航": "Page navigation",
   "研究工作区": "Research workspace",
@@ -27,7 +27,7 @@ const EN = {
   "传统研究": "CONVENTIONAL RESEARCH",
   "研究者逐个搭建与提交": "The researcher builds and submits, one by one",
   "挑候选、建结构、写输入、跑计算、整理数据，再逐一比较解释。": "Pick candidates, build structures, write inputs, run calculations, collect the data, then compare and explain each one.",
-  "智能体研究 / AGENTS-A1.5": "AGENT RESEARCH / AGENTS-A1.5",
+  "智能体研究 / Sage-A1.5": "AGENT RESEARCH / Sage-A1.5",
   "给定问题与规范，贯通全流程": "Given a question and a protocol, it carries the whole workflow",
   "自己提出候选与预测，写计算脚本，处理失败，并解释结果。": "It proposes the candidates and predictions, writes the calculation scripts, handles failures and explains the results.",
   "研究价值": "WHY IT MATTERS",

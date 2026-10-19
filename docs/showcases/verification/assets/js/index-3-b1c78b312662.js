@@ -74,7 +74,7 @@ const COPY={
   endTitle:'走不通的时候，<br><em>先停下来反思沉淀，再尝试换一条路。</em>',
   endDesc:'自我反思发生在模型的推理过程中，通过 system prompt 的一行配置开启。',
   endWatch:'再看一次', endTop:'回到顶部',
-  footer:'Agents-A1.5 · Agentic Verification',
+  footer:'Sage-A1.5 · Agentic Verification',
 
   dims:{known:['已经确认了什么','只算检索结果里真正验证到的事实'],
         reflect:['之前的判断哪里站不住','反复搜同一件事、过早下结论'],
@@ -149,7 +149,7 @@ const COPY={
   endTitle:'When the road runs out,<br><em>stop and take stock, then try another one.</em>',
   endDesc:'The self-reflection happens inside the model’s reasoning and costs no extra search. One line in the system prompt turns it on or off.',
   endWatch:'Watch again', endTop:'Back to top',
-  footer:'Agents-A1.5 · Agentic Verification',
+  footer:'Sage-A1.5 · Agentic Verification',
 
   dims:{known:['What is actually confirmed','Only facts genuinely verified in the results'],
         reflect:['Where the earlier reasoning fails','Searching the same thing again, concluding too early'],

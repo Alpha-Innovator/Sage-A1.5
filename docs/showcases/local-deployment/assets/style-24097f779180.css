@@ -2751,3 +2751,8 @@ dialog > p {
   .die-parameter { font-size: 24px; letter-spacing: .02em; }
   .die-caption { font-size: 26px; }
 }
+
+/* Fit the full model name in compact showcase illustrations. */
+.die-modelname { font-size: 48px; }
+.model-sigil { width: 92px; max-width: 100%; font-size: 14px; letter-spacing: -.04em; }
+.private-model strong { font-size: 16px; letter-spacing: -.04em; }

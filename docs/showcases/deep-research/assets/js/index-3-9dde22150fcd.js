@@ -11,9 +11,9 @@ const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const COPY={
  zh:{
   navFlow:'研究流程',navFig:'图表生成',navReport:'报告样例',navPlay:'观看演示',
-  heroEye:'AGENTS-A1.5 · DEEP RESEARCH',
+  heroEye:'Sage-A1.5 · DEEP RESEARCH',
   heroTitle:'从一个研究问题，<em>到一份可溯源的深度报告</em>',
-  heroDesc:'Agents-A1.5 将研究问题分解为具依赖关系的任务图，分层并行执行，依据阶段性结果动态调整后续规划，并在撰写正文的同时生成配套的可编辑矢量图表，最终产出结构完整、引用可回溯的研究报告。',
+  heroDesc:'Sage-A1.5 将研究问题分解为具依赖关系的任务图，分层并行执行，依据阶段性结果动态调整后续规划，并在撰写正文的同时生成配套的可编辑矢量图表，最终产出结构完整、引用可回溯的研究报告。',
   heroWatch:'观看研究流程',heroRead:'查阅报告样例',
   mNodes:'报告章节',mCalls:'正文引用',mCites:'参考文献',mFigs:'配图',mLang:'报告语言',
   eye1:'研究流程',
@@ -25,7 +25,7 @@ const COPY={
   eye3:'报告样例',
   h3t:'一份<em>引用完整的研究报告</em>',
   p3:'正文中的编号引用可点击查阅来源。',
-  foot:'Agents-A1.5 · Deep Research',
+  foot:'Sage-A1.5 · Deep Research',
   stages:[['01','总览'],['02','任务规划'],['03','并行执行'],['04','动态调度'],['05','报告合成'],['06','图表生成'],['07','成稿输出']],
   n_query:'query',n_planner:'planner 生成初始执行图',n_exec:'executioner 按层并行执行图',
   n_coord:'coordinator 依据结果修改后续节点',n_syn:'synthesizer 生成报告',
@@ -72,7 +72,7 @@ const COPY={
   statLabels:['章节','正文引用','来源','配图','体量'],
   refsTitle:'参考文献',
   pvTag:'研究报告',pvFile:'navier-stokes-report.pdf',
-  pvEyebrow:'AGENTS-A1.5 · DEEP RESEARCH',
+  pvEyebrow:'Sage-A1.5 · DEEP RESEARCH',
   pvTitle:'2026年9月的纳维–斯托克斯事件：OpenAI 的主张、菲尔兹奖得主的声明与验证之路',
   pvMeta:['8 章节','391 处引用','84 篇参考文献'],
   pvSecs:['引言','技术背景与证明标准','宣布之前的前奏与酝酿','2026年9月的公告：材料、方法与主张','验证状态与路径','数学界的观点与治理回应','媒体报道与叙事动态','影响、未解问题与未来轨迹'],
@@ -80,9 +80,9 @@ const COPY={
  },
  en:{
   navFlow:'Research pipeline',navFig:'Figure generation',navReport:'Sample report',navPlay:'Watch',
-  heroEye:'AGENTS-A1.5 · DEEP RESEARCH',
+  heroEye:'Sage-A1.5 · DEEP RESEARCH',
   heroTitle:'From a research question <em>to a fully sourced report</em>',
-  heroDesc:'Agents-A1.5 decomposes a research question into a dependency graph of tasks, executes it in parallel layers, revises the remaining plan as results arrive, and drafts the prose alongside its editable vector figures — producing a structured report in which every claim is traceable to its source.',
+  heroDesc:'Sage-A1.5 decomposes a research question into a dependency graph of tasks, executes it in parallel layers, revises the remaining plan as results arrive, and drafts the prose alongside its editable vector figures — producing a structured report in which every claim is traceable to its source.',
   heroWatch:'View the pipeline',heroRead:'Read the sample report',
   mNodes:'Sections',mCalls:'In-text citations',mCites:'References',mFigs:'Figures',mLang:'Languages',
   eye1:'Research pipeline',
@@ -94,7 +94,7 @@ const COPY={
   eye3:'Sample report',
   h3t:'A research report <em>with complete citations</em>',
   p3:'Numbered citations in the text are clickable.',
-  foot:'Agents-A1.5 · Deep Research',
+  foot:'Sage-A1.5 · Deep Research',
   stages:[['01','Overview'],['02','Planning'],['03','Execution'],['04','Scheduling'],['05','Synthesis'],['06','Figures'],['07','Output']],
   n_query:'query',n_planner:'planner builds the graph',n_exec:'executioner runs it layer by layer',
   n_coord:'coordinator revises nodes ahead',n_syn:'synthesizer composes the report',
@@ -141,7 +141,7 @@ const COPY={
   statLabels:['Sections','Citations','Sources','Figures','Size'],
   refsTitle:'References',
   pvTag:'Research report',pvFile:'navier-stokes-report.pdf',
-  pvEyebrow:'AGENTS-A1.5 · DEEP RESEARCH',
+  pvEyebrow:'Sage-A1.5 · DEEP RESEARCH',
   pvTitle:'The September 2026 Navier-Stokes Episode: OpenAI\u2019s Claim, the Fields Medalists\u2019 Statement, and the Path to Verification',
   pvMeta:['8 sections','391 citations','84 references'],
   pvSecs:['Introduction','Technical Background and Proof Standards','Precursors and Build-up',
@@ -1004,7 +1004,7 @@ function buildDoc(){
 function applyLang(){
  lang='en';docLang='en';
  lang='en';docLang='en';
- document.title=lang==='en'?'Agents-A1.5 · Deep Research':'Agents-A1.5 · 深度调研';
+ document.title=lang==='en'?'Sage-A1.5 · Deep Research':'Sage-A1.5 · 深度调研';
  const languageURL=new URL((window.showcaseLocation||window.location).href);
  languageURL.searchParams.set('lang',lang);
  if(window.showcaseLocation)window.showcaseLocation.replace(languageURL.href);

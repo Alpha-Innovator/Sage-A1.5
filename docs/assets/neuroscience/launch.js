@@ -66,7 +66,7 @@ function openResearchBrief(){
   const axis=pct(D.pc1),movement=pct(D.r2.choice);
   document.body.insertAdjacentHTML('beforeend',`<dialog id="research-brief" aria-labelledby="brief-title" data-no-translate>
    <div class="dialog-head"><strong>${EN?'Research brief':'研究结论摘要'}</strong><button class="close-btn" data-close aria-label="${EN?'Close':'关闭'}">×</button></div>
-   <article class="brief-body"><div class="eyebrow">AGENTS-A1.5 × SEEKBRAIN</div>
+   <article class="brief-body"><div class="eyebrow">Sage-A1.5 × SEEKBRAIN</div>
     <p class="brief-question">${EN?'How does the mouse brain encode different variables within a visual decision-making task?':'小鼠大脑，如何组织不同任务信息？'}</p>
     <h2 id="brief-title">${EN?'A shared regional coding structure, associated with movement.':'<span>不同任务信息，</span><br><span>呈现与运动相关的</span><wbr><span>共享编码结构。</span>'}</h2>
     <p class="brief-answer">${EN?'Across 201 mouse brain regions, measures of stimulus, choice, feedback and wheel movement covary. After adjustment for movement, the three task measures retain distinct regional residual distributions.':'在 201 个小鼠脑区中，刺激、选择、反馈与转轮运动指标协同变化。考虑运动因素后，三类任务指标仍呈现不同的区域残差分布。'}</p>
