@@ -1,4 +1,4 @@
-# Agents-A1.5: Scaling the Horizon, Not the Parameters
+# Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition
 
 <div align="center" style="line-height:1">
   <a href="https://github.com/Alpha-Innovator/Agents-A1.5/blob/main/LICENSE" target="_blank"><img alt="License" src="https://img.shields.io/badge/License-Apache--2.0-f5de53?&color=f5de53"/></a>
@@ -15,7 +15,7 @@
 
 ---
 
-**Agents-A1.5** is a 35B Mixture-of-Experts Agentic Model that builds on the foundation of [Agents-A1](https://github.com/InternScience/Agents-A1), delivering enhanced capabilities across engineering, long-horizon search, scientific research, instruction following, and general agentic tasks.
+**Sage-A1.5** is a 35B Mixture-of-Experts Agentic Model that builds on the foundation of [Agents-A1](https://github.com/InternScience/Agents-A1), delivering enhanced capabilities across engineering, long-horizon search, scientific research, instruction following, and general agentic tasks.
 
 ## Key Features
 
@@ -41,9 +41,9 @@ Handles diverse long-horizon agent workflows including tool calling, web browsin
 
 ## Performance
 
-We evaluate Agents-A1.5 across engineering tasks, long-horizon search, scientific research, instruction following, and general agentic tasks. Despite operating in the ~35B model class, Agents-A1.5 delivers highly competitive performance against frontier-scale systems.
+We evaluate Sage-A1.5 across engineering tasks, long-horizon search, scientific research, instruction following, and general agentic tasks. Despite operating in the ~35B model class, Sage-A1.5 delivers highly competitive performance against frontier-scale systems.
 
-![Agents-A1.5 Benchmark Results](./assets/a15_hf_benchmarks.png)
+![Sage-A1.5 Benchmark Results](./assets/a15_hf_benchmarks.png)
 
 ## Usage
 
