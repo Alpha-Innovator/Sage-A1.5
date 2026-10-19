@@ -1,6 +1,6 @@
 /* light-visual-palette */
 
-/* Agents-A1.5 / Agentic Verification 能力演示。
+/* Sage-A1.5 / Agentic Verification 能力演示。
  * 确定性矢量帧: 给定时间 t 就得到一张 SVG, 不依赖随机数, 也没有网络请求。
  * 画面里的检索词、反思内容、最终答案均取自同一道题的真实作答记录。
  */

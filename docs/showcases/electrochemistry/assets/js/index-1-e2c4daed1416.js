@@ -117,7 +117,7 @@
   function setLanguage(nextLanguage){
     language = 'en';
     document.documentElement.lang = language==='en' ? 'en' : 'zh-CN';
-    document.title = language==='en' ? 'Agents-A1.5 · Electrochemical Condition Optimization' : 'Agents-A1.5 · 电化学条件优化';
+    document.title = language==='en' ? 'Sage-A1.5 · Electrochemical Condition Optimization' : 'Sage-A1.5 · 电化学条件优化';
     render();
     paintFilm();
     translateStatic();

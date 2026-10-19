@@ -229,7 +229,7 @@
     $('chapters').innerHTML=s.steps.map((step,i)=>`<button data-chapter="${i}" aria-label="Chapter ${i+1}: ${step[0]}">0${i+1} / ${step[0]}</button>`).join('');
     $('figure-gallery').innerHTML=s.figures.map(([file,caption])=>`<figure><a href="assets/images/${name}/${file}" target="_blank" rel="noopener"><img src="assets/images/${name}/${file}" alt="${escape(caption)}" loading="lazy"></a><figcaption>${escape(caption)}</figcaption></figure>`).join('');
     $('delivery-title').textContent=s.deliveryTitle;$('delivery-copy').textContent=s.deliveryCopy;
-    $('run-details').textContent=`${d.model} · ${d.harness} · ${d.runDate} · ${d.durationMin} minutes · ${d.exchanges} model exchanges. One recorded attempt (${isAero?'t093':'t141'}, attempt-01). Recorded task score: ${fmt(d.score)} out of 1.000, as supplied in the run-data handoff. Scores refer to these individual runs. The supplied summary values are preserved; listed output hashes have been checked against the extracted artifacts.`;
+    $('run-details').textContent=`Sage-A1.5 · ${d.harness} · ${d.runDate} · ${d.durationMin} minutes · ${d.exchanges} model exchanges. One recorded attempt (${isAero?'t093':'t141'}, attempt-01). Recorded task score: ${fmt(d.score)} out of 1.000, as supplied in the run-data handoff. Scores refer to these individual runs. The supplied summary values are preserved; listed output hashes have been checked against the extracted artifacts.`;
     $('hashes').innerHTML=Object.entries(d.hashes).map(([file,hash])=>`<div><strong>${escape(file)}</strong><br><code>${escape(hash)}</code></div>`).join('');
     $('file-search').value='';loadWorkspace(name);renderFilm(0);
     if(url){const u=new URL(location.href);u.searchParams.set('study',name);history.replaceState(null,'',u);}

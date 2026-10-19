@@ -115,7 +115,7 @@ class ScienceMotionFilm {
       stats.forEach(([value,label],i)=>{const xx=x+i*w/3,yy=P?701:734;this.line(xx,yy-54,xx+w/3-25,yy-54,'#612aa745');this.text(value,xx,yy,P?43:46,i===1?'#359c7c':'#5921b0','left',450,w/3-24);this.text(label,xx,yy+40,P?21:22,'#663f92','left',400,w/3-25)});
       this.text(EN?'NEXT QUESTION':'下一步研究',x,P?801:857,18,'#3f9270');
       this.text(EN?'Which regional differences should experiments test next?':'哪些脑区的差异，值得进一步实验检验？',x,P?841:898,P?28:31,'#172b45','left',450,w);
-      this.text(EN?'Summary of saved results · AGENTS-A1.5 × SEEKBRAIN':'基于本次运行结果整理 · AGENTS-A1.5 × SEEKBRAIN',x,P?876:943,P?18:18,'#526078','left',400,w);
+      this.text(EN?'Summary of saved results · Sage-A1.5 × SEEKBRAIN':'基于本次运行结果整理 · Sage-A1.5 × SEEKBRAIN',x,P?876:943,P?18:18,'#526078','left',400,w);
     });
   }
   text(s,x,y,size=28,color='#61349d',align='left',weight=450,maxWidth){
@@ -170,7 +170,7 @@ class ScienceMotionFilm {
     c.save();c.translate(cx,cy);c.rotate(-.27+t*.006);for(let j=0;j<3;j++){c.strokeStyle=`rgba(93,55,154,${.095-j*.019})`;c.lineWidth=1;c.beginPath();c.ellipse(0,0,(this.portrait?465:530)+j*40,245+j*32,0,0,Math.PI*2);c.stroke()}c.restore();
   }
   _header(t){
-    const P=this.portrait,pad=P?65:85;this.text(D.model.toUpperCase()+' · '+D.resultVersion,pad,62,P?26:22,'#6124ad','left',550);this.text('RESEARCH IN MOTION',this.W-pad,62,P?17:17,'#526078','right');
+    const P=this.portrait,pad=P?65:85;this.text('Sage-A1.5'+' · '+D.resultVersion,pad,62,P?26:22,'#6124ad','left',550);this.text('RESEARCH IN MOTION',this.W-pad,62,P?17:17,'#526078','right');
     const names=LANG==='en'?['QUESTION','INPUT DATA','ANALYSIS','ANATOMY','FINDING']:['研究问题','输入数据','自主分析','解剖定位','科学发现'];
     const stage=t<3.2?0:t<6.5?1:t<17.2?2:t<22.1?3:4,width=(this.W-2*pad)/5;
     names.forEach((s,i)=>{const x=pad+i*width;this.line(x,111,x+width-16,111,i<=stage?'#5a28aa':'#c6d4e555',i===stage?3:1);this.text(s,x,147,P?20:18,i===stage?'#5a1fb2':'#526078')});
@@ -216,7 +216,7 @@ class ScienceMotionFilm {
     this._note(t,-1,0,2.7,3.8,()=>{
       this.text(EN?'A scientific question':'一个科学问题',x,y,EN?45:47,'#6f359c','left',450,w);
       const lines=EN?['Seeing. Choosing. Receiving feedback.','How are these signals related?']:['看见、选择、获得反馈。','这些信息在全脑中，怎样关联？'];lines.forEach((s,i)=>this.text(s,x,y+72+i*46,P?27:30,'#693f92','left',400,w));
-      this.text('AGENTS-A1.5 × SEEKBRAIN',x,y+225,20,'#6a3f92');
+      this.text('Sage-A1.5 × SEEKBRAIN',x,y+225,20,'#6a3f92');
     });
     this._note(t,2.7,3.8,6.0,7.0,()=>{
       this.text('59',x,y+72,P?115:145,'#601fb2','left',440);this.text(EN?'provided input files':'个提供的输入文件',x+(P?190:238),y+63,28,'#673f92');

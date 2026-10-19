@@ -540,8 +540,8 @@
     document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
     document.title =
       lang === "en"
-        ? "Agents-A1.5 · Local Deployment"
-        : "Agents-A1.5 · 本地化部署";
+        ? "Sage-A1.5 · Local Deployment"
+        : "Sage-A1.5 · 本地化部署";
     $$("[data-i18n]").forEach((el) => (el.textContent = tr(el.dataset.i18n)));
     $$("[data-html]").forEach((el) => (el.innerHTML = tr(el.dataset.html)));
     $$("[data-title]").forEach((el) => {

@@ -1,6 +1,6 @@
 /* light-visual-palette */
 'use strict';
-/* Agents-A1.5 · computational chemistry showcase (house system v0.7.2).
+/* Sage-A1.5 · computational chemistry showcase (house system v0.7.2).
    Scientific numbers come from D, which build.py assembles from the run directory;
    WORKSPACE carries the task files given to the model, inlined at build time.
    Differences to the parent, chart geometry, the 3D viewer and the process film are
@@ -47,7 +47,7 @@ function initLocale() {
   document.documentElement.lang = LANG === 'en' ? 'en' : 'zh-CN';
   $$('[data-language-slot]').forEach(slot => { slot.remove(); });
   $$('a[href]').forEach(a => { if (/^(?:\.\.\/\.\.\/)?(index|01-launch|02-chemistry)\.html(?:[?#]|$)/.test(a.getAttribute('href'))) a.href = localeURL(a.getAttribute('href')); });
-  if (LANG === 'en') document.title = 'Agents-A1.5 · The computational chemistry showcase';
+  if (LANG === 'en') document.title = 'Sage-A1.5 · The computational chemistry showcase';
   localizeRoot(document);
   if (LANG === 'en') new MutationObserver(ms => { for (const m of ms) { if (m.type === 'childList') m.addedNodes.forEach(localizeRoot); else localizeRoot(m.target); } })
     .observe(document.body, {subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ['title', 'aria-label', 'data-tip']});
@@ -827,7 +827,7 @@ function sourceText() {
 `这次模型做了什么
 
 研究问题：吡啶上的小取代基，如何改变它与 N-甲基乙酰胺之间 N–H···N 氢键的结合？
-模型：${m.model || 'Agents-A1.5'}（运行配置 ${m.sourceModel || na}）
+模型：Sage-A1.5（运行配置 ${m.sourceModel || na}）
 智能体框架：${m.harness || 'Codex CLI'} ${v.codex || ''}
 计算引擎：${m.engine || 'Psi4'} ${v.psi4 || ''}
 运行编号：${m.runId || na}
@@ -851,7 +851,7 @@ function sourceText() {
 `What the model did
 
 Research question: how do small substituents on pyridine change its N–H···N hydrogen-bonded association with N-methylacetamide?
-Model: ${m.model || 'Agents-A1.5'} (run configuration ${m.sourceModel || na})
+Model: Sage-A1.5 (run configuration ${m.sourceModel || na})
 Agent harness: ${m.harness || 'Codex CLI'} ${v.codex || ''}
 Calculation engine: ${m.engine || 'Psi4'} ${v.psi4 || ''}
 Run ID: ${m.runId || na}
@@ -886,7 +886,7 @@ function openResearchBrief() {
   if (!dialog) {
     document.body.insertAdjacentHTML('beforeend', `<dialog id="research-brief" aria-labelledby="brief-title">
       <div class="dialog-head"><strong>${tr('研究结论摘要', 'Research brief')}</strong><button class="close-btn" data-close aria-label="${tr('关闭', 'Close')}">×</button></div>
-      <article class="brief-body"><div class="eyebrow">AGENTS-A1.5 × CODEX × PSI4</div>
+      <article class="brief-body"><div class="eyebrow">Sage-A1.5 × CODEX × PSI4</div>
        <p class="brief-question">${tr('吡啶上的小取代基，如何改变它与酰胺的结合？', 'How do small substituents on pyridine change its association with an amide?')}</p>
        <h2 id="brief-title"${pend('REPORT.md', !D.findings)}>${D.findings ? esc(L(D.findings.title)) : ph('（科学结论等待运行结果）', '(The conclusion awaits the run)')}</h2>
        <p class="brief-answer"${pend('REPORT.md', !D.findings)}>${D.findings ? esc(L(D.findings.text)) : ph('报告的主要发现：哪些修饰改变了结合、改变有多大、主要是哪种作用力在起作用。', 'The main finding: which modifications changed binding, by how much, and which force drove it.')}</p>
@@ -934,11 +934,11 @@ function bindGlobal() {
         (original ? tr('（以下为本次运行生成的报告原文，未翻译）\n\n', '(The run\'s own report, unedited)\n\n') : '') + body);
     }
     if (t.matches('[data-research-brief]')) openResearchBrief();
-    if (t.matches('[data-download-data]')) download('agents-a1.5-chemistry-data.json', JSON.stringify(D, (k, v) => k === 'figures' ? undefined : v, 1));
-    if (t.matches('[data-download-fig]')) download(`agents-a1.5-chemistry-${t.dataset.downloadFig}.png`, D.figures[t.dataset.downloadFig]);
+    if (t.matches('[data-download-data]')) download('Sage-A1.5-chemistry-data.json', JSON.stringify(D, (k, v) => k === 'figures' ? undefined : v, 1));
+    if (t.matches('[data-download-fig]')) download(`Sage-A1.5-chemistry-${t.dataset.downloadFig}.png`, D.figures[t.dataset.downloadFig]);
     if (t.matches('[data-workspace-file]')) openWorkspace(t.dataset.workspaceFile);
     if (t.matches('[data-workspace-save]')) { const f = WORKSPACE.files.find(x => x.id === t.dataset.workspaceSave); download(f.name, f.text, 'text/markdown'); }
-    if (t.matches('[data-workspace-download]')) download('agents-a1.5-chemistry-task-files.md', WORKSPACE.files.map(f => `<!-- ${f.path} -->\n\n${f.text}`).join('\n\n---\n\n'), 'text/markdown');
+    if (t.matches('[data-workspace-download]')) download('Sage-A1.5-chemistry-task-files.md', WORKSPACE.files.map(f => `<!-- ${f.path} -->\n\n${f.text}`).join('\n\n---\n\n'), 'text/markdown');
     if (t.matches('[data-toggle-pending]')) { const on = document.body.classList.toggle('show-pending'); t.textContent = on ? tr('隐藏标记', 'Hide markers') : tr('显示标记', 'Show markers'); }
     if (t.matches('[data-hero-candidate]')) showHeroCandidate(t.dataset.heroCandidate);
     if (t.matches('[data-hero-locate]')) { state.selected = COMPARISON_ROWS.find(r => r.c.id === t.dataset.heroLocate && r.p?.id === bestPose(r.c, 'all')?.id)?.id; selectEvidence('energies'); renderResults($('[data-widget=results]')); $('#findings').scrollIntoView(); }
@@ -987,7 +987,7 @@ function start() {
   $$('[data-widget]').forEach(el => { const f = W[el.dataset.widget]; if (f) el.innerHTML = f(); });
   $('[data-finding-cards]').innerHTML = findingCards();
   injectDialogs();
-  $$('[data-release]').forEach(el => { el.textContent = SKELETON ? tr('AGENTS-A1.5 × CODEX × PSI4 · 骨架预览', 'AGENTS-A1.5 × CODEX × PSI4 · skeleton preview') : 'AGENTS-A1.5 × CODEX × PSI4'; });
+  $$('[data-release]').forEach(el => { el.textContent = SKELETON ? tr('Sage-A1.5 × CODEX × PSI4 · 骨架预览', 'Sage-A1.5 × CODEX × PSI4 · skeleton preview') : 'Sage-A1.5 × CODEX × PSI4'; });
   $('[data-input-scope]').innerHTML = [
     [String(WORKSPACE.files.length), tr('份任务文件', 'task files')],
     ['0', tr('个预置候选或脚本', 'candidates or scripts supplied')],
