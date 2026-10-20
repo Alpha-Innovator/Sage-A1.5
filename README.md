@@ -1,16 +1,16 @@
 # Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition
 
 <div align="center" style="line-height:1">
-  <a href="https://github.com/Alpha-Innovator/Agents-A1.5/blob/main/LICENSE" target="_blank"><img alt="License" src="https://img.shields.io/badge/License-Apache--2.0-f5de53?&color=f5de53"/></a>
+  <a href="https://github.com/Alpha-Innovator/Sage-A1.5/blob/main/LICENSE" target="_blank"><img alt="License" src="https://img.shields.io/badge/License-Apache--2.0-f5de53?&color=f5de53"/></a>
 </div>
 
 <div align="center" style="line-height: 1;">
-  <a href="https://huggingface.co/collections/Alpha-Innovator/agents-a15" target="_blank"><img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Agents--A1.5-ffc107?color=ffc107&logoColor=white"/></a>
-  <a href="https://modelscope.cn/models/Alpha-Innovator/Agents-A1.5" target="_blank"><img alt="ModelScope" src="https://img.shields.io/badge/ModelScope-Agents--A1.5-624AFF?logo=modelscope&logoColor=white"/></a>
+  <a href="https://huggingface.co/collections/InternScience/sage-a15" target="_blank"><img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Agents--A1.5-ffc107?color=ffc107&logoColor=white"/></a>
+  <a href="https://modelscope.cn/collections/InternScience/Sage-A15" target="_blank"><img alt="ModelScope" src="https://img.shields.io/badge/ModelScope-Agents--A1.5-624AFF?logo=modelscope&logoColor=white"/></a>
 </div>
 
 <p align="center">
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🏠&nbsp;&nbsp;<a href="https://alpha-innovator.github.io/Agents-A1.5/">Home Page</a></b>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🏠&nbsp;&nbsp;<a href="https://alpha-innovator.github.io/Sage-A1.5/">Home Page</a></b>
 </p>
 
 ---
