@@ -1,0 +1,84 @@
+{
+  "source_run": "A1.5-Preview-local02",
+  "selected_version": "V3",
+  "report_revision": 3,
+  "source_pdf": "A1.5_neuroscience_two_panel_v3.pdf",
+  "source_pdf_sha256": "8c92529564ba390a2da9122fd0fff197f1f506451e54c27aac5b124448985e5b",
+  "export": "PyMuPDF render of clipped original vector PDF, 300 dpi; no analysis rerun",
+  "panels": {
+    "C": {
+      "display": "C-report-v3.png",
+      "sha256": "34805fcc211d973d6760dee61be8c1df99382b48524fe4a754a8b8b19854dea9",
+      "clip_pdf_points": [
+        0.0,
+        0.0,
+        277.0559936523438,
+        295.20001220703125
+      ],
+      "original": "../figures/C.png",
+      "original_sha256": "effbfc48a87fc0bab269f152bd835f6e26da9f0c6da50f1c517235338e8ae945"
+    },
+    "F": {
+      "display": "F-report-v3.png",
+      "sha256": "ae5ab80fd38e1b55e885f7b6f62775624ba4fb21d072fb29ef1abd5593c93556",
+      "clip_pdf_points": [
+        277.0559936523438,
+        0.0,
+        532.7999877929688,
+        295.20001220703125
+      ],
+      "original": "../figures/F.png",
+      "original_sha256": "fb62b32cb210cf15ac47ca2c91917dd06d3a0a5f1ff52c7e5da00aec7aad6f2d"
+    }
+  },
+  "permutation_histogram": {
+    "n": 5000,
+    "bin_width_percentage_points": 0.5,
+    "bin_edges_percentage_points": [
+      20.5,
+      21.0,
+      21.5,
+      22.0,
+      22.5,
+      23.0,
+      23.5,
+      24.0,
+      24.5,
+      25.0,
+      25.5,
+      26.0,
+      26.5,
+      27.0,
+      27.5,
+      28.0,
+      28.5,
+      29.0
+    ],
+    "ylim": [
+      0,
+      1000
+    ],
+    "highest_bin_count": 913
+  },
+  "atlas": {
+    "scale": [
+      -4,
+      8
+    ],
+    "palette": [
+      "#f7fbff",
+      "#deebf7",
+      "#b4c7e7",
+      "#2f5597"
+    ],
+    "original_rank_markers": "omitted in report display; retained in original F"
+  },
+  "data_sha256": {
+    "atlas.svg": "faba6b7d70f6f2899989e6ba466ffb1870ac44d0ff9a98def196b8db10f2dab9",
+    "showcase_manifest.json": "58a75650f0a35db7fc4211b06e31128583ae931467444675878c21ac4d69d0f8",
+    "rendered_scalars.csv": "148965dfbf6d22d5c216b7f585f1a5ee2a15f9245b4d0aec8f80efa018fb46fe",
+    "regional_scores.csv": "9abf24d47e60918a7a34459887286eee3e388d59b0badecf1170038464603047",
+    "statistics.json": "0e25fde93592a427be1c2f64373efdaf460529c89c69268120b0c7a7dccb3cbd",
+    "null_distribution.csv": "a9257bb2425d3c1baf55c4c7eae80ff39a6b44d4b557ea1ee91ffe6ade2d29ad"
+  }
+}
