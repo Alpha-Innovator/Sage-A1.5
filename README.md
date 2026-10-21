@@ -68,7 +68,7 @@ The following commands create API endpoints at `http://localhost:8000/v1`:
 
   ```shell
   python -m sglang.launch_server \
-    --model-path Alpha-Innovator/Agents-A1.5 \
+    --model-path InternScience/Sage-A1.5 \
     --port 8000 \
     --tp-size 1 \
     --mem-fraction-static 0.8 \
@@ -79,7 +79,7 @@ The following commands create API endpoints at `http://localhost:8000/v1`:
 
   ```shell
   python -m sglang.launch_server \
-    --model-path Alpha-Innovator/Agents-A1.5 \
+    --model-path InternScience/Sage-A1.5 \
     --port 8000 \
     --tp-size 1 \
     --mem-fraction-static 0.8 \
@@ -108,7 +108,7 @@ The following commands create API endpoints at `http://localhost:8000/v1`:
 - **Standard Version** (1 GPUs, 262K context):
 
   ```shell
-  vllm serve Alpha-Innovator/Agents-A1.5 \
+  vllm serve InternScience/Sage-A1.5 \
     --port 8000 \
     --tensor-parallel-size 1 \
     --max-model-len 262144 \
@@ -117,7 +117,7 @@ The following commands create API endpoints at `http://localhost:8000/v1`:
 - **Tool Call**:
 
   ```shell
-  vllm serve Alpha-Innovator/Agents-A1.5 \
+  vllm serve InternScience/Sage-A1.5 \
     --port 8000 \
     --tensor-parallel-size 1 \
     --max-model-len 262144 \
