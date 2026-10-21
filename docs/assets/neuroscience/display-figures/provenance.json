@@ -15,8 +15,7 @@
         277.0559936523438,
         295.20001220703125
       ],
-      "original": "../figures/C.png",
-      "original_sha256": "effbfc48a87fc0bab269f152bd835f6e26da9f0c6da50f1c517235338e8ae945"
+      "archived_original_sha256": "effbfc48a87fc0bab269f152bd835f6e26da9f0c6da50f1c517235338e8ae945"
     },
     "F": {
       "display": "F-report-v3.png",
@@ -27,8 +26,7 @@
         532.7999877929688,
         295.20001220703125
       ],
-      "original": "../figures/F.png",
-      "original_sha256": "fb62b32cb210cf15ac47ca2c91917dd06d3a0a5f1ff52c7e5da00aec7aad6f2d"
+      "archived_original_sha256": "fb62b32cb210cf15ac47ca2c91917dd06d3a0a5f1ff52c7e5da00aec7aad6f2d"
     }
   },
   "permutation_histogram": {
@@ -71,7 +69,7 @@
       "#b4c7e7",
       "#2f5597"
     ],
-    "original_rank_markers": "omitted in report display; retained in original F"
+    "original_rank_markers": "omitted in the report display"
   },
   "data_sha256": {
     "atlas.svg": "faba6b7d70f6f2899989e6ba466ffb1870ac44d0ff9a98def196b8db10f2dab9",
@@ -80,5 +78,6 @@
     "regional_scores.csv": "9abf24d47e60918a7a34459887286eee3e388d59b0badecf1170038464603047",
     "statistics.json": "0e25fde93592a427be1c2f64373efdaf460529c89c69268120b0c7a7dccb3cbd",
     "null_distribution.csv": "a9257bb2425d3c1baf55c4c7eae80ff39a6b44d4b557ea1ee91ffe6ade2d29ad"
-  }
+  },
+  "published_versions": "C and F each use the report version only; original outputs remain in the research archive and version history."
 }

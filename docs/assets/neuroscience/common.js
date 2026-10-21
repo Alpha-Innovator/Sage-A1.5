@@ -110,8 +110,8 @@ function inspectRegion(w,acr=researchRegion){
  $('.region-detail',w).innerHTML=`<h3>${r.acr}</h3><div class="region-name">${esc(r.name)}<br><span style="opacity:.7">${esc(r.groupName)}</span></div><div class="score">${layer.key==='pc1'||layer.key==='rank'?signed(layer.value(r)):layer.value(r).toFixed(3)}</div><div class="label" style="margin-bottom:22px">${layer.label}</div>${r.values.map((v,i)=>`<div class="profile-row"><span>${UI.shortLabels[i]}</span><div class="track"><i style="width:${Math.max(0,v)/Math.max(...D.regions.map(x=>x.values[i]))*100}%"></i></div><b>${v.toFixed(3)}</b></div>`).join('')}<p class="note" style="margin:12px 0 17px">五类解码指标的原始值；细条按各指标的最大值分别缩放。</p>${hasShape?'':'<p class="atlas-unmapped note">该脑区未包含在此平面投影中；此处保留数值，不标注解剖位置。</p>'}`;
  $$('.atlas-region',w).forEach(p=>p.classList.toggle('highlight',p.dataset.region===acr));
 }
-// Report display assets are separate from immutable V3 originals.
-function figureSource(key,original=false){return (!original&&DISPLAY_FIG[key])||FIG[key]}
+// Panels C and F have one published version: the report display.
+function figureSource(key){return DISPLAY_FIG[key]||FIG[key]}
 const FIGURE_DETAILS={
  G:{width:1050,height:1320,box:'15 75 1015 1010'}
 };
@@ -123,7 +123,7 @@ function setGalleryView(w,view){
  w.dataset.figureView=detail&&view==='detail'?'detail':'full';
  $('.figure-toolbar .switch',w).hidden=!detail;
  $$('[data-figure-view]',w).forEach(b=>{const active=b.dataset.figureView===w.dataset.figureView;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});
- $('.figure-view-note',w).textContent=T(DISPLAY_FIG[w.dataset.panel]?'报告版图表，使用本次运行已保存的数据。点击可放大；原始图保留供对照。':w.dataset.figureView==='detail'?'局部放大：脑区与色阶。完整标注见原图。':'完整原图。点击可缩放查看标注。');
+ $('.figure-view-note',w).textContent=T(DISPLAY_FIG[w.dataset.panel]?'报告版图表，使用本次运行已保存的数据。点击可放大。':w.dataset.figureView==='detail'?'局部放大：脑区与色阶。完整标注见原图。':'完整原图。点击可缩放查看标注。');
 }
 function drawGallery(w,k=w.dataset.panel){
  const previous=w.dataset.panel,view=w.dataset.figureView;
@@ -134,7 +134,7 @@ function drawGallery(w,k=w.dataset.panel){
  else image.removeAttribute('href');
  setGalleryView(w,previous===k&&view?view:(detail?'detail':'full'));
  $$('.gallery-tabs button',w).forEach(b=>{b.classList.toggle('active',b.dataset.panelSelect===k);b.setAttribute('aria-pressed',b.dataset.panelSelect===k)});
- $('.gallery-copy',w).innerHTML=`<div class="eyebrow">${k==='overview'?'OVERVIEW':`PANEL ${k}`} / ${DISPLAY_FIG[k]?'V3 / REPORT DISPLAY':'V3 ORIGINAL OUTPUT'}</div><h3>${a[0]}</h3><p>${a[2]}</p><div class="actions"><button class="btn small" data-zoom="${k}">放大图表 <span>↗</span></button><button class="text-link" data-download-panel="${k}">下载 PNG</button>${DISPLAY_FIG[k]?`<button class="text-link" data-original-zoom="${k}">查看原始图</button>`:""}</div>${DISPLAY_FIG[k]?'<p class="note">报告版 C、F 与报告双图保持一致；分箱与配色调整不改变统计结果。</p>':""}<div class="source-label">${a[1]}<br>来源：Sage-A1.5 · V3（第 3 次运行）</div>${'FGHIJ'.includes(k)?'<div class="atlas-reading-note"><strong>相同轮廓，不同分析量</strong><p>这五张图共用小鼠脑区边界。F/G 展示主成分得分；H/I/J 分别展示选择、刺激、反馈的运动残差。请比较脑区颜色与数值。</p></div>':''}`;
+ $('.gallery-copy',w).innerHTML=`<div class="eyebrow">${k==='overview'?'OVERVIEW':`PANEL ${k}`} / ${DISPLAY_FIG[k]?'V3 / REPORT DISPLAY':'V3 ORIGINAL OUTPUT'}</div><h3>${a[0]}</h3><p>${a[2]}</p><div class="actions"><button class="btn small" data-zoom="${k}">放大图表 <span>↗</span></button><button class="text-link" data-download-panel="${k}">下载 PNG</button></div>${DISPLAY_FIG[k]?'<p class="note">报告版 C、F 与报告双图保持一致；分箱与配色调整不改变统计结果。</p>':""}<div class="source-label">${a[1]}<br>来源：Sage-A1.5 · V3（第 3 次运行）</div>${'FGHIJ'.includes(k)?'<div class="atlas-reading-note"><strong>相同轮廓，不同分析量</strong><p>这五张图共用小鼠脑区边界。F/G 展示主成分得分；H/I/J 分别展示选择、刺激、反馈的运动残差。请比较脑区颜色与数值。</p></div>':''}`;
 }
 function figureFitScale(){
  const viewport=$('.lightbox-viewport'),img=$('#lightbox img');
@@ -154,15 +154,14 @@ function setFigureScale(scale,reset=false){
  viewport.scrollLeft=reset?0:cx*viewport.scrollWidth-viewport.clientWidth/2;
  viewport.scrollTop=reset?0:cy*viewport.scrollHeight-viewport.clientHeight/2;
 }
-async function openFigure(k,original=false){
+async function openFigure(k){
  const d=$('#lightbox'),img=$('img',d);
- d.dataset.panel=k;d.dataset.original=String(original);d.classList.add('loading');img.src=figureSource(k,original);img.alt=T(PANELS[k][0]);
- $('.dialog-head strong',d).textContent=T(`Panel ${k} · ${PANELS[k][0]} · ${!original&&DISPLAY_FIG[k]?'报告版图表':'本次运行原图'}`);
+ d.dataset.panel=k;d.classList.add('loading');img.src=figureSource(k);img.alt=T(PANELS[k][0]);
+ $('.dialog-head strong',d).textContent=T(`Panel ${k} · ${PANELS[k][0]} · ${DISPLAY_FIG[k]?'报告版图表':'本次运行原图'}`);
  $('[data-download-panel]',d).dataset.downloadPanel=k;
- $('[data-download-panel]',d).dataset.original=String(original);
  if(!d.open)d.showModal();
  try{await img.decode()}catch(error){if(d.dataset.panel===k){d.classList.remove('loading');$('.figure-scale',d).textContent=T('图片加载失败')}return}
- if(d.dataset.panel!==k||d.dataset.original!==String(original)||!d.open)return;
+ if(d.dataset.panel!==k||!d.open)return;
  setFigureScale(figureFitScale(),true);d.classList.remove('loading');
 }
 function bindFigureViewer(){
@@ -186,7 +185,7 @@ function download(name,content,type='application/json'){
  const url=typeof content==='string'&&(content.startsWith('data:')||content.startsWith('assets/'))?content:URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();if(url.startsWith('blob:'))setTimeout(()=>URL.revokeObjectURL(url),3000);
 }
 function openText(title,body){const dialog=$('#text-dialog');$('.dialog-head strong',dialog).textContent=title;$('.source-text',dialog).textContent=body;dialog.showModal()}
-function sourceNotes(){if(LANG==='en')return SOURCE_EN;return `这次模型做了什么\n\n研究问题：五类脑区级解码图，是否共享一个主要的行动／状态模式？\n\n实验对象与任务：小鼠看屏幕左右两侧的图案，用前爪转动小轮，将图案移向屏幕中央。答对得到水奖励；答错收到噪声提示并短暂等待。刺激、选择和反馈分别对应图案位置、左右转轮选择以及奖励或错误结果。运动指标是转轮速度及带方向的转轮速度。\n\n数据：Findling2025 / IBL region_info.csv。每行是一个 Beryl 小鼠脑区，每个解码指标概括该脑区活动中与某类变量相关的信息。279 行输入中，本次分析使用了五项指标均有效的 201 个脑区。\n\n执行环境：Sage-A1.5（运行记录中的模型名为 A1.5-Preview），经 SeekBrain Harness 执行分阶段研究任务。此次展示使用已有运行结果，不重新调用模型。\n\n能力链条：读取并整理数据 → 比较数值和排名关系 → 提取跨指标协变结构并与随机参照比较 → 分离运动相关成分 → 回填双侧脑区解剖图谱 → 生成图表和报告。\n\n主要数值：PC1 解释 ${pct(D.pc1)}% 方差；${D.permutations.toLocaleString('en-US')} 次置换的平均参照 ${pct(D.nullMean)}%；排名 PC1 解释 ${pct(D.rankPc1)}%；主分析与排名分析脑区得分相关 ${D.rankCorrelation.toFixed(3)}。\n\n展示说明：交互图表使用本次已保存的数值；交互脑区解剖图谱复用原始 Panel F 的 Swanson 轮廓并重绘颜色，主 PCA 与排名 PCA 统一范围 −4 至 +8，五类解码指标分别按观测范围着色；主 PC1 展示图使用蓝色色阶，颜色越深表示得分越高；灰色表示无有效数值。Swanson 是脑区平面投影；投影未覆盖的脑区保留数值，不标注位置。交互 PC1 与排名 PC1 分别使用 Panel C、D 的五类解码指标分析；V3 原始 Panel G 使用同样五类解码指标的排名得分，短片读取 G 自身保存的结果表。−4 至 +8 为交互展示色阶。V3 的 A–J 原图及总览图保持原样，可通过“查看原始图”打开。图集 C、F 默认使用报告蓝色双图：C 按 0.5 个百分点分箱，纵轴 0–1000；F 使用蓝色色阶并省略排名标注。两者均来自同一批已保存数据，统计结果不变。短片与结论摘要将五组已保存数值重绘到 F 的解剖轮廓：主 PC1 来自 C，五指标排名 PC1 来自 G，选择、刺激、反馈残差分别来自 H、I、J。PC1 色阶为 −4 至 +8，残差为 −3 至 +3，超出范围饱和显示。F/G 分别展示数值和排名两种分析；主分析与排名分析的得分相关约为 ${D.rankCorrelation.toFixed(3)}。结尾摘要由展示端根据运行结果整理，不是另行由模型独立撰写的报告。28 秒短片依据真实数值与产物重构研究流程；界面操作、文件高亮和动画时序为叙事示意，不是逐条执行录屏，也不表示实际运行耗时。开头的一句问题为任务摘要；本次实际执行接收了分阶段任务说明。数据浏览器仅展示 59 个提供的输入文件；图谱资源与分析产物另行说明，不把所有可用文件都算作 PCA 输入。短片中的粒子变形是流程示意，并非神经元位置或神经活动轨迹。汇总报告由上游公共脚本生成，不作为模型独立撰写报告的证据。\n\n解读范围：脑区级、观察性分析；跨指标协变结构不是已确立的因果机制。${pct(D.pc1)}% 指五类标准化指标的总方差解释比例。\n\n科研价值：再分析展示了跨任务编码指标的协变及其与转轮运动的关联，为可检验的新假设提供依据。页面的后续假设示例是本展示基于结果的延伸推演，不是原报告的原文，也不是已完成的新实验。SeekBrain 无预设方向探索的愿景，与本 case 明确要求检验共同轴和运动成分的具体任务有所区别。\n\n新增交互：相关矩阵与散点图联动，显示 Pearson r 与 Spearman ρ。散点使用原始指标值；OLS 拟合均值的点态 95% 置信带由展示页根据已保存数值计算，使用自由度 199 的 t 分布，不是原模型运行产物。区间未校正脑区空间依赖；不等同于单个脑区的预测区间。方法参考：https://www.itl.nist.gov/div898/handbook/pmd/section5/pmd511.htm\n\nSeekBrain 方法与研究案例参考：\n[1] Jiamin Wu et al. (2026). SeekBrain: An Autonomous Multi-Agent System for Accelerating Neuroscience Discovery. arXiv:2607.29347. https://arxiv.org/abs/2607.29347\n\n实验背景来源：https://www.nature.com/articles/s41586-025-09226-1 和 https://www.nature.com/articles/s41586-025-09235-0\n\n结果版本：${D.resultVersion}（第 ${D.overallRunIndex} 次运行）\n运行标识：${D.run}`}
+function sourceNotes(){if(LANG==='en')return SOURCE_EN;return `这次模型做了什么\n\n研究问题：五类脑区级解码图，是否共享一个主要的行动／状态模式？\n\n实验对象与任务：小鼠看屏幕左右两侧的图案，用前爪转动小轮，将图案移向屏幕中央。答对得到水奖励；答错收到噪声提示并短暂等待。刺激、选择和反馈分别对应图案位置、左右转轮选择以及奖励或错误结果。运动指标是转轮速度及带方向的转轮速度。\n\n数据：Findling2025 / IBL region_info.csv。每行是一个 Beryl 小鼠脑区，每个解码指标概括该脑区活动中与某类变量相关的信息。279 行输入中，本次分析使用了五项指标均有效的 201 个脑区。\n\n执行环境：Sage-A1.5（运行记录中的模型名为 A1.5-Preview），经 SeekBrain Harness 执行分阶段研究任务。此次展示使用已有运行结果，不重新调用模型。\n\n能力链条：读取并整理数据 → 比较数值和排名关系 → 提取跨指标协变结构并与随机参照比较 → 分离运动相关成分 → 回填双侧脑区解剖图谱 → 生成图表和报告。\n\n主要数值：PC1 解释 ${pct(D.pc1)}% 方差；${D.permutations.toLocaleString('en-US')} 次置换的平均参照 ${pct(D.nullMean)}%；排名 PC1 解释 ${pct(D.rankPc1)}%；主分析与排名分析脑区得分相关 ${D.rankCorrelation.toFixed(3)}。\n\n展示说明：交互图表使用本次已保存的数值；交互脑区解剖图谱复用原始 Panel F 的 Swanson 轮廓并重绘颜色，主 PCA 与排名 PCA 统一范围 −4 至 +8，五类解码指标分别按观测范围着色；主 PC1 展示图使用蓝色色阶，颜色越深表示得分越高；灰色表示无有效数值。Swanson 是脑区平面投影；投影未覆盖的脑区保留数值，不标注位置。交互 PC1 与排名 PC1 分别使用 Panel C、D 的五类解码指标分析；V3 原始 Panel G 使用同样五类解码指标的排名得分，短片读取 G 自身保存的结果表。−4 至 +8 为交互展示色阶。图集 C、F 使用报告蓝色双图，其余图表沿用 V3 产物：C 按 0.5 个百分点分箱，纵轴 0–1000；F 使用蓝色色阶并省略排名标注。两者均来自同一批已保存数据，统计结果不变。短片与结论摘要将五组已保存数值重绘到 F 的解剖轮廓：主 PC1 来自 C，五指标排名 PC1 来自 G，选择、刺激、反馈残差分别来自 H、I、J。PC1 色阶为 −4 至 +8，残差为 −3 至 +3，超出范围饱和显示。F/G 分别展示数值和排名两种分析；主分析与排名分析的得分相关约为 ${D.rankCorrelation.toFixed(3)}。结尾摘要由展示端根据运行结果整理，不是另行由模型独立撰写的报告。28 秒短片依据真实数值与产物重构研究流程；界面操作、文件高亮和动画时序为叙事示意，不是逐条执行录屏，也不表示实际运行耗时。开头的一句问题为任务摘要；本次实际执行接收了分阶段任务说明。数据浏览器仅展示 59 个提供的输入文件；图谱资源与分析产物另行说明，不把所有可用文件都算作 PCA 输入。短片中的粒子变形是流程示意，并非神经元位置或神经活动轨迹。汇总报告由上游公共脚本生成，不作为模型独立撰写报告的证据。\n\n解读范围：脑区级、观察性分析；跨指标协变结构不是已确立的因果机制。${pct(D.pc1)}% 指五类标准化指标的总方差解释比例。\n\n科研价值：再分析展示了跨任务编码指标的协变及其与转轮运动的关联，为可检验的新假设提供依据。页面的后续假设示例是本展示基于结果的延伸推演，不是原报告的原文，也不是已完成的新实验。SeekBrain 无预设方向探索的愿景，与本 case 明确要求检验共同轴和运动成分的具体任务有所区别。\n\n新增交互：相关矩阵与散点图联动，显示 Pearson r 与 Spearman ρ。散点使用原始指标值；OLS 拟合均值的点态 95% 置信带由展示页根据已保存数值计算，使用自由度 199 的 t 分布，不是原模型运行产物。区间未校正脑区空间依赖；不等同于单个脑区的预测区间。方法参考：https://www.itl.nist.gov/div898/handbook/pmd/section5/pmd511.htm\n\nSeekBrain 方法与研究案例参考：\n[1] Jiamin Wu et al. (2026). SeekBrain: An Autonomous Multi-Agent System for Accelerating Neuroscience Discovery. arXiv:2607.29347. https://arxiv.org/abs/2607.29347\n\n实验背景来源：https://www.nature.com/articles/s41586-025-09226-1 和 https://www.nature.com/articles/s41586-025-09235-0\n\n结果版本：${D.resultVersion}（第 ${D.overallRunIndex} 次运行）\n运行标识：${D.run}`}
 function injectDialogs(){document.body.insertAdjacentHTML('beforeend',`<div class="tip" role="tooltip" id="tooltip"></div><dialog id="text-dialog"><div class="dialog-head"><strong>研究背景</strong><button class="close-btn" data-close aria-label="关闭">×</button></div><div class="dialog-body"><div class="source-text"></div></div></dialog><dialog class="lightbox" id="lightbox"><div class="dialog-head"><strong>本次运行 · 图表</strong><button class="close-btn" data-close aria-label="关闭">×</button></div><div class="figure-zoom-toolbar"><div class="figure-zoom-controls" role="group" aria-label="图表缩放"><button data-figure-scale="out" aria-label="缩小">−</button><output class="figure-scale" aria-live="polite">—</output><button data-figure-scale="in" aria-label="放大">+</button><button data-figure-scale="fit">适应窗口</button><button data-figure-scale="native">原始尺寸</button></div><button class="text-link" data-download-panel="F">下载 PNG</button></div><p class="figure-zoom-hint">放大后可拖动或滚动查看</p><div class="lightbox-viewport" tabindex="0" aria-label="可滚动的图表"><div class="lightbox-stage"><img alt="放大的研究图表" draggable="false"></div></div></dialog><dialog id="gallery-dialog"><div class="dialog-head"><strong>本次 Sage-A1.5 运行 · 图表</strong><button class="close-btn" data-close aria-label="关闭">×</button></div><div class="dialog-body">${galleryWidget()}</div></dialog><dialog class="film motion-film" id="film" aria-label="28 秒脑科学能力宣传片"><div class="dialog-head"><strong>${D.model.toUpperCase()} · ${D.resultVersion}</strong><button class="close-btn" data-close aria-label="关闭短片">×</button></div><div class="film-picture"><canvas class="motion-canvas" role="img" aria-label="脑科学研究过程的连续动画"></canvas></div><p class="film-transcript">从研究问题出发，浏览工作区、分析数据、检验关系、映射脑区。Sage-A1.5 通过 SeekBrain 再分析小鼠全脑已有数据，识别五类指标的主要协变轴及其与运动的关联。</p><div class="film-bottom"><button class="film-play" aria-label="暂停播放">Ⅱ</button><span class="film-time">00:00</span><input class="film-scrubber" type="range" min="0" max="28" step="0.01" value="0" aria-label="短片进度（秒）"><span>00:28</span><button class="film-sound" aria-pressed="false">开启声音</button><button class="text-link" data-film-restart>重播 ↺</button><span data-language-slot></span></div><div class="film-credit">基于本次真实运行产物的 28 秒叙事回放 · 播放时长不代表模型运行用时</div></dialog>`)}
 let filmState={playing:false,elapsed:0,last:0,raf:0,sound:true};
 let filmRuntime=null,filmAudio=null;
@@ -239,14 +238,13 @@ function bindGlobal(){
  if(t.matches('[data-task]'))openText('交给模型的研究任务 · 中文导读',LANG==='en'?TASK_EN:`研究目标\n\n再分析 Findling2025 / IBL 已有小鼠脑区级解码数据，研究图案位置、左右转轮选择、奖励或错误反馈、转轮速度及带方向的转轮速度五类指标，是否主要由一个共同的行动／状态模式支配。\n\n要求模型完成\n\n1. 读取 CSV，选取五类指标均有效的脑区。\n2. 比较五类指标的数值相关和排名相关。\n3. 用 PCA 提取跨指标协变结构，用 ${D.permutations.toLocaleString('en-US')} 次随机置换作参照，并以排名分析检查稳定性。\n4. 用运动指标建立线性模型，计算刺激、选择和反馈的剩余成分。\n5. 把主模式、排名模式和三类剩余成分映射回双侧脑区解剖图谱。\n6. 交付 A–J 十张图、结构化统计量与研究报告。\n\n这是原始任务的展示用摘要。研究数据为脑区级指标；可查看“研究背景与展示来源”了解图形与数值来源。`);
  if(t.matches('[data-open-gallery]'))$('#gallery-dialog').showModal();
  if(t.matches('[data-zoom]'))openFigure(t.dataset.zoom);
- if(t.matches('[data-original-zoom]'))openFigure(t.dataset.originalZoom,true);
  if(t.matches('[data-figure-view]'))setGalleryView(t.closest('.gallery-widget'),t.dataset.figureView);
  if(t.matches('[data-figure-scale]')){
   const d=$('#lightbox');if(d.classList.contains('loading'))return;
   const action=t.dataset.figureScale,scale=+d.dataset.scale;
   setFigureScale(action==='fit'?figureFitScale():action==='native'?1:scale*(action==='in'?1.5:1/1.5),action==='fit');
  }
- if(t.matches('[data-download-panel]'))download('Sage-A1.5-panel-'+t.dataset.downloadPanel+(t.dataset.original==='true'?'-original':DISPLAY_FIG[t.dataset.downloadPanel]?'-report-v3':'')+'.png',figureSource(t.dataset.downloadPanel,t.dataset.original==='true'));
+ if(t.matches('[data-download-panel]'))download('Sage-A1.5-panel-'+t.dataset.downloadPanel+(DISPLAY_FIG[t.dataset.downloadPanel]?'-report-v3':'')+'.png',figureSource(t.dataset.downloadPanel));
  if(t.matches('[data-download="data"]'))download('Sage-A1.5-showcase-data.json',JSON.stringify({...D,atlas:undefined},null,2));
  if(t.matches('[data-film]'))playFilm(true);
  if(t.matches('[data-film-restart]'))playFilm(true);
