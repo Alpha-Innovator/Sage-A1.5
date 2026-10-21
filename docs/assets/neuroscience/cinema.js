@@ -8,8 +8,8 @@ class ScienceMotionFilm {
     this.canvas=canvas;this.ctx=canvas.getContext('2d',{alpha:false});this.duration=FILM_DURATION;this.time=0;this.frames=0;this.costs=[];
     this.colors=['#4f1fb2','#1f38b2','#a03177','#349d8e','#b2721f'];
     this.cues=[
-      {start:0,end:3.2,id:'question',zh:['小鼠大脑，如何组织不同任务信息？','图案、选择与反馈，怎样在全脑中联系起来？'],en:['How does the mouse brain encode different variables','within a visual decision-making task?']},
-      {start:3.2,end:6.5,id:'data',zh:['从真实数据，开始探索。','59 个输入文件 · 8 个实验室 · 29 组记录探针'],en:['Start with the real data.','59 input files · 8 laboratories · 29 recording probes']},
+      {start:0,end:3.2,id:'question',zh:['再分析小鼠大脑的任务与运动编码。','从已有数据重访共同变化模式。'],en:['Reanalyzing task and movement coding','in existing mouse brain data.']},
+      {start:3.2,end:6.5,id:'data',zh:['从已有数据，开始再分析。','59 个输入文件 · 8 个实验室 · 29 组记录探针'],en:['Start with the existing data.','59 input files · 8 laboratories · 29 recording probes']},
       {start:6.5,end:10.2,id:'flow',zh:['让分析，接着问题往前走。','比较关系 → 提取主轴 → 随机参照检验'],en:['Move the question forward.','Compare relationships → Extract an axis → Test against shuffled data']},
       {start:10.2,end:14.2,id:'pattern',zh:['五类信息，一条主要统计轴。','不同信息在脑区间，呈现一致的变化趋势。'],en:['Five measures. One principal axis.','Different measures rise and fall together across brain regions.']},
       {start:14.2,end:17.2,id:'separate',zh:['这条线索，与运动有关。','选择信息的脑区差异，与转轮运动指标密切相关。'],en:['A connection to movement.','Regional variation in choice coding is associated with wheel movement.']},
@@ -36,6 +36,7 @@ class ScienceMotionFilm {
     this.scale=Math.min(this.canvas.width/this.W,this.canvas.height/this.H);this.ox=(this.canvas.width-this.W*this.scale)/2;this.oy=(this.canvas.height-this.H*this.scale)/2;
   }
   _mapColor(key,value){
+    if(key==='F')return pc1DisplayColor(value,...BRAIN_MAPS.layers.F.scale);
     if(!Number.isFinite(value))return '#191d29';
     const {scale:[lo,hi],palette}=BRAIN_MAPS.layers[key],u=this.clamp((value-lo)/(hi-lo))*(palette.length-1),i=Math.min(palette.length-2,Math.floor(u));
     const rgb=s=>s.slice(1).match(/../g).map(x=>parseInt(x,16)),a=rgb(palette[i]),b=rgb(palette[i+1]);
@@ -46,7 +47,7 @@ class ScienceMotionFilm {
     const [bx,by,bw,bh]=D.atlas.bbox;this.maps={};
     for(const [key,layer] of Object.entries(BRAIN_MAPS.layers)){
       const a=document.createElement('canvas');a.width=800;a.height=Math.ceil(800*bh/bw);const c=a.getContext('2d');c.scale(800/bw,800/bw);c.translate(-bx,-by);
-      for(const p of D.atlas.paths){c.fillStyle=layer.colors[p.acr]||'#191d29';c.strokeStyle='#b6a8d54c';c.lineWidth=.16;const path=new Path2D(p.d);c.fill(path);c.stroke(path)}
+      for(const p of D.atlas.paths){c.fillStyle=key==='F'?pc1DisplayColor(layer.values[p.acr],...layer.scale):(layer.colors[p.acr]||'#191d29');c.strokeStyle='#b6a8d54c';c.lineWidth=.16;const path=new Path2D(p.d);c.fill(path);c.stroke(path)}
       this.maps[key]=a;
     }
     this.atlas=this.maps.F;ScienceMotionFilm.mapCache=this.maps;
@@ -94,7 +95,7 @@ class ScienceMotionFilm {
       this._scaleBar('F',P?330:this.mix(1080,1290,report),P?1160+report*46:655,P?110:82);
       this._scaleBar('G',P?750:this.mix(1565,1660,report),P?1160+report*46:655,P?110:82);
       this._scaleBar('H',P?540:this.mix(1290,1480,report),P?1500+report*26:940,P?190:144);
-      this.text(D.resultVersion+(EN?' original colors · IBL / Allen anatomy':' 原图配色 · IBL / Allen 解剖图谱'),P?540:1475,P?1574:969,P?19:17,'#526078','center');
+      this.text(D.resultVersion+(EN?' reanalysis · IBL / Allen anatomy':' 再分析 · IBL / Allen 解剖图谱'),P?540:1475,P?1574:969,P?19:17,'#526078','center');
     });
     this.withAlpha(anatomy*(1-fan),()=>this.text('IBL / ALLEN ATLAS',P?540:1335,P?1500:981,P?22:19,'#526078','center'));
   }
