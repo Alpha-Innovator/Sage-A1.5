@@ -5,62 +5,62 @@
     {
       "id": "swarm",
       "href": "showcases/swarm/index.html",
-      "sha256": "3d20dcc72aa0b9bedf162c77355d12ce9fb9f505cd9d17cd2b8dbc8a5a113fa9"
+      "sha256": "341b84337fa2d4878557ed608addb09a9b4f0ec9f890af2eba0274371c57a744"
     },
     {
       "id": "verification",
       "href": "showcases/verification/index.html",
-      "sha256": "08217fd5c1790e78607d35e3b6cb7e95992ab325d1ad56a2b971fd5de4567e88"
+      "sha256": "e2d617b6cb2bab7546ada45381672889d264b668ad1bf848083f72cfb4f55d0e"
     },
     {
       "id": "local-deployment",
       "href": "showcases/local-deployment/index.html",
-      "sha256": "f6c6d7bec13494bab44d5e72c14a0417244bdac04149856f23e12a3ab0ffb874"
+      "sha256": "6625b75039a408bfe3ec66e9a3f3298977a1b6d7cc08951b3be24a44eb38a998"
     },
     {
       "id": "deep-research",
       "href": "showcases/deep-research/index.html",
-      "sha256": "2c114449aa712b32655f96d312bcfdaf1c68a81e8fc9a07669416f81c9f4bf32"
+      "sha256": "7f55f0d963c10fb7d86131466f76620ed94656343d9779daa39a7d26d73ae0a5"
     },
     {
       "id": "scientific-reasoning",
       "href": "showcases/scientific-reasoning/index.html",
-      "sha256": "ca9b7cf234eec2851eb9d783c78460a27e5e04bb8141d62ea6dae5374172da93"
+      "sha256": "b6b7ad8f01b054e6d545f393333aba97eba4eb8428eca3ee5764f63ad867df51"
     },
     {
       "id": "scientific-co-working",
       "href": "showcases/scientific-co-working/index.html",
-      "sha256": "db2c301f46a32aaf3ea3a8e8032cefdfa81c39476697a988121a33555e720d48"
+      "sha256": "b19c8d9e9f050631ccd21e9c18c603fe53bb0b7c56a7406ee1bf419959fbd674"
     },
     {
       "id": "researchclawbench",
       "href": "showcases/researchclawbench/index.html",
-      "sha256": "fb1ca6676035be84fb0998f7bcd18a6543cd1b46bb1fb76c0a075fed0d98c149"
+      "sha256": "53b4f157ef0f12892d891693cb4e7d4f9833e1bcb39cfcbeb12891dc62a073f1"
     },
     {
       "id": "neuroscience",
       "href": "01-launch.html",
-      "sha256": "c4512f7fa95e49aaf6ed8dd5a220c35086bbe2b20383a5b7858813cba3958337"
+      "sha256": "2626f0fb826aafbe72bb6b7dfccf46bcbdd07aed90a11d843559771818595d13"
     },
     {
       "id": "computational-chemistry",
       "href": "showcases/computational-chemistry/index.html",
-      "sha256": "55728851f1afded611aa4ad20c30151dd9e6e6c4115b17908493f1c057d5cdb2"
+      "sha256": "fd2dd5b3fbb46476d3029b274ce7c1d4fdae8d5b4caccbb99c041d5097256ecf"
     },
     {
       "id": "condensed-matter",
       "href": "showcases/condensed-matter/index.html",
-      "sha256": "6f92e9c3ecb5024ec4e7d1756ebaa752079b9b3b7da3977cfb2c7da6681d3ea8"
+      "sha256": "655a1566fd946a4a01dd5e94b1464eee60adcf57772c07ba563a09e3b20e759a"
     },
     {
       "id": "electrochemistry",
       "href": "showcases/electrochemistry/index.html",
-      "sha256": "8e9c4b3969aebf7227202ce460d5bec37b3437db212da17ef72a4a82f4dec04e"
+      "sha256": "f29f776a47492c468a6ee3029f3c9ee1f581f1a77334284e128307b83ff1107d"
     },
     {
       "id": "flurescene-spot-detection",
       "href": "showcases/flurescene-spot-detection/index.html",
-      "sha256": "dd142810d0347ef7a13518029dc890e2bfbb383eca6afaf43965c41fc22de3b4"
+      "sha256": "6bde25561985771fdff92ee52a7b6f6dd6d3c843c920c317130848f5343c8402"
     }
   ],
   "collections": [

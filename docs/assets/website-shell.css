@@ -15,7 +15,7 @@
 .a15-nav-links a[aria-current="page"], .a15-nav-links a[aria-current="location"] { color: #2563eb; }
 .a15-footer { display: block; margin: 0; }
 .a15-footer a { color: inherit; }
-#demos, .demo-card[id] { scroll-margin-top: 100px; }
+#cases, .demo-card[id] { scroll-margin-top: 100px; }
     .a15-site-header {
       position: sticky;
       top: 0;

@@ -95,7 +95,7 @@ class ScienceMotionFilm {
       this._scaleBar('F',P?330:this.mix(1080,1290,report),P?1160+report*46:655,P?110:82);
       this._scaleBar('G',P?750:this.mix(1565,1660,report),P?1160+report*46:655,P?110:82);
       this._scaleBar('H',P?540:this.mix(1290,1480,report),P?1500+report*26:940,P?190:144);
-      this.text(D.resultVersion+(EN?' reanalysis · IBL / Allen anatomy':' 再分析 · IBL / Allen 解剖图谱'),P?540:1475,P?1574:969,P?19:17,'#526078','center');
+      this.text((EN?'Reanalysis · IBL / Allen anatomy':'再分析 · IBL / Allen 解剖图谱'),P?540:1475,P?1574:969,P?19:17,'#526078','center');
     });
     this.withAlpha(anatomy*(1-fan),()=>this.text('IBL / ALLEN ATLAS',P?540:1335,P?1500:981,P?22:19,'#526078','center'));
   }
@@ -171,7 +171,7 @@ class ScienceMotionFilm {
     c.save();c.translate(cx,cy);c.rotate(-.27+t*.006);for(let j=0;j<3;j++){c.strokeStyle=`rgba(93,55,154,${.095-j*.019})`;c.lineWidth=1;c.beginPath();c.ellipse(0,0,(this.portrait?465:530)+j*40,245+j*32,0,0,Math.PI*2);c.stroke()}c.restore();
   }
   _header(t){
-    const P=this.portrait,pad=P?65:85;this.text('Sage-A1.5'+' · '+D.resultVersion,pad,62,P?26:22,'#6124ad','left',550);this.text('RESEARCH IN MOTION',this.W-pad,62,P?17:17,'#526078','right');
+    const P=this.portrait,pad=P?65:85;this.text('Sage-A1.5',pad,62,P?26:22,'#6124ad','left',550);this.text('RESEARCH IN MOTION',this.W-pad,62,P?17:17,'#526078','right');
     const names=LANG==='en'?['QUESTION','INPUT DATA','ANALYSIS','ANATOMY','FINDING']:['研究问题','输入数据','自主分析','解剖定位','科学发现'];
     const stage=t<3.2?0:t<6.5?1:t<17.2?2:t<22.1?3:4,width=(this.W-2*pad)/5;
     names.forEach((s,i)=>{const x=pad+i*width;this.line(x,111,x+width-16,111,i<=stage?'#5a28aa':'#c6d4e555',i===stage?3:1);this.text(s,x,147,P?20:18,i===stage?'#5a1fb2':'#526078')});

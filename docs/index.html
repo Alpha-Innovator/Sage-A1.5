@@ -868,7 +868,7 @@
       .demo-grid { grid-template-columns: 1fr; }
     }
   </style>
-  <link rel="stylesheet" href="./assets/website-shell.css?v=integration-2" />
+  <link rel="stylesheet" href="./assets/website-shell.css?v=cases-anchor-20261022" />
 <link rel="stylesheet" href="assets/showcase-categories.css?v=20261016-paired">
 </head>
 <body>
@@ -878,7 +878,7 @@
         <a class="a15-nav-cta" href="https://huggingface.co/collections/InternScience/sage-a15" target="_blank" rel="noopener noreferrer">Model</a>
         <a href="#capabilities">Capabilities</a>
         <a href="#benchmarks">Benchmarks</a>
-        <a href="#demos">Demos</a>
+        <a href="#cases">Cases</a>
         <a href="#training">Training</a>
         <a href="#usage">Usage</a>
         <a href="#related-projects">Related Projects</a>
@@ -906,7 +906,7 @@
           <div class="action-row resource-row">
             <a class="btn resource-link" href="https://github.com/InternScience/Agents-A1" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
             <a class="btn resource-link" href="#benchmarks">View Benchmarks</a>
-            <a class="btn resource-link" href="#demos">View Demos</a>
+            <a class="btn resource-link" href="#cases">View Scientific Cases</a>
           </div>
         </div>
         <div class="hero-meta" aria-label="Key model facts">
@@ -999,7 +999,7 @@
       </div>
     </section>
 
-    <section class="band alt" id="demos">
+    <section class="band alt" id="cases">
       <div class="inner">
         <div class="section-head">
           <h2>Capability showcases</h2>
@@ -1419,6 +1419,7 @@
 
     })();
   </script>
-<script src="assets/showcase-navigation.js?v=integration-1" defer></script>
+<script>if (location.hash === "#demos") location.replace("#cases");</script>
+<script src="assets/showcase-navigation.js?v=cases-anchor-20261022" defer></script>
 </body>
 </html>

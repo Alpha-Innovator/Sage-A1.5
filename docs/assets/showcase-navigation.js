@@ -61,7 +61,7 @@
 
   const origin = read(key);
   const returnURL = new URL(valid(origin) ? origin.url : home.href);
-  returnURL.hash = valid(origin) && origin.card ? origin.card : 'demos';
+  returnURL.hash = valid(origin) && origin.card ? origin.card : 'cases';
   document.querySelectorAll('[data-site-return], [data-showcase-return], [data-showcase-home], [data-shell-home], .home-brand').forEach(link => {
     link.href = returnURL.href;
     if (!link.matches('[aria-current="page"]')) link.setAttribute('aria-label', 'Back to all demos');
